@@ -1,14 +1,14 @@
 { 
-  "name": "KING-MD",
+  "name": "DARK-SHAN-MD",
   "description": "A Whatsapp md bot built By Naveed to make experience better",
-  "logo": "https://telegra.ph/file/a6b9bbde7feaa92c69c7b.jpg",
-  "keywords": ["nodejs", "bot", "whatsapp bot", "King-Two", "KING-MD", "KING","king-Bot","theme bot","multi device","baileys"],
+  "logo": "https://telegra.ph/file/ee0f303f5da6d86d024e0.jpg",
+  "keywords": ["nodejs", "bot", "whatsapp bot", "darkshan-Two", "DARK-SHAN-MD", "DARKSHAN","darkshan-Bot","theme bot","multi device","baileys"],
   "success_url": "/",
   "stack": "container",
 "env": {
   "OWNER_NAME": {
   "description": "OWNER NAME",
-      "value": "NAVEED DOGAR"
+      "value": "DARK-SHAN-MD"
   },
     "AUTO_STATUS_SAVER": {
       "description": "Automatically saves status of every person and sends in log number.",
@@ -29,7 +29,7 @@
     },
    "THUMB_IMAGE": {
     "description": "Put Your Image Url for bot.",
-     "value": "https://telegra.ph/file/a6b9bbde7feaa92c69c7b.jpg"
+     "value": "https://telegra.ph/file/ee0f303f5da6d86d024e0.jpg"
     },
     "ANTI_BAD_WORD": {
     "description": "Put words here. If you want it enabled in your bot otherwise leave it blank",
@@ -67,7 +67,7 @@
     "BOT_NAME": {
 	    "description": "Choose your bot name",
 	    "required": "true",
-	    "value": "*KING-MD*"
+	    "value": "*DARK-SHAN-MD*"
 },
     "DISABLE_PM": {
       "description": "Disable bot in pm",
@@ -96,7 +96,7 @@
   },
     "THEME": {
     "description": "Don't Change . No Need To Change Only Avilable King-Md .",
-     "value": "KING-MD"
+     "value": "DARKSHAN"
   },
     "WORKTYPE": {
   "description": "Worktype of your bot. Use public or private, if it is private then only bot number can use it. If public then everyone can use it.",
@@ -109,11 +109,11 @@
   },
   "PACK_AUTHER": {
     "description": "PUT STICKER AUTHOR NAME",
-    "value": "naveeddogar"
+    "value": "DARK-SHAN-MD"
   },
   "PACK_NAME": {
     "description": "PUT STICKER PACK NAME",
-    "value": "king-mdbot"
+    "value": "dark-shanbot"
   },
   "heroku": {
     "description": "Weather it is on heroku or not",
