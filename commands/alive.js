@@ -1,25 +1,43 @@
 /**
 ========================================================
-      █▄▀ █ █▄ █ ▄▀     █▄ ▄█ █▀▄
-      █ █ █ █ ▀█ ▀▄█ ▀▀ █ ▀ █ █▄▀
+
+██████╗░░█████╗░██████╗░██╗░░██╗
+██╔══██╗██╔══██╗██╔══██╗██║░██╔╝
+██║░░██║███████║██████╔╝█████═╝░
+██║░░██║██╔══██║██╔══██╗██╔═██╗░
+██████╔╝██║░░██║██║░░██║██║░╚██╗
+╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝
+
+░██████╗██╗░░██╗░█████╗░███╗░░██╗
+██╔════╝██║░░██║██╔══██╗████╗░██║
+╚█████╗░███████║███████║██╔██╗██║
+░╚═══██╗██╔══██║██╔══██║██║╚████║
+██████╔╝██║░░██║██║░░██║██║░╚███║
+╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚══╝
+
+███╗░░░███╗██████╗░
+████╗░████║██╔══██╗
+██╔████╔██║██║░░██║
+██║╚██╔╝██║██║░░██║
+██║░╚═╝░██║██████╔╝
+╚═╝░░░░░╚═╝╚═════╝░
 ========================================================
  Copyright (C) 2022.                                                                                        
  Licensed under the  GPL-3.0 License;                                                      
  You may not use this file except in compliance with the License.    
  It is supplied in the hope that it may be useful                                     
- * @project_name : KING-MD                                                                    
- * @author : SuhailTechInfo <https://github.com/SuhailTechInfo>   
- * @description : KING-MD ,A Multi-functional whatsapp bot.       
- * @version 1.0.1                                                                                             
+ * @project_name : DARK SHAN MD                                                                    
+ * @author : kushansewmina1234 <https://github.com/kushansewmina1234>   
+ * @description : DARK SHAN MD ,A Multi-functional whatsapp bot.       
+ * @version 0.0.1                                                                                             
  ========================================================
  **/
 
-
- var alivemessage = `*ι αм σηℓιηє нσω ¢αη ι нєℓρ уσυ*
+ var alivemessage = `*HELLO IM DARK SHAN MD*
  
-_ι αм ᴍυℓтι ԃєνιᴄє ωнαтѕαρρ вσт_ 
+_IM MULTI DEVICE WWHATSAPP BOT_ 
 
-_If any query : wa.me/923096566451_
+_If any query : wa.me/94772108460_
 
 
 *_Update Alive Message by adding text with Alive_*
