@@ -2,7 +2,7 @@
 
 ### SCAN QR 
 
-<a href='https://darkshan-qr-03bc7ae2ad19.herokuapp.com/' target="_blank"><img alt='Fork repo' src='https://img.shields.io/badge/SCAN QR CODE-brown?style=for-the-badge&logo=qrcode&logoColor=white'/></a>
+<a href='https://darkshan-qr-03bc7ae2ad19.herokuapp.com/' target="_blank"><img alt='Fork repo' src='https://img.shields.io/badge/SCAN QR CODE-brown?style=for-the-badge&logo=https://www.qr-code-generator.com/&logoColor=white'/></a>
 
 ### DEPLOY HEROKU
 
