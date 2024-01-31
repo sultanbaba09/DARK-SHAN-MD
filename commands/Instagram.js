@@ -29,7 +29,7 @@
  It is supplied in the hope that it may be useful                                     
  * @project_name : DARK SHAN MD                                                                    
  * @author : kushansewmina1234 <https://github.com/kushansewmina1234>   
- * @description : KING-MD ,A Multi-functional whatsapp bot.       
+ * @description : DARK SHAN MD ,A Multi-functional whatsapp bot.       
  * @version 0.0.1                                                                                             
  ========================================================
  **/
