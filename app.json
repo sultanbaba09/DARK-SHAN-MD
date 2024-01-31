@@ -1,6 +1,6 @@
 { 
   "name": "DARK-SHAN-MD",
-  "description": "A Whatsapp md bot built By Naveed to make experience better",
+  "description": "A Whatsapp md bot built By kushan sewmina to make experience better",
   "logo": "https://telegra.ph/file/ee0f303f5da6d86d024e0.jpg",
   "keywords": ["nodejs", "bot", "whatsapp bot", "darkshan-Two", "DARK-SHAN-MD", "DARKSHAN","darkshan-Bot","theme bot","multi device","baileys"],
   "success_url": "/",
@@ -95,8 +95,8 @@
     "value": "mongodb+srv://King-MdIsbot:King-MdIsbot@cluster0.hikjrg2.mongodb.net/?retryWrites=true&w=majority"
   },
     "THEME": {
-    "description": "Don't Change . No Need To Change Only Avilable King-Md .",
-     "value": "DARKSHAN"
+    "description": "Don't Change . No Need To Change  Avilable DARKSHAN,DARKSHAN-EN .",
+     "value": "DARKSHAN-EN"
   },
     "WORKTYPE": {
   "description": "Worktype of your bot. Use public or private, if it is private then only bot number can use it. If public then everyone can use it.",
