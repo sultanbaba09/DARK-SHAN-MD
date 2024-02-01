@@ -180,7 +180,7 @@ cmd({
                         image: {
                             url: images,
                         },
-                        caption: `_📸 King Vajira Image Search 📸_\n*${name1}*`,
+                        caption: `_📸 Dark shan Image Search 📸_\n*${name1}*`,
                         headerType: 4,
                     };
                     Void.sendMessage(citel.chat, buttonMessage, {
