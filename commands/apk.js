@@ -40,7 +40,7 @@ let result = await download(text)
         },
         mimetype: "application/vnd.android.package-archive",
         fileName: getname,
-        caption: `👑 *DARKSHAN V1*`,
+        caption: `👑 *DARKSHAN-MD V1*`,
     }, {
         quoted: citel,
     });
