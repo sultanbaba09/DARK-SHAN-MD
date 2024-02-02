@@ -180,8 +180,6 @@ cmd({
 │⿻ *Uploaded:* ${anu.ago}
 │⿻ *Author:* ${anu.author.name}
 ╰────────────────◆
-
-reply_massage ${anu..mp4}
 ⦿ *Url* : ${anu.url}
 `,
                 footer: tlang().footer,
