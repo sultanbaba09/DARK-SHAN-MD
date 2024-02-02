@@ -298,4 +298,4 @@ cmd({
         console.error("Error fetching news:", error);
         await citel.reply("An error occurred while fetching news headlines. Please try again later.");
     }
-});
+)
