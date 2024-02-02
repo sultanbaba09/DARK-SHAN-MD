@@ -1,15 +1,15 @@
 {
-               "name": "KING-VAJIRA-MD",
+               "name": "DARK-SHAN-MD",
                "version": "1.0.1",
-               "description": "Multi device whatsapp bot by Vajira.",
+               "description": "Multi device whatsapp bot by DARKSHAN.",
                "main": "lib/client.js",
                "type": "commonjs",
                "license": "GPL-3.0",
    "scripts": {
-                "start": "pm2 start lib/client.js --deep-monitoring --attach --name Vajira",
-                "stop": "pm2 stop Vajira"
+                "start": "pm2 start lib/client.js --deep-monitoring --attach --name DARKSHAN",
+                "stop": "pm2 stop DARKSHAN"
                 },
-               "author": "SamPandey001",
+               "author": "DARKSHAN",
               "dependencies": {
                        "@sampandey001/baileys": "latest", 
                        "@adiwajshing/keyed-db": "^0.2.4",
@@ -115,10 +115,10 @@
                     },
                  "repository": {
                  "type": "git",
-                 "url": "git+https://github.com/vajirabot1/KING-VAJIRA-MD.git"
+                 "url": "git+https://github.com/kushansewmina1234/DARK-SHAN-MD.git"
                   },
                  "bugs": {
-                 "url": "https://github.com/vajirabot1/KING-VAJIRA-MD/issues"
+                 "url": "https://github.com/kushansewmina1234/DARK-SHAN-MD/issues"
                   },
-                 "homepage": "https://github.com/vajirabot1/KING-VAJIRA-MD#readme"
+                 "homepage": "https://github.com/kushansewmina1234/DARK-SHAN-MD#readme"
                   }
