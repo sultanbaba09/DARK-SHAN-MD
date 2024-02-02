@@ -23,7 +23,7 @@ let result = await download(text)
             url: icon,
         }, 
         caption: `
-        \n ✧ *KING VAJIRA APP DOWNLOADER*
+        \n ✧ *DARK SHAN MD APP DOWNLOADER*
         \n━━━━━━━━━━━━━━━━━━
         
         \n 📚 *ᴀᴘᴘ ɴᴀᴍᴇ:* ${getname}
