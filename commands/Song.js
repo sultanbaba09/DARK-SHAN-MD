@@ -1,5 +1,5 @@
 const { tlang, ringtone, cmd,fetchJson, sleep, botpic,ffmpeg, getBuffer, pinterest, prefix, Config } = require('../lib')
-const = ytdl (sector-pack)
+const ytdl = require('ytdl-secktor')
 
 
 
