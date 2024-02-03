@@ -1,25 +1,22 @@
 const { tlang, cmd,fetchJson, botpic,ffmpeg, getBuffer, prefix, Config } = require('../lib')
 const ytdl = require('ytdl-secktor')
 cmd({
-    pattern: "song",
-    desc: "download yt song",
-    category: "downloader",
-    filename: __filename,
-    use: '<faded-Alan Walker>',
-    
-  },
-  async (message, match) => {
-    match = match || message.reply_message.text
-    if (!match) return await message.send('*Example : song indila love story/ yt link*')
-    const vid = ytIdRegex.exec(match)
-    if (vid) {
-      const _song = await song(vid[1])
-      const [result] = await yts(vid[1], true)
-      const { author, title, thumbnail } = result
-      const meta = title ? await addAudioMetaData(_song, title, author, '', thumbnail.url) : _song
-      return await message.send(
-        meta,
-        { quoted: message.data, mimetype: 'audio/mpeg', fileName: `${title}.mp3` },
+            pattern: "song",
+            desc: "download yt song",
+            category: "downloader",
+            filename: __filename,
+            use: '<text>',
+ },
+        async(Void, citel, text) => {
+            let yts = require("secktor-pack");
+            let search = await yts(text);
+            let anu = search.videos[0];
+            const getRandom = (ext) => {
+                return `${Math.floor(Math.random() * 10000)}${ext}`;
+            };
+            let infoYt = await ytdl.getInfo(anu.url);
+            if (infoYt.videoDetails.lengthSeconds >= videotime) return citel.reply(`😔 Video file too big!`);
+            let titleYt = infoYt.videoDetails.title;        { quoted: message.data, mimetype: 'audio/mpeg', fileName: `${title}.mp3` },
         'audio'
       )
     }
