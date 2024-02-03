@@ -1,4 +1,4 @@
-const { tlang, ringtone, cmd,fetchJson, sleep, botpic,ffmpeg, getBuffer, pinterest, prefix, Config } = require('../lib')
+const { tlang, cmd,fetchJson, botpic,ffmpeg, getBuffer, prefix, Config } = require('../lib')
 const ytdl = require('ytdl-secktor')
 cmd({
     pattern: "song",
