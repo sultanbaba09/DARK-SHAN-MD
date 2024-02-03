@@ -1,4 +1,14 @@
-import Esana from '@sl-code-lords/esana-news';
+const {cmd,fetchJson,botpic,ffmpeg,getBuffer,prefix} = require('../lib')
+const esana = require('@sl-code-lords/esana-news')
+
+cmd({
+            pattern: "esana",
+            desc: "esana news",
+            category: "downloader",
+            filename: __filename,
+            use: '<helakuru>',
+        },
+
 
 
 const api = new Esana();
@@ -36,9 +46,4 @@ async function sendSpecificNews(newsId, m, conn) {
   conn.sendFile(m.chat, newsInfo.results.COVER, 'thumbnail.jpg', newsCaption, m);
   m.react('✅');
 }
-
-handler.help = ['esana'];
-handler.tags = ['news'];
-handler.command = ['esana'];
-
-export default handler;
+//---------------------------------------------------------------------------
