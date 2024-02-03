@@ -1,11 +1,12 @@
 const { tlang, ringtone, cmd,fetchJson, sleep, botpic,ffmpeg, getBuffer, pinterest, prefix, Config } = require('../lib')
 const ytdl = require('ytdl-secktor')
-cmd(
-  {
+cmd({
     pattern: "song",
-    fromMe: true,
-    desc: 'download yt song',
-    category: 'downloader',
+    desc: "download yt song",
+    category: "downloader",
+    filename: __filename,
+    use: '<faded-Alan Walker>',
+    
   },
   async (message, match) => {
     match = match || message.reply_message.text
