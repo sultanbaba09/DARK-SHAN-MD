@@ -1,17 +1,11 @@
 const { tlang, ringtone, cmd,fetchJson, sleep, botpic,ffmpeg, getBuffer, pinterest, prefix, Config } = require('../lib')
 const ytdl = require('ytdl-secktor')
-
-
-
-
-
-
 cmd(
   {
-    pattern: 'song ?(.*)',
+    pattern: "song",
     fromMe: true,
     desc: 'download yt song',
-    type: 'download',
+    category: 'downloader',
   },
   async (message, match) => {
     match = match || message.reply_message.text
@@ -56,3 +50,4 @@ cmd(
     // )
   }
 )
+//---------------------------------------------------------------------------
