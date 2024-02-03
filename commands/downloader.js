@@ -300,7 +300,20 @@ cmd({
             let infoYt = await ytdl.getInfo(anu.url);
             if (infoYt.videoDetails.lengthSeconds >= videotime) return citel.reply(`❌ Video file too big!`);
             let titleYt = infoYt.videoDetails.title;
-            let randomName = getRandom(".mp3");
+            const tmpDir = os.tmpdir();
+            if (!m.quoted || m.quoted.id !== key.id || !m.text) return;
+            const choice = m.text.trim();
+            const inputNumber = Number(choice);
+            if (inputNumber >= 1 && inputNumber <= result.allLinks.length) {
+            const selectedUrl = result.allLinks[inputNumber - 1].url;
+            console.log("selectedUrl", selectedUrl)
+            let title = generateRandomName();
+            const audioStream = ytdl(selectedUrl, {
+            filter: 'audioonly',
+            quality: 'highestaudio',
+        });
+        
+            const writableStream = fs.createWriteStream(`${tmpDir}/${title}.mp3`);
             citel.reply('*Downloadig:* '+titleYt)
             const stream = ytdl(anu.url, {
                     filter: (info) => info.audioBitrate == 160 || info.audioBitrate == 128,
