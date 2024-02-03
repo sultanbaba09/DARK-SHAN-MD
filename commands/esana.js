@@ -13,11 +13,7 @@ cmd({
             try {
                  const URL = `https://www.helakuru.lk/esana/${last_id}`;
                 fetch(URL, {
-                        method: 'POST'
-                    })
-                    .then(response => response.json())
-                    .then(json => {
-                        const date = json.current_date;
+            );    
                         console.log(date);
                         let textw = "";
                         textw +=;      
@@ -27,12 +23,16 @@ cmd({
                         textw += `📅 Date: ${published}`;
                         textw += `🔗 URL: ${url}`;
                         textw += `🗞️ Description: ${full_news}`;
-                        citel.reply(textw)
-                    });
 
-            } catch (e) {
-                console.log(e)
-            }
+            Void.sendMessage(
+                citel.chat, {
+                    text: textw,
+                }, {
+                    quoted: citel,
+                }
+            );
+
         }
-    )
+    ) 
+            
 //---------------------------------------------------------------------------
