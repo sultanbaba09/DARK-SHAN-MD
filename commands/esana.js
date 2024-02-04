@@ -4,7 +4,7 @@ const esana = require('@sl-code-lords/esana-news')
 cmd({
             pattern: "esana",
             desc: "esana news",
-            category: "search",
+            category: "news",
             filename: __filename,
             use: '<helakuru>',
         },
