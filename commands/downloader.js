@@ -539,7 +539,7 @@ cmd({
                 let buttonMessage = {
                     audio: fs.readFileSync(`./${randomName}`),
                     mimetype: 'audio/mpeg',
-                    fileName: titleYt + ".mp3",
+                    fileName: titleYt + ".mp4",
                     headerType: 4,
                     contextInfo: {
                         externalAdReply: {
