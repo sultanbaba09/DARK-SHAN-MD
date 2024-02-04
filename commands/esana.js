@@ -1,4 +1,4 @@
-const {cmd,fetchJson,botpic,ffmpeg,getBuffer,prefix} = require('../lib')
+const {cmd,fetchJson,botpic,getBuffer,prefix,tlang,formatp,runtime} = require('../lib')
 const esana = require('@sl-code-lords/esana-news')
 
 cmd({
