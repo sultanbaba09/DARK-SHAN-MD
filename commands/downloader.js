@@ -183,12 +183,6 @@ cmd({
  
 ⦿ *Url* : ${anu.url}
 `
- const buttons = [
-            { type: "url", displayText: "Watch on YouTube", url: input },
-            { type: "click", displayText: "🎶 Audio File", buttonCMD: `${prefix}mp3 ${input}` },
-            { type: "click", displayText: "📁 Document File", buttonCMD: `${prefix}ytdownload document ${input}` },
-            { type: "click", displayText: "ℹ️ Video Info", buttonCMD: `${prefix}ytinfo ${input}` }
-        ]
     ,
                 footer: tlang().footer,
                 headerType: 4,
