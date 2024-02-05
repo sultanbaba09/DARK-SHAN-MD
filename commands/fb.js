@@ -3,13 +3,15 @@ const { cmd, fetchJson } = require('../lib');
 cmd(
     {
         pattern: "fb",
+        alias: "facebook",
+        category:"downloader",
         react: "📽️",
         filename: __filename
     },
     async (Void, citel, text) => {
         try {
             if (!text) {
-                citel.reply("*Please provide a valid URL* 🌏.");
+                citel.reply("*Please provide a valid URL* ✏️.");
                 return;
             }
 
@@ -25,7 +27,7 @@ cmd(
                 {
                     video: { url: wamod.result.hd },
                     mimetype: "video/mp4",
-                    caption:'┏━━━━━━━━━━━━━┓\n\n🐹 * ${Config.botname} ꜰʙ ᴠɪᴅᴇᴏ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ*🐹\n\n▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁\n\n✷▎🎋⃟🥷 *ᴄʀᴇᴀᴛᴇʀ*: kushansewmina\n\n✷▎🎋⃟🥷 *ᴄʀᴇᴀᴛᴇʀ ɴᴜᴍʙᴇʀ*:  wa.me//+9477xxxxxx\n\n┗━━━━━━━━━━━━━┛\n\n*ʏᴏᴜʀ ᴠɪᴅᴇᴏ ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ*...🔥🔥'
+                    caption:'┏━━━━━━━━━━━━━┓\n\n🐹 * DARK SHAN MD  ꜰʙ ᴠɪᴅᴇᴏ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ*🐹\n\n▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁\n\n✷▎🎋⃟🥷 *ᴄʀᴇᴀᴛᴇʀ*: kushansewmina\n\n✷▎🎋⃟🥷 *ᴄʀᴇᴀᴛᴇʀ ɴᴜᴍʙᴇʀ*:  wa.me//+9477xxxxxx\n\n┗━━━━━━━━━━━━━┛\n\n*ʏᴏᴜʀ ᴠɪᴅᴇᴏ ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ*...🔥🔥'
                 },
                 { quoted: citel }
             );
