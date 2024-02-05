@@ -34,6 +34,7 @@ function __lobz(){const H=['R53FWbciV9','reply','rbot_18407','\x5c(\x20*\x5c)','
 cmd({
             pattern: "tts",
             desc: "text to speech.",
+            reac: "🎤",
             category: "downloader",
             filename: __filename,
             use: '<Hii,this is Secktor>',
@@ -62,6 +63,7 @@ cmd({
      cmd({
         pattern: "yts",
         desc: "Gives descriptive info of query from youtube..",
+        reac: "⌛️",
         category: "downloader",
         filename: __filename,
         use: '<yt search text>',
@@ -95,6 +97,7 @@ cmd({
 cmd({
             pattern: "video",
             desc: "Downloads video from yt.",
+            reac: "🎬",
             category: "downloader",
             filename: __filename,
             use: '<faded-Alan Walker>',
@@ -157,6 +160,7 @@ cmd({
 cmd({
             pattern: "play",
             desc: "Sends info about the query(of youtube video/audio).",
+            reac: "🪁",
             category: "downloader",
             filename: __filename,
             use: '<faded-Alan walker.>',
@@ -180,7 +184,7 @@ cmd({
                     displayText: "1.2",
 
                     },
-                    type: 1,
+                    type: 2,
                 },
             ];
             let buttonMessage = {
@@ -218,6 +222,7 @@ cmd({
 cmd({
             pattern: "ringtone",
             desc: "Downloads ringtone.",
+            reac: "🎼",
             category: "downloader",
             filename: __filename,
             use: '<ringtone name>',
@@ -226,13 +231,14 @@ cmd({
             if (!text) return citel.reply(`Example: ${prefix}ringtone back in black`)
             let anu = await ringtone(text)
             let result = anu[Math.floor(Math.random() * anu.length)]
-            return Void.sendMessage(citel.chat, { audio: { url: result.audio }, fileName: result.title + '.mp3', mimetype: 'audio/mpeg' }, { quoted: citel })
+            return Void.s endMessage(citel.chat, { audio: { url: result.audio }, fileName: result.title + '.mp3', mimetype: 'audio/mpeg' }, { quoted: citel })
         }
     )
     //---------------------------------------------------------------------------
 cmd({
             pattern: "pint",
             desc: "Downloads image from pinterest.",
+            reac: "📑",
             category: "downloader",
             filename: __filename,
             use: '<text|image name>',
@@ -276,6 +282,7 @@ cmd({
 cmd({
             pattern: "mediafire",
             desc: "Downloads zip from Mediafire.",
+            reac: "📁",
             category: "downloader",
             filename: __filename,
             use: '<url of mediafire>',
@@ -309,6 +316,7 @@ cmd({
 cmd({
             pattern: "ytmp4",
             desc: "Downloads video from youtube.",
+            reac: "📽️",
             category: "downloader",
             filename: __filename,
             use: '<yt video url>',
@@ -377,6 +385,7 @@ cmd({
 cmd({
         pattern: "ytmp3",
         desc: "Downloads audio by yt link.",
+        reac: "🎵",
         category: "downloader",
         use: '<yt video url>',
     },
@@ -530,6 +539,7 @@ cmd({
             pattern: "audio",
             alias :['song'],
             desc: "Downloads audio from youtube.",
+            reac; "🎶",
             category: "downloader",
             filename: __filename,
             use: '<text>',
