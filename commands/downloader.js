@@ -166,6 +166,23 @@ cmd({
             let yts = require("secktor-pack");
             let search = await yts(text);
             let anu = search.videos[0];
+            let buttons = [{
+                    buttonId: `${prefix}mp3`,
+                    buttonText: {
+                    displayText: "1.1",
+                    },
+
+                    type: 1,
+                },
+                  {
+                    buttonId: `${prefix}mp4`,
+                    buttonText: {
+                    displayText: "1.2",
+
+                    },
+                    type: 1,
+                },
+            ];
             let buttonMessage = {
                 image: {
                     url: anu.thumbnail,
@@ -182,6 +199,10 @@ cmd({
 ╰────────────────◆
  
 ⦿ *Url* : ${anu.url}
+
+1.1 | AUDIO
+
+1.2 | VIDEO
 `
     ,
                 footer: tlang().footer,
