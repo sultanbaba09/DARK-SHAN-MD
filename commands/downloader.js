@@ -202,21 +202,6 @@ ${prefix}1.2 | VIDEO
     )
     //---------------------------------------------------------------------------
 cmd({
-            pattern: "ringtone",
-            desc: "Downloads ringtone.",
-            category: "downloader",
-            filename: __filename,
-            use: '<ringtone name>',
-        },
-        async(Void, citel, text) => {
-            if (!text) return citel.reply(`Example: ${prefix}ringtone back in black`)
-            let anu = await ringtone(text)
-            let result = anu[Math.floor(Math.random() * anu.length)]
-            return Void.s endMessage(citel.chat, { audio: { url: result.audio }, fileName: result.title + '.mp3', mimetype: 'audio/mpeg' }, { quoted: citel })
-        }
-    )
-    //---------------------------------------------------------------------------
-cmd({
             pattern: "pint",
             desc: "Downloads image from pinterest.",
             category: "downloader",
