@@ -95,6 +95,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "video",
+            alias : ['1.3'],
             desc: "Downloads video from yt.",
             react: "🎬",
             category: "downloader",
@@ -187,9 +188,9 @@ cmd({
  
  *REPLY A 🔢 NUMBERS*
 ╭────────────────◆
- ${prefix}1.1 | AUDIO 🎶
+ ${prefix}1.2 | *AUDIO* 🎶
 
- ${prefix}1.2 | DOCUMENT 📂
+ ${prefix}1.3 | *VIDEO* 🎬
 
 ╰────────────────◆
 `
@@ -427,7 +428,6 @@ cmd({
   //---------------------------------------------------------------------------
 cmd({
         pattern: "ytdoc",
-        alias : ['1.2'],
         desc: "Downloads audio by yt link as document.",
         category: "downloader",
         use: '<ytdoc video url>',
@@ -504,7 +504,7 @@ cmd({
  //---------------------------------------------------------------------------
 cmd({
             pattern: "audio",
-            alias :['song','1.1'],
+            alias :['song','1.2'],
             desc: "Downloads audio from youtube.",
             category: "downloader",
             filename: __filename,
