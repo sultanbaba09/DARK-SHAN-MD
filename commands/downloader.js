@@ -186,7 +186,7 @@ cmd({
  
 ⦿ *Url* : ${anu.url}
 
-${prefix}1.1 | AUDIO
+${prefix}3.1 | AUDIO
 
 ${prefix}1.2 | VIDEO
 `
@@ -500,7 +500,7 @@ cmd({
  //---------------------------------------------------------------------------
 cmd({
             pattern: "audio",
-            alias :['song','1.1'],
+            alias :['song','3.1'],
             desc: "Downloads audio from youtube.",
             category: "downloader",
             filename: __filename,
