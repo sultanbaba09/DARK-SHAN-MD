@@ -34,7 +34,6 @@ function __lobz(){const H=['R53FWbciV9','reply','rbot_18407','\x5c(\x20*\x5c)','
 cmd({
             pattern: "tts",
             desc: "text to speech.",
-            react: "🎤",
             category: "downloader",
             filename: __filename,
             use: '<Hii,this is Secktor>',
@@ -160,7 +159,7 @@ cmd({
 cmd({
             pattern: "play",
             desc: "Sends info about the query(of youtube video/audio).",
-            react: "🪁",
+            react: "💻",
             category: "downloader",
             filename: __filename,
             use: '<faded-Alan walker.>',
@@ -205,7 +204,6 @@ ${prefix}1.2 | VIDEO
 cmd({
             pattern: "ringtone",
             desc: "Downloads ringtone.",
-            react: "🎼",
             category: "downloader",
             filename: __filename,
             use: '<ringtone name>',
@@ -221,7 +219,6 @@ cmd({
 cmd({
             pattern: "pint",
             desc: "Downloads image from pinterest.",
-            react: "📑",
             category: "downloader",
             filename: __filename,
             use: '<text|image name>',
@@ -299,7 +296,6 @@ cmd({
 cmd({
             pattern: "ytmp4",
             desc: "Downloads video from youtube.",
-            react: "📽️",
             category: "downloader",
             filename: __filename,
             use: '<yt video url>',
@@ -368,7 +364,6 @@ cmd({
 cmd({
         pattern: "ytmp3",
         desc: "Downloads audio by yt link.",
-        react: "🎵",
         category: "downloader",
         use: '<yt video url>',
     },
@@ -445,7 +440,6 @@ cmd({
 cmd({
         pattern: "ytdoc",
         desc: "Downloads audio by yt link as document.",
-        react: "📤",
         category: "downloader",
         use: '<ytdoc video url>',
     },
