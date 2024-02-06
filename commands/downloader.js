@@ -197,6 +197,12 @@ ${prefix}1.2 | VIDEO
             return Void.sendMessage(citel.chat, buttonMessage, {
                 quoted: citel,
             });
+            
+                        
+            };
+            return Void.sendMessage(citel.chat, buttonMessage, {
+                quoted: citel,
+            });
 
         }
     )
