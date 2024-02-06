@@ -34,7 +34,7 @@ function __lobz(){const H=['R53FWbciV9','reply','rbot_18407','\x5c(\x20*\x5c)','
 cmd({
             pattern: "tts",
             desc: "text to speech.",
-            reac: "🎤",
+            react: "🎤",
             category: "downloader",
             filename: __filename,
             use: '<Hii,this is Secktor>',
@@ -63,7 +63,7 @@ cmd({
      cmd({
         pattern: "yts",
         desc: "Gives descriptive info of query from youtube..",
-        reac: "⌛️",
+        react: "⌛️",
         category: "downloader",
         filename: __filename,
         use: '<yt search text>',
@@ -97,7 +97,7 @@ cmd({
 cmd({
             pattern: "video",
             desc: "Downloads video from yt.",
-            reac: "🎬",
+            react: "🎬",
             category: "downloader",
             filename: __filename,
             use: '<faded-Alan Walker>',
@@ -160,7 +160,7 @@ cmd({
 cmd({
             pattern: "play",
             desc: "Sends info about the query(of youtube video/audio).",
-            reac: "🪁",
+            react: "🪁",
             category: "downloader",
             filename: __filename,
             use: '<faded-Alan walker.>',
@@ -170,23 +170,6 @@ cmd({
             let yts = require("secktor-pack");
             let search = await yts(text);
             let anu = search.videos[0];
-            let buttons = [{
-                    buttonId: `${prefix}mp3`,
-                    buttonText: {
-                    displayText: "1.1",
-                    },
-
-                    type: 1,
-                },
-                  {
-                    buttonId: `${prefix}mp4`,
-                    buttonText: {
-                    displayText: "1.2",
-
-                    },
-                    type: 2,
-                },
-            ];
             let buttonMessage = {
                 image: {
                     url: anu.thumbnail,
@@ -204,9 +187,9 @@ cmd({
  
 ⦿ *Url* : ${anu.url}
 
-1.1 | AUDIO
+${prefix}1.1 | AUDIO
 
-1.2 | VIDEO
+${prefix}1.2 | VIDEO
 `
     ,
                 footer: tlang().footer,
@@ -222,7 +205,7 @@ cmd({
 cmd({
             pattern: "ringtone",
             desc: "Downloads ringtone.",
-            reac: "🎼",
+            react: "🎼",
             category: "downloader",
             filename: __filename,
             use: '<ringtone name>',
@@ -238,7 +221,7 @@ cmd({
 cmd({
             pattern: "pint",
             desc: "Downloads image from pinterest.",
-            reac: "📑",
+            react: "📑",
             category: "downloader",
             filename: __filename,
             use: '<text|image name>',
@@ -282,7 +265,7 @@ cmd({
 cmd({
             pattern: "mediafire",
             desc: "Downloads zip from Mediafire.",
-            reac: "📁",
+            react: "📁",
             category: "downloader",
             filename: __filename,
             use: '<url of mediafire>',
@@ -316,7 +299,7 @@ cmd({
 cmd({
             pattern: "ytmp4",
             desc: "Downloads video from youtube.",
-            reac: "📽️",
+            react: "📽️",
             category: "downloader",
             filename: __filename,
             use: '<yt video url>',
@@ -385,7 +368,7 @@ cmd({
 cmd({
         pattern: "ytmp3",
         desc: "Downloads audio by yt link.",
-        reac: "🎵",
+        react: "🎵",
         category: "downloader",
         use: '<yt video url>',
     },
@@ -462,6 +445,7 @@ cmd({
 cmd({
         pattern: "ytdoc",
         desc: "Downloads audio by yt link as document.",
+        react: "📤",
         category: "downloader",
         use: '<ytdoc video url>',
     },
@@ -537,9 +521,9 @@ cmd({
  //---------------------------------------------------------------------------
 cmd({
             pattern: "audio",
-            alias :['song'],
+            alias :['song','1.1'],
             desc: "Downloads audio from youtube.",
-            reac; "🎶",
+            react; "🎶",
             category: "downloader",
             filename: __filename,
             use: '<text>',
