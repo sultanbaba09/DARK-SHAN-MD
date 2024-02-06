@@ -174,31 +174,28 @@ cmd({
                     url: anu.thumbnail,
                 },
                 caption: `
+ ${anu.title}
 ╭───────────────◆
-│⿻ ${tlang().title} 
-│  *Youtube Player* ✨
-│⿻ *Title:* ${anu.title}
+│⿻ *DARK SHAN MD AUDIO INFO* 🌟
+│⿻ *Youtube Player* ✨
 │⿻ *Duration:* ${anu.timestamp}
 │⿻ *Viewers:* ${anu.views}
 │⿻ *Uploaded:* ${anu.ago}
 │⿻ *Author:* ${anu.author.name}
+│⦿ *Url* : ${anu.url}
 ╰────────────────◆
  
-⦿ *Url* : ${anu.url}
+ *REPLY A 🔢 NUMBERS*
+╭────────────────◆
+ ${prefix}1.1 | AUDIO 🎶
 
-${prefix}3.1 | AUDIO
+ ${prefix}1.2 | DOCUMENT 📂
 
-${prefix}1.2 | VIDEO
+╰────────────────◆
 `
     ,
                 footer: tlang().footer,
                 headerType: 4,
-            };
-            return Void.sendMessage(citel.chat, buttonMessage, {
-                quoted: citel,
-            });
-            
-                        
             };
             return Void.sendMessage(citel.chat, buttonMessage, {
                 quoted: citel,
@@ -430,6 +427,7 @@ cmd({
   //---------------------------------------------------------------------------
 cmd({
         pattern: "ytdoc",
+        alias : ['1.2'],
         desc: "Downloads audio by yt link as document.",
         category: "downloader",
         use: '<ytdoc video url>',
@@ -506,7 +504,7 @@ cmd({
  //---------------------------------------------------------------------------
 cmd({
             pattern: "audio",
-            alias :['song','3.1'],
+            alias :['song','1.1'],
             desc: "Downloads audio from youtube.",
             category: "downloader",
             filename: __filename,
