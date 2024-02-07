@@ -511,6 +511,25 @@ cmd({
             use: '<text>',
         },
         async(Void, citel, text) => {
+                   let buttons = [{
+
+                    buttonId: `${prefix}video`,
+                    buttonText: {
+                    displayText: "video",
+                    },
+
+                    type: 1,
+                },
+                  {
+                    buttonId: `${prefix}audio`,
+                    buttonText: {
+                    displayText: "song",
+
+                    },
+                    type: 1,
+                },
+            ];
+            let buttonMessage = {
             let yts = require("secktor-pack");
             let search = await yts(text);
             let anu = search.videos[0];
