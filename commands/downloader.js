@@ -525,7 +525,7 @@ cmd({
                         },
 
                         type: 1,
-                    },    
+                 };
             let infoYt = await ytdl.getInfo(anu.url);
             if (infoYt.videoDetails.lengthSeconds >= videotime) return citel.reply(`❌ Video file too big!`);
             let titleYt = infoYt.videoDetails.title;
