@@ -504,32 +504,13 @@ cmd({
  //---------------------------------------------------------------------------
 cmd({
             pattern: "audio",
-            alias :['song','1.2'],
+            alias :['song'],
             desc: "Downloads audio from youtube.",
             category: "downloader",
             filename: __filename,
             use: '<text>',
         },
         async(Void, citel, text) => {
-                   let buttons = [{
-
-                    buttonId: `${prefix}video`,
-                    buttonText: {
-                    displayText: "video",
-                    },
-
-                    type: 1,
-                },
-                  {
-                    buttonId: `${prefix}audio`,
-                    buttonText: {
-                    displayText: "song",
-
-                    },
-                    type: 1,
-                },
-            ];
-            let buttonMessage = {
             let yts = require("secktor-pack");
             let search = await yts(text);
             let anu = search.videos[0];
@@ -537,9 +518,9 @@ cmd({
                 return `${Math.floor(Math.random() * 10000)}${ext}`;
             };
             let infoYt = await ytdl.getInfo(anu.url);
-            if (infoYt.videoDetails.lengthSeconds >= videotime) return citel.reply(`😔 Video file too big!`);
+            if (infoYt.videoDetails.lengthSeconds >= videotime) return citel.reply(`❌ Video file too big!`);
             let titleYt = infoYt.videoDetails.title;
-            let randomName = getRandom(".mp4");
+            let randomName = getRandom(".mp3");
             citel.reply('*Downloadig:* '+titleYt)
             const stream = ytdl(anu.url, {
                     filter: (info) => info.audioBitrate == 160 || info.audioBitrate == 128,
@@ -554,10 +535,19 @@ cmd({
             let fileSizeInBytes = stats.size;
             let fileSizeInMegabytes = fileSizeInBytes / (1024 * 1024);
             if (fileSizeInMegabytes <= dlsize) {
+                        let buttons = [{
+
+                    buttonId: `${prefix}mp3`,
+                    buttonText: {
+                    displayText: "song",
+                    },
+
+                    type: 1,
+                },
                 let buttonMessage = {
                     audio: fs.readFileSync(`./${randomName}`),
                     mimetype: 'audio/mpeg',
-                    fileName: titleYt + ".mp4",
+                    fileName: titleYt + ".mp3",
                     headerType: 4,
                     contextInfo: {
                         externalAdReply: {
@@ -583,3 +573,4 @@ cmd({
 
         }
     )
+    //---------------------------------------------------------------------------
