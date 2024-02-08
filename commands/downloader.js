@@ -561,9 +561,9 @@ cmd({
             fs.unlinkSync(`./${randomName}`);
                  let buttons = {
 
-                    buttonId: `${prefix}system`,
+                    buttonId: `${prefix}mp3`,
                     buttonText: {
-                    displayText: "System",
+                    displayText: "song",
                     },
             
 
