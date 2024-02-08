@@ -564,7 +564,8 @@ cmd({
                     buttonId: `${prefix}mp3`,
                     buttonText: {
                     displayText: "song",
-                    },
+            }
+                   
             
 
 
