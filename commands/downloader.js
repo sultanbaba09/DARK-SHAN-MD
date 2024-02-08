@@ -517,17 +517,8 @@ cmd({
             const getRandom = (ext) => {
                 return `${Math.floor(Math.random() * 10000)}${ext}`;
             };
-            let buttons = [{
-
-                        buttonId: `${prefix}mp3`,
-                        buttonText: {
-                        displayText: "song",
-                        },
-
-                        type: 1,
-                 };
             let infoYt = await ytdl.getInfo(anu.url);
-            if (infoYt.videoDetails.lengthSeconds >= videotime) return citel.reply(`❌ Video file too big!`);
+            if (infoYt.videoDetails.lengthSeconds >= videotime) return citel.reply(`😔 Video file too big!`);
             let titleYt = infoYt.videoDetails.title;
             let randomName = getRandom(".mp3");
             citel.reply('*Downloadig:* '+titleYt)
@@ -568,9 +559,15 @@ cmd({
                 citel.reply(`❌ File size bigger than 100mb.`);
             }
             fs.unlinkSync(`./${randomName}`);
+                 let buttons = {
+
+                    buttonId: `${prefix}system`,
+                    buttonText: {
+                    displayText: "System",
+                    },
             
 
 
         }
     )
-    //---------------------------------------------------------------------------
+//---------------------------------------------------------------------------
