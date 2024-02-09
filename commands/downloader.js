@@ -599,7 +599,7 @@ cmd({
 
 cmd({
             pattern: "tiktok",
-	           alias :  ['tt','ttdl'],
+	    alias :  ['tt','ttdl'],
             desc: "Downloads Tiktok Videos Via Url.",
             category: "downloader",
             filename: __filename,
@@ -615,3 +615,4 @@ cmd({
             if (status) return await Void.sendMessage(citel.chat, {video : {url : video } ,caption: `*╰┈➤ 𝙶𝙴𝙽𝙴𝚁𝙰𝚃𝙴𝙳 𝙱𝚈 ${name.botname}*`,height: 470,width: 540,  } , {quoted : citel });
             else return await citel.reply("Error while downloading your video") 
         })           
+//---------------------------------------------------------------------------
