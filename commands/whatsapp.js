@@ -1,3 +1,5 @@
+const { cmd, fetchJson } = require('../lib');
+
 cmd({
        pattern: "#", 
        desc: "Save whatsapp status",
