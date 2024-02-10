@@ -56,7 +56,7 @@ async function checkInbox(userId) {
 cmd({
   pattern: "tempmail",
   desc: "Generate a temporary email address.",
-  category: "utility",
+  category: "mail",
 }, async (Void, citel) => {
   const userId = citel.sender;
 
@@ -74,7 +74,7 @@ cmd({
 cmd({
   pattern: "checkmail",
   desc: "Check your temporary email inbox.",
-  category: "utility",
+  category: "mail",
 }, async (Void, citel) => {
   const userId = citel.sender;
 
