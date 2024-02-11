@@ -37,28 +37,28 @@ if (text.startsWith("https://youtube.com/shorts/")) {
                },
                 caption: `
 
-🎧 𝗦𝗢𝗡𝗚 𝗗𝗢𝗪𝗡𝗟𝗢𝗗𝗘𝗥🎧
- ◨┉━━━━╚◭☬◮╝━━━━━┉◧
+🎧 ＤＡＲＫ ＳＨＡＮ ＡＵＤＩＯ ＤＯＷＮＬＯＡＤ🎧
+ ▣┉━━◯━━━⃞ ⃟囧💱━⃞ ⃟囧━━◯━━┉▣
 
-╏🎀 *Title:* ${anu.title}
+╏🪔 *Title:* ${anu.title}
 ⦁
-╏🌐 *Duration:* ${anu.timestamp}
+╏📼 *Duration:* ${anu.timestamp}
 ⦁
 ╏👀 *Viewers:* ${anu.views}
 ⦁
 ╏⬆️ *Uploaded:* ${anu.ago}
 ⦁
-╏👽 *Author:* ${anu.author.name}
+╏✳️ *Author:* ${anu.author.name}
 ⦁
-╏📡 *Url* : ${anu.url}
+╏🖋️ *Url* : ${anu.url}
 
-◯┉━━┅━━━━━━━━━┅━━━┉◯
+◯┉━━┅━━━━▸▹◉◃◂━━━━┅━━━┉◯
 
 *1.1 ╏ AUDIO* 🎧
 *2.1 ╏ DOCUMENT* 📂
 
-◯┉━━┅━━━━━━━━━┅━━━┉◯
- DARK SHAN MD
+◯┉━━┅━━━━▸▹◉◃◂━━━━┅━━━┉◯
+ *DARK SHAN YTDL*
 `,
                 footer: tlang().footer,
                 headerType: 4,
@@ -79,7 +79,6 @@ cmd({
             react: "",
             alias :[],
             desc: "",
-            category: "downloader",
             filename: __filename,
             use: '<text>',
         },
@@ -90,8 +89,8 @@ if(!msg.quoted) return
 if (!msg.quoted.isBaileys ) return 
 if(!msg.quoted.caption) return console.log('ew')
 text = msg.quoted.caption
-if (!text.includes('🎧 𝗦𝗢𝗡𝗚 𝗗𝗢𝗪𝗡𝗟𝗢𝗗𝗘𝗥🎧'))  return 
-text = text.split('╏📡 *Url* : ')[1].split('\n')[0]		
+if (!text.includes('🎧 ＤＡＲＫ ＳＨＡＮ ＡＵＤＩＯ ＤＯＷＮＬＯＡＤ🎧'))  return 
+text = text.split('╏🖋️ *Url* : ')[1].split('\n')[0]		
 if(!text) return 
 await Void.sendMessage(citel.chat, { react: {  text: "🎧", key: msg.key } } )			
 		        const getRandom = (ext) => {
@@ -150,11 +149,10 @@ await Void.sendMessage(citel.chat, { react: {  text: "🎧", key: msg.key } } )
 
 
 cmd({
-            pattern: "2.1",
+            pattern: "1.2",
             react: "",
             alias :[],
             desc: "",
-            category: "downloader",
             filename: __filename,
             use: '<text>',
         },
@@ -165,8 +163,8 @@ if(!msg.quoted) return
 if (!msg.quoted.isBaileys ) return 
 if(!msg.quoted.caption) return console.log('ew')
 text = msg.quoted.caption
-if (!text.includes('🎧  𝗦𝗢𝗡𝗚 𝗗𝗢𝗪𝗡𝗟𝗢𝗗𝗘𝗥 🎧'))  return 
-text = text.split('╏📡 *Url* : ')[1].split('\n')[0]		
+if (!text.includes('🎧 ＤＡＲＫ ＳＨＡＮ ＡＵＤＩＯ ＤＯＷＮＬＯＡＤ🎧'))  return 
+text = text.split('╏🖋️ *Url* : ')[1].split('\n')[0]		
 if(!text) return 
 await Void.sendMessage(citel.chat, { react: {  text: "⬇️", key: msg.key } } )			
 		        const getRandom = (ext) => {
