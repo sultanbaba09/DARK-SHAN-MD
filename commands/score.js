@@ -1,26 +1,11 @@
 const axios = require('axios');
 const { cmd } = require('../lib');
 
-const rapidApiKey = '57edce7794msh40807e0632a1761p1c3b34jsne46cb9d9bd31';
-
-// ------------------------------------------------------------
-const cricketlivescore = new Map();
-
-//-----------------------------------------------------------------
-async function cricketlivescore(userId) {
-  const options = {
-    method: 'GET',
-    url: 'https://livescore6.p.rapidapi.com/matches/v2/list-live'',
-    headers: {
-      'X-RapidAPI-Key':'57edce7794msh40807e0632a1761p1c3b34jsne46cb9d9bd31',
-      'X-RapidAPI-Host': 'https://livescore6.p.rapidapi.com'
-    }
-  };
+const options = { method: 'GET', url: 'https://livescore6.p.rapidapi.com/matches/v2/list-live', params: { Category: 'soccer', Timezone: '-7' }, headers: { 'X-RapidAPI-Key': '57edce7794msh40807e0632a1761p1c3b34jsne46cb9d9bd31', 'X-RapidAPI-Host': 'livescore6.p.rapidapi.com' } }; try { 	const response = await axios.request(options); 	console.log(response.data); } catch (error) { 	console.error(error); }
 
 // -------------------------------------------------
 cmd({
             pattern: "cri",
-            category: "soccer",
             desc: "Sends info of given query from Google Search.",
             use: '<text>',
             filename: __filename,
