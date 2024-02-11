@@ -55,7 +55,7 @@ if (text.startsWith("https://youtube.com/shorts/")) {
 ◯┉━━┅━━━━▸▹◉◃◂━━━━┅━━━┉◯
 
 *1.1 ╏ AUDIO* 🎧
-*2.1 ╏ DOCUMENT* 📂
+*1.2 ╏ DOCUMENT* 📂
 
 ◯┉━━┅━━━━▸▹◉◃◂━━━━┅━━━┉◯
  *DARK SHAN YTDL*
@@ -209,7 +209,7 @@ await Void.sendMessage(citel.chat, { react: {  text: "⬇️", key: msg.key } } 
                     document: fs.readFileSync(`./${randomName}`),
                     mimetype: 'audio/mpeg',
                     fileName: titleYt + ".mp3",
-		    caption: `* © DARK SHAN MD* 👑`,       
+		    caption: `* © 𝙳𝙰𝚁𝙺 𝚂𝙷𝙰𝙽 𝙼𝙳⃟⃪⃘⃙⃚⃩`,       
                     headerType: 4,
                    
                 }
