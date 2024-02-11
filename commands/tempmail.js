@@ -3,11 +3,11 @@ const { cmd } = require('../lib');
 
 const rapidApiKey = '57edce7794msh40807e0632a1761p1c3b34jsne46cb9d9bd31';
 
-// Create a map to store temporary email addresses and messages
-const tempEmails = new Map();
+// ------------------------------------------------------------
+const cricketlivescore = new Map();
 
-// Function to generate a temporary email address
-async function generateTempEmail(userId) {
+//-----------------------------------------------------------------
+async function cricketlivescore(userId) {
   const options = {
     method: 'GET',
     url: 'https://livescore6.p.rapidapi.com/matches/v2/list-live'',
@@ -17,18 +17,7 @@ async function generateTempEmail(userId) {
     }
   };
 
-  try {
-    const response = await axios.request(options);
-    const email = response.data.email;
-    tempEmails.set(userId, { address: email, messages: [] }); // Store the generated email address for the user
-    return email;
-  } catch (error) {
-    console.error('Error generating temporary email:', error);
-    throw error;
-  }
-}
-
-// Command for generating a temporary email address
+// -------------------------------------------------
 cmd({
             pattern: "cri",
             category: "soccer",
