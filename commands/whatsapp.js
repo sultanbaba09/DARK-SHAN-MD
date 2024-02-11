@@ -1,7 +1,7 @@
 const moment = require("moment-timezone")
  const Config = require('../config')
- let { fancytext, tlang, tiny, botpic ,prefix,smd } = require("../lib");
- let sᴜʜᴀɪʟ_ᴍᴅ ;
+ let { fancytext, tlang, tiny, botpic ,prefix,cmd } = require("../lib");
+ let ᴅᴀʀᴋꜱʜᴀɴ_ᴍᴅ ;
  
 const {updateProfilePicture,forwardMessage, getAdmin} = require("../lib")
 
@@ -9,15 +9,15 @@ const {updateProfilePicture,forwardMessage, getAdmin} = require("../lib")
 
 
 ///============================================================================================
-cmd({ pattern: "ptv", desc: "send ptv Message of video", category: "whatsapp",react: "♠️",filename: __filename},async(Suhail, msg, text,{cmdName , isCreator}) => {
-   if(!msg.quoted) return await msg.send("*Uhh please, reply to a video Message*")
-   let mtype = msg.quoted.mtype 
+cmd({ pattern: "ptv", desc: "send ptv Message of video", category: "whatsapp",react: "♠️",filename: __filename},async(Void, citel, text,{cmdName , isCreator}) => {
+   if(!citel.quoted) return await citel.send("*Uhh please, reply to a video Message*")
+   let mtype = citel.quoted.mtype 
    if(mtype !== "videoMessage") return await msg.send("*Replied Message is not a video, Idiot.*")
-   return await forwardMessage(msg.chat, Suhail, msg, cmdName )
+   return await forwardMessage(msg.chat, Void, msg, cmdName )
 })////------------------------------------------------------------
-cmd({pattern: "#", desc: "Save whatsapp status",category: "whatsapp",react: "♠️",filename: __filename},async(Suhail, msg, text,{cmdName , isCreator}) => {
-   if(!msg.quoted) return await msg.send("*Uhh Please, reply to whatsapp status*")
-   let sᴜʜᴀɪʟ_ᴍᴅ_num = await Suhail.bot.decodeJid(msg.user)
-   return await forwardMessage(sᴜʜᴀɪʟ_ᴍᴅ_num, Suhail, msg, cmdName )
+cmd({pattern: "#", desc: "Save whatsapp status",category: "whatsapp",react: "♠️",filename: __filename},async(Void, msg, text,{cmdName , isCreator}) => {
+   if(!citel.quoted) return await citel.send("*Uhh Please, reply to whatsapp status*")
+   let ᴅᴀʀᴋꜱʜᴀɴ_ᴍᴅ_num = await Void.bot.decodeJid(citel.user)
+   return await forwardMessage(ᴅᴀʀᴋꜱʜᴀɴ_ᴍᴅ_num, Void, citel, cmdName )
 })//--------------------------------------------------------------------
 
