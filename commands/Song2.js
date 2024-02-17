@@ -9,7 +9,7 @@ var dlsize = 1000 // 1000mb
 
 
 cmd({
-        pattern: "yts",
+        pattern: "play2",
         desc: "Gives descriptive info of query from youtube..",
         react: "⌛️",
         category: "dark shan",
@@ -24,11 +24,20 @@ cmd({
         let no = 1;
         for (let i of search.all) {
             textt += `${no++}\n ✏️Title : ${i.title}\n
-    }\n🙈Views : ${i.views}\n⌛Duration : ${
+    \n🙈Views : ${i.views}\n⌛Duration : ${
       i.timestamp
     }\n🎵Url : ${
       i.url
     }\n\n\n\n`;
+		caption: `let buttons ={
+
+                    buttonId: `${prefix}system`,
+                    buttonText: {
+                    displayText: "System",
+                    },
+
+                    type: 1,
+                },`
 		
         }
         return Void.sendMessage(citel.chat, {
