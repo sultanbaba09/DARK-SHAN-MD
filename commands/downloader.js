@@ -63,7 +63,7 @@ cmd({
         pattern: "yts",
         desc: "Gives descriptive info of query from youtube..",
         react: "⌛️",
-        category: "downloader",
+        category: "dark shan",
         filename: __filename,
         use: '<yt search text>',
     },
@@ -81,6 +81,15 @@ cmd({
     }\n🌟Upload At : ${i.ago}\n👑Author : ${i.author.name}\n🎵Url : ${
       i.url
     }\n\n──────────────\n\n`;
+		let buttons = {
+
+                    buttonId: `${prefix}${no++}🎵Url : ${
+      i.url`,
+                    buttonText: {
+                    displayText: "3",
+                    },
+
+                    type: 1,
         }
         return Void.sendMessage(citel.chat, {
             image: {
