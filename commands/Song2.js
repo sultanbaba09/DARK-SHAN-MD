@@ -17,8 +17,8 @@ cmd(
     use: '<Hii,this is dark shan>',    
 
   },
-  async (ck,citel, match) => {
-    match = match || citel.reply_message.text
+  async (Void,citel, match) => {
+    match = match || citel.reply_message.reply
     if (!match) return await citel.reply('*Example : song indila love story/ yt link*')
     const vid = ytIdRegex.exec(match)
     if (vid) {
