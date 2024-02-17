@@ -8,45 +8,39 @@ var dlsize = 1000 // 1000mb
 
 
 
-cmd({
-        pattern: "play2",
-        desc: "Gives descriptive info of query from youtube..",
-        react: "⌛️",
-        category: "dark shan",
-        filename: __filename,
-        use: '<yt search text>',
-    },
-    async(Void, citel, text) => {
-        let yts = require("secktor-pack");
-        if (!text) return citel.reply(`Example : ${prefix}yts ${tlang().title} WhatsApp Bot`);
-        let search = await yts(text);
-        let textt = "*YouTube Search*\n\n Result From " + text + "\n\n───────────────────\n";
-        let no = 1;
-        for (let i of search.all) {
-            textt += `${no++}\n ✏️Title : ${i.title}\n
-    \n🙈Views : ${i.views}\n⌛Duration : ${
-      i.timestamp
-    }\n🎵Url : ${
-      i.url
-    }\n\n\n\n`;
-		caption: `let buttons ={
+cmd(
+  {
+    pattern: 'song',
+    desc: 'download yt song',
+    category: "downloader",
+    filename: __filename,
+    use: '<Hii,this is dark shan>',    
 
-                    buttonId: `${prefix}system`,
-                    buttonText: {
-                    displayText: "System",
-                    },
-
-                    type: 1,
-                },`
-		
-        }
-        return Void.sendMessage(citel.chat, {
-            image: {
-                url: search.all[0].thumbnail,
-            },
-            caption: textt,
-        }, {
-            quoted: citel,
-        });
+  },
+  async (ck,citel, match) => {
+    match = match || citel.reply_message.text
+    if (!match) return await citel.reply('*Example : song indila love story/ yt link*')
+    const vid = ytIdRegex.exec(match)
+    if (vid) {
+      const _song = await song(vid[1])
+      const [result] = await yts(vid[1], true)
+      const { author, title, thumbnail } = result
+      const meta = title ? await addAudioMetaData(_song, title, author, '', thumbnail.url) : _song
+      return await citel.reply(
+        meta,
+        { quoted: citel.data, mimetype: 'audio/mpeg', fileName: `${title}.mp3` },
+        'audio'
+      )
     }
-)
+    const result = await yts(match, 0, 1)
+    if (!result.length) return await citel.reply(`_Not result for_ *${match}*`)
+    const msg = generateList(
+      result.map(({ title, id, duration, author, album }) => ({
+        _id: `🆔&id\n`,
+        text: `🎵${title}\n🕒${duration}\n👤${author}\n📀${album}\n\n`,
+        id: `song https://www.youtube.com/watch?v=${id}`,
+      })),
+      `Searched ${match} and Found ${result.length} results\nsend 🆔 to download song.\n`,
+      citel.jid,
+      citel.participant
+    )
