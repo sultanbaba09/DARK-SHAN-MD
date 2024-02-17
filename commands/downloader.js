@@ -63,7 +63,7 @@ cmd({
         pattern: "yts",
         desc: "Gives descriptive info of query from youtube..",
         react: "⌛️",
-        category: "dark shan",
+        category: "downloader",
         filename: __filename,
         use: '<yt search text>',
     },
