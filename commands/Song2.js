@@ -17,10 +17,10 @@ cmd(
     use: '<Hii,this is dark shan>',    
 
   },
-  async (Void,citel, match) => {
-    match = match || citel.reply_message.reply
-    if (!match) return await citel.reply('*Example : song indila love story/ yt link*')
-    const vid = ytIdRegex.exec(match)
+  async (Void,citel,text) => {
+    Void = Void || citel.reply_message.reply
+    if (!Void) return await citel.reply('*Example : song indila love story/ yt link*')
+    const vid = ytIdRegex.exec(Void)
     if (vid) {
       const _song = await song(vid[1])
       const [result] = await yts(vid[1], true)
@@ -32,8 +32,8 @@ cmd(
         'audio'
       )
     }
-    const result = await yts(match, 0, 1)
-    if (!result.length) return await citel.reply(`_Not result for_ *${match}*`)
+    const result = await yts(Void, 0, 1)
+    if (!result.length) return await citel.reply(`_Not result for_`)
     const msg = generateList(
       result.map(({ title, id, duration, author, album }) => ({
         _id: `🆔&id\n`,
