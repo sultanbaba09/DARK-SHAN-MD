@@ -19,7 +19,7 @@
 
 ### FORK REPO
 
-<a href='https://github.com/kushansewmina2580/DARK-SHAN-MD/fork' target="_blank"><img alt='Fork repo' src='https://img.shields.io/badge/FORK-black?style=for-the-badge&logo=github&logoColor=white'/></a>
+<a href='https://github.com/kushansewmina2580/DARK-SHAN-MD/fork' target="_blank"><img alt='Fork repo' src='https://img.shields.io/badge/FORK REPO-black?style=for-the-badge&logo=github&logoColor=white'/></a>
 
 
 ### SCAN QR 
