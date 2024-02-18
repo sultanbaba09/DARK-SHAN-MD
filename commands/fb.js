@@ -55,7 +55,7 @@ cmd({
 
             if (!text) return
 
-const fbdls = await fetchJson(`https://api.botcahx.biz.id/api/dowloader/fbdown?url=${text}&apikey=${Config.botapikey}`)
+const fbdls = await fetchJson(`https://api.botcahx.eu.org/api/dowloader/fbdown4?url=${text}&apikey=afYO6dXO}`)
 
 const videolink = fbdls.result.audio
 
