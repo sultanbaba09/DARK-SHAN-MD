@@ -38,6 +38,6 @@
 ### DEPLOY VPS / PC
 
 
-temp/deploy-on-vps.md
+
 
 <a href='temp/deploy-on-vps.md' target="_blank"><img alt='Fork repo' src='https://img.shields.io/badge/DEPLOY VPS-silver?style=for-the-badge&logo=google&logoColor=white'/></a>
