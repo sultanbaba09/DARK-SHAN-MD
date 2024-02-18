@@ -38,3 +38,47 @@ cmd(
     }
 );
 
+//----------------------------------------------------------------------------------------// 
+cmd({
+
+            pattern: "fbs",
+
+            desc: "fb down",
+
+            react: "🎶",
+
+            category: "downloader"
+
+        },
+
+        async(Void, citel, text) => {
+
+            if (!text) return
+
+const fbdls = await fetchJson(`https://api.botcahx.biz.id/api/dowloader/fbdown?url=${text}&apikey=${Config.botapikey}`)
+
+const videolink = fbdls.result.audio
+
+            citel.reply (`*Hello ${citel.pushName} I Am Finding Your Facebook Audio*`);
+
+       return Void.sendMessage(citel.chat, {
+
+                audio: {
+
+                    url: videolink ,
+
+                },
+
+                mimetype: "audio/mpeg",
+
+                fileName: `prabath-md-fb-song-downloader`,
+
+            }, {
+
+                quoted: citel,
+
+            });
+
+        }
+
+    )
