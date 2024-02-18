@@ -35,4 +35,9 @@
 
 <a href='https://replit.com/~' target="_blank"><img alt='Fork repo' src='https://img.shields.io/badge/DEPLOY REPLIT-orange?style=for-the-badge&logo=replit&logoColor=white'/></a>
 
+### DEPLOY VPS / PC
 
+
+temp/deploy-on-vps.md
+
+<a href='temp/deploy-on-vps.md' target="_blank"><img alt='Fork repo' src='https://img.shields.io/badge/DEPLOY VPS-orange?style=for-the-badge&logo=VPS&logoColor=white'/></a>
