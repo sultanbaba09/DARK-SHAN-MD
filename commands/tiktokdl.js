@@ -17,7 +17,7 @@ cmd(
 
             const wamod = await fetchJson(`https://api.neoxr.eu/api/tiktok?url=${url}&apikey=KjAtqH`);
 
-            if (!wamod.result || !wamod.result.hd) {
+            if (!wamod.result || !wamod.video) {
                 citel.reply("Failed to fetch video URL or HD link ❌.");
                 return;
             }
