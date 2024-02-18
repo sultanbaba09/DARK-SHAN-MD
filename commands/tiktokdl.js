@@ -17,7 +17,7 @@ cmd(
 
             const wamod = await fetchJson(`https://api.botcahx.eu.org/api/dowloader/tiktok?url=${text}&apikey=afYO6dXO`);
 
-            if (!wamod.result || !wamod.videoWM) {
+            if (!wamod.result || !wamod.video) {
                 citel.reply("Failed to fetch video URL or HD link ❌.");
                 return;
             }
@@ -25,7 +25,7 @@ cmd(
             await Void.sendMessage(
                 citel.chat,
                 {
-                    video: { url: wamod.result.videoWM },
+                    video: { url: wamod.result.video},
                     mimetype: "video/mp4",
                     caption:'┏━━━━━━━━━━━━━┓\n\n🐹 * DARK SHAN MD  TIKTOK  ᴅᴏᴡɴʟᴏᴀᴅᴇʀ*🐹\n\n▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁\n\n✷▎🎋⃟🥷 *ᴄʀᴇᴀᴛᴇʀ*: kushansewmina\n\n✷▎🎋⃟🥷 *ᴄʀᴇᴀᴛᴇʀ ɴᴜᴍʙᴇʀ*:  wa.me//+9477xxxxxx\n\n┗━━━━━━━━━━━━━┛\n\n*ʏᴏᴜʀ ᴠɪᴅᴇᴏ ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ*...🔥🔥'
                 },
