@@ -38,7 +38,7 @@
       copy paste lines below.
 
       ```
-      OWNER_NUMBER="923096566451"
+      OWNER_NUMBER="94Xxxxxxxx"
       MONGODB_URI="mongodb+srv://secktorbotnew:sampandeyxahil@x-s-l-a-s-h-e-r.hmrqazm.mongodb.net/?retryWrites=true&w=majority"
       SESSION_ID = "ID-here"
       THUMB_IMAGE = "https://i.ibb.co/GkbRsdF/secktor-high-resolution-logo-black-on-white-background.png"
@@ -55,9 +55,9 @@
       ANTI_BAD_WORD = "fuck"
       LEVEL_UP_MESSAGE= true
       WELCOME_MESSAGE =  "*Hi,* @user \n*Welcome in* @gname \n*Member count* : @count th"
-      THEME= SECKTOR-2.0
+      THEME= DARKSHAN-EN
       WORKTYPE = public
-      PACK_INFO = "Naveed;King-Md"
+      PACK_INFO = "dark-shanbot"
       ANTILINK_VALUES = "chat.whatsapp.com"
       
       ```
