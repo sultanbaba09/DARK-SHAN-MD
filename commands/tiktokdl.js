@@ -15,9 +15,9 @@ cmd(
                 return;
             }
 
-            const data = await fetchJson(`https://vihangayt.me/download/tiktok?url=${text}`);
+            const data = await fetchJson(`https://rest-api.akuari.my.id/downloader/tiktok?link=${text}`);
 
-            if (!data.result || !data.result.ft) {
+            if (!data.result || !data.result.nowm) {
                 citel.reply("Failed to fetch video URL or HD link ❌.");
                 return;
             }
@@ -25,7 +25,7 @@ cmd(
             await Void.sendMessage(
                 citel.chat,
                 {
-                    video: { url: data.result.ft},
+                    video: { url: data.result.nowm},
                     mimetype: "video/mp4",
                     caption:'┏━━━━━━━━━━━━━┓\n\n🐹 * DARK SHAN MD  TIKTOK  ᴅᴏᴡɴʟᴏᴀᴅᴇʀ*🐹\n\n▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁\n\n✷▎🎋⃟🥷 *ᴄʀᴇᴀᴛᴇʀ*: kushansewmina\n\n✷▎🎋⃟🥷 *ᴄʀᴇᴀᴛᴇʀ ɴᴜᴍʙᴇʀ*:  wa.me//+9477xxxxxx\n\n┗━━━━━━━━━━━━━┛\n\n*ʏᴏᴜʀ ᴠɪᴅᴇᴏ ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ*...🔥🔥'
                 },
