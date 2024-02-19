@@ -17,7 +17,7 @@ cmd(
 
             const data = await fetchJson(`https://rest-api.akuari.my.id/downloader/tiktok2?link=${text}`);
 
-            if (!data.result || !data.result.wmplay) {
+            if (!data.result || !data.result.play) {
                 citel.reply("Failed to fetch video URL or HD link ❌.");
                 return;
             }
@@ -25,7 +25,7 @@ cmd(
             await Void.sendMessage(
                 citel.chat,
                 {
-                    video: { url: data.result.wmplay},
+                    video: { url: data.result.play},
                     mimetype: "video/mp4",
                     caption:'┏━━━━━━━━━━━━━┓\n\n🐹 * DARK SHAN MD  TIKTOK  ᴅᴏᴡɴʟᴏᴀᴅᴇʀ*🐹\n\n▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁\n\n✷▎🎋⃟🥷 *ᴄʀᴇᴀᴛᴇʀ*: kushansewmina\n\n✷▎🎋⃟🥷 *ᴄʀᴇᴀᴛᴇʀ ɴᴜᴍʙᴇʀ*:  wa.me//+9477xxxxxx\n\n┗━━━━━━━━━━━━━┛\n\n*ʏᴏᴜʀ ᴠɪᴅᴇᴏ ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ*...🔥🔥'
                 },
