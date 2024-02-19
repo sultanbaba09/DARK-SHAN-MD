@@ -17,7 +17,7 @@ cmd(
 
             const data = await fetchJson(`https://api.botcahx.eu.org/api/dowloader/tiktok?url=${text}&apikey=afYO6dXO`);
 
-            if (!data.result || !data.video) {
+            if (!data.result || !data.result.video) {
                 citel.reply("Failed to fetch video URL or HD link ❌.");
                 return;
             }
