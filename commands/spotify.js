@@ -15,9 +15,8 @@ cmd(
                 return;
             } 
            
-            const data = await fetchjson(`https://vihangayt.me/search/spotify?q=${text}`);
-
-            if (!data.result || !data.result.preview) {
+            const data = await fetchjson(`https://erdwpe-api.herokuapp.com/api/dowloader/soundcloud?url=${text}`);
+            if (!data.result || !data.result.download) {
                 citel.reply("faild to fetch song 🌐");
                 return;
             } 
@@ -25,7 +24,7 @@ cmd(
             await void.sendMessage(
                 clite.chat,
                 {
-                    song: {url: data.result.preview},
+                    song: {url: data.result.download},
                     mimetype: "audio/mpeg",
                     caption: ' DARK SHAN MD AUDIO DOWNLOAD'
                 },
