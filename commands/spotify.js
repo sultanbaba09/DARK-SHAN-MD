@@ -15,7 +15,7 @@ cmd(
                 return;
             } 
            
-            const data = await fetchjson(`https://erdwpe-api.herokuapp.com/api/dowloader/soundcloud?url=${text}`);
+            const data = await fetchjson(`https://rest-api.akuari.my.id/downloader/scdl?link=${text}`);
             if (!data.result || !data.result.download) {
                 citel.reply("faild to fetch song 🌐");
                 return;
