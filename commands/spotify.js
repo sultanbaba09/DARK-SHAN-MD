@@ -17,46 +17,24 @@ cmd(
            
             const data = await fetchjson(`https://vihangayt.me/search/spotify?q=${text}`);
 
-            if (!data.result || !data.result.preview) {
-                citel.reply("faild to fetch song 🌐");
-                return;
-            } 
-
-            await void.sendMessage(
-                clite.chat,
-                {
-                    song: {url: data.result.preview},
-                    mimetype: "audio/mpeg",
-                    caption: ' DARK SHAN MD AUDIO DOWNLOAD'
-                },
-                { quoted: citel }
-            );
-        } catch (error) {
-            citel.reply("an erro occurred: "erro.message);
+        let textt = "*spotify Search*\n\n Result From " + text + "\n\n───────────────────\n";
+        let no = 1;
+        for (let i of search.all) {
+            textt += `⚡ No : ${no++}\n ❤Title : ${d.title}\n♫ preview : ${
+      d.preview}\n⌛Duration : ${
+      d.duration
+    }\n🌟Upload At : ${i.ago}\n👑Author : ${i.author.name}\n🎵Url : ${
+      i.url
+    }\n\n──────────────\n\n`;
+		
         }
-   }
-);
-                        
-                
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
+        return Void.sendMessage(citel.chat, {
+            image: {
+                url: "https://telegra.ph/file/801d1aea02b90650ce841.jpg",
+            },
+            caption: textt,
+        }, {
+            quoted: citel,
+        });
+    }
+)
