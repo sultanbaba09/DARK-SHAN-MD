@@ -15,7 +15,7 @@ cmd(
                 return;
             } 
            
-            const data = await fetchjson(
+            const data = await fetchjson(`https://vihangayt.me/search/spotify?q=${text}`);
 
 
 
@@ -34,7 +34,7 @@ cmd(
 
 
 
-https://vihangayt.me/search/spotify?q=
+
 
 
  
