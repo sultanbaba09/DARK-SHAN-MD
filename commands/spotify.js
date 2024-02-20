@@ -23,8 +23,6 @@ cmd(
             textt += `⚡ No : ${no++}\n ❤Title : ${d.title}\n♫ preview : ${
       d.preview}\n⌛Duration : ${
       d.duration
-    }\n🌟Upload At : ${i.ago}\n👑Author : ${i.author.name}\n🎵Url : ${
-      i.url
     }\n\n──────────────\n\n`;
 		
         }
