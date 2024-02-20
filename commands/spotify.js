@@ -16,7 +16,7 @@ cmd(
             } 
            
             const data = await fetchjson(`https://rest-api.akuari.my.id/downloader/scdl?link=${text}`);
-            if (!data.result || !data.result.download) {
+            if (!data.result || !data.result.link) {
                 citel.reply("faild to fetch song 🌐");
                 return;
             } 
@@ -24,7 +24,7 @@ cmd(
             await void.sendMessage(
                 clite.chat,
                 {
-                    song: {url: data.result.download},
+                    song: {url: data.result.link},
                     mimetype: "audio/mpeg",
                     caption: ' DARK SHAN MD AUDIO DOWNLOAD'
                 },
