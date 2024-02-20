@@ -15,7 +15,7 @@ cmd(
                 return;
             }
 
-            const wamod = await fetchJson(`https://kaveesha-sithum-api.cyclic.cloud/tkdl?url=${text}`);
+            const wamod = await fetchJson(`https://rest-api.akuari.my.id/downloader/tiktok?link=${text}`);
 
             if (!wamod.result || !wamod.result.nowm) {
                 citel.reply("Failed to fetch video URL or HD link ❌.");
