@@ -6,7 +6,7 @@ cmd({
     pattern: 'esana',
     alias: ['esananews','news'],
     desc: 'whatsapp beta infomation.',
-    category: '🗞️NEWS',
+    category: 'NEWS',
     react: "📃",
     use: '<wbi>',
   },
