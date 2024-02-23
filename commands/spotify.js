@@ -18,7 +18,7 @@ const fetch = require('node-fetch')
         let results = await axios.get(`https://rest-api.akuari.my.id/search/bingsearch?query=${text}`);
         results({ 'query': text}).then(res => {
             let msg= `bing Search From : ${text} \n\n`;
-            for (let r of res) {
+            for (let r of results) {
                 msg+= `➣ Title : ${r.title}\n`;
                 msg+= `➣ link : ${r.url}\n`;
                 msg+= `➣ Description : ${r.description}\n\n────────────────────────\n\n`;
