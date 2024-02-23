@@ -15,12 +15,8 @@ const fetch = require('node-fetch')
     },
     async(Void, citel, text) => {
         if (!text) return citel.reply(`give me a query\n*Example : .bing Who is dark shan yt.*`);
-        let shan = await axios.get(`https://rest-api.akuari.my.id/search/bingsearch?query=${text}`);
-let no = 1;
-        for (let i of search.all) {
-            textt += `⚡ No : ${no++}\n ❤Title : ${i.title}
-      \n🎵Url : ${i.url
-    }\n\n──────────────\n\n`;
+        let shan = await axios.get(`https://vihangayt.me/download/spotify?url=${text}`);
+
          
             return citel.reply(msg);
         })
