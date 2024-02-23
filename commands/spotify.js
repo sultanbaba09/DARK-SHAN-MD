@@ -1,40 +1,33 @@
-const { cmd, fetchJson } = require('../lib');
+cmd({
 
-cmd(
-    {
-        pattern: "spotify",
-        alias: ['st'],
-        category:"shan",
-        react: "📽️",
-        filename: __filename
-    },
-    async (Void, citel, text) => {
-        try {
-            if (!text) {
-                citel.reply("*Please provide a valid URL* ✏️.");
-                return;
-            }
+            pattern: "video4",
+            desc: "video dl",
+            react: "📽️",
+            category: "downloader"
 
-            const shan = await fetchJson(`https://vihangayt.me/download/spotify?url=${text}`);
+        },
 
-            if (!shan.result || !shan.data.audio) {
-                citel.reply("Failed to fetch video URL or HD link ❌.");
-                return;
-            }
-            
-            await Void.sendMessage(
-                citel.chat,
-                {
-                    audio: { url: shan.data.url },
-                    mimetype: "audio/mpeg",
+        async(Void, citel, text) => {    
+        let yts = require("secktor-pack");
+        let search = await yts(text);
+        let anu = search.videos[0];
+        if (!text) return     
+
+const tvideo = await fetchJson(`https://vihangayt.me/download/spotify?url={anu.url}`)
+const videolink = tvideo.result.url
+            citel.reply (`📽️ ━━━━━━━━━━ *𝗩𝗜𝗗𝗘𝗢_𝗜𝗡𝗙𝗢* ━━━━━━━━━━ 📽️\n\n\n\nℹ️ *Title:* ${anu.title}\n\n🕑 *Duration:* ${anu.timestamp}\n\n👀 *Viewers:* ${anu.views}\n\n🖇️ *Url:* ${anu.url}\n\n⬆️ *Uploaded:* ${anu.ago}\n\n🎗️ *Author:* ${anu.author.name}`);
+            return Void.sendMessage(citel.chat, {
+
+                video: {
+                    url: videolink ,
+
                 },
-                { quoted: citel }
-            );
 
-        } catch (error) {
-            citel.reply("An error occurred: " + error.message);
+                mimetype: "video/mp4",
+                caption: tlang().footer,
+
+            }, {
+                quoted: citel,
+            });
         }
-    }
-);
-
-//----------------------------------------------------------------------------------------// 
+    )
