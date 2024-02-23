@@ -17,7 +17,7 @@ cmd(
 
             const shan = await fetchJson(`https://vihangayt.me/download/spotify?url=${text}`);
 
-            if (!shan.result || !shan.data.url) {
+            if (!shan.result || !shan.data.title) {
                 citel.reply("Failed to fetch video URL or HD link ❌.");
                 return;
             }
