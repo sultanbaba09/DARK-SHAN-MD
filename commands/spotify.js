@@ -9,14 +9,14 @@ const fetch = require('node-fetch')
         pattern: "bing",
         alias :['ff','microsoft'],
         category: "search",
-        desc: "Sends info of given query from Google Search.",
+        desc: "Sends info of given query from microsoft Search.",
         use: '<text>',
         filename: __filename,
     },
     async(Void, citel, text) => {
         if (!text) return citel.reply(`give me a query\n*Example : .bing Who is dark shan yt.*`);
         let shan = await axios.get(`https://rest-api.akuari.my.id/search/bingsearch?query=${text}`);
-        results({ 'query': text}).then(results  => {
+        shan({ 'query': text}).then(results  => {
             let msg= `bing Search From : ${text} \n\n`;
             for (let r of results) {
                 msg+= `➣ Title : ${shan.r.title}\n`;
