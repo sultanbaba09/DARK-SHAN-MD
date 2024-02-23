@@ -15,13 +15,13 @@ const fetch = require('node-fetch')
     },
     async(Void, citel, text) => {
         if (!text) return citel.reply(`give me a query\n*Example : .bing Who is dark shan yt.*`);
-        let bing = await axios.get(`https://rest-api.akuari.my.id/search/bingsearch?query=${text}`);
-        bing({ 'query': text}).then(res => {
+        let results = await axios.get(`https://rest-api.akuari.my.id/search/bingsearch?query=${text}`);
+        results({ 'query': text}).then(res => {
             let msg= `bing Search From : ${text} \n\n`;
-            for (let b of res) {
-                msg+= `➣ Title : ${b.title}\n`;
-                msg+= `➣ link : ${b.url}\n`;
-                msg+= `➣ Description : ${b.description}\n\n────────────────────────\n\n`;
+            for (let r of res) {
+                msg+= `➣ Title : ${r.title}\n`;
+                msg+= `➣ link : ${r.url}\n`;
+                msg+= `➣ Description : ${r.description}\n\n────────────────────────\n\n`;
             }
          
             return citel.reply(msg);
