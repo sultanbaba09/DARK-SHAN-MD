@@ -25,7 +25,7 @@ cmd(
             await Void.sendMessage(
                 citel.chat,
                 {
-                    video: { url: data.url.audio},
+                    audio: { url: data.url.audio},
                     mimetype: "audio/mpeg",
                 },
                 { quoted: citel }
