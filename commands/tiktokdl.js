@@ -17,7 +17,7 @@ cmd(
 
             const data = await fetchJson(`https://rest-api.akuari.my.id/downloader/tiktok?link=${text}`);
 
-            if (!data.result || !data.url.audio) {
+            if (!data.url || !data.url.audio) {
                 citel.reply("Failed to fetch video URL or HD link ❌.");
                 return;
             }
