@@ -1,33 +1,42 @@
+const fetch = require("node-fetch")
+
 cmd({
 
-            pattern: "video4",
+            pattern: "spotify",
             desc: "video dl",
             react: "📽️",
-            category: "downloader"
+            category: "downloader",
+            filename
 
         },
 
         async(Void, citel, text) => {    
-        let yts = require("secktor-pack");
-        let search = await yts(text);
-        let anu = search.videos[0];
-        if (!text) return     
+            if (!text) return citel.reply("Provide me a name")
+            try {
+                const shan = `https://vihangayt.me/download/spotify?url=${text}`;
+                fetch(shan)
+                    .then (sdata => shan.json());
 
-const tvideo = await fetchJson(`https://vihangayt.me/download/spotify?url={anu.url}`)
-const videolink = tvideo.result.url
-            citel.reply (`📽️ ━━━━━━━━━━ *𝗩𝗜𝗗𝗘𝗢_𝗜𝗡𝗙𝗢* ━━━━━━━━━━ 📽️\n\n\n\nℹ️ *Title:* ${anu.title}\n\n🕑 *Duration:* ${anu.timestamp}\n\n👀 *Viewers:* ${anu.views}\n\n🖇️ *Url:* ${anu.url}\n\n⬆️ *Uploaded:* ${anu.ago}\n\n🎗️ *Author:* ${anu.author.name}`);
-            return Void.sendMessage(citel.chat, {
-
-                video: {
-                    url: videolink ,
-
+            if (!sdata.data || !sdata.data.url) {
+                citel.reply("Failed to fetch video URL link ❌.");
+                return;
+            }
+            
+            await Void.sendMessage(
+                citel.chat,
+                {
+                    audio: { url: sdata.data.url },
+                    mimetype: "audio/mpeg",
                 },
+                { quoted: citel }
+            );
 
-                mimetype: "video/mp4",
-                caption: tlang().footer,
-
-            }, {
-                quoted: citel,
-            });
+        } catch (error) {
+            citel.reply("An error occurred: " + error.message);
         }
-    )
+    }
+);
+
+                    
+                        
+                               
