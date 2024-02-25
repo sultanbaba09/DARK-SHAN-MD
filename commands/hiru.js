@@ -9,8 +9,7 @@ cmd({
     use: '<wbi>',
   },
         async(Void, citel, text) => {
-          const sirasanews = require('sirasa-news')
-
+            
 async function news() {
 const newsdata = await sirasanews();
 const output = newsdata.result;
