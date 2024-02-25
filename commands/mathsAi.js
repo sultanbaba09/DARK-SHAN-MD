@@ -27,4 +27,3 @@ cmd({
         }
     )
 
-https://vihangayt.me/tools/mathssolve?q=20+20
