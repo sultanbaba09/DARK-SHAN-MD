@@ -69,7 +69,7 @@ cmd({
         filename: __filename,
     },
     async(Void, citel) => {
-        let { data } = await axios.get('https://api.github.com/repos/SamPandey001/Secktor-Md')
+        let { data } = await axios.get('https://api.github.com/repos/kushansewmina1234/DARK-SHAN-MD')
         let cap = `💈 *DARK SHAN MD REPO* \n
 *⭐ Total Stars:* ${data.stargazers_count} stars
 
