@@ -53,7 +53,7 @@ cmd(
             await Void.sendMessage(
                 citel.chat,
                 {
-                    text: { data: kushan.data},
+                    text: {!kushan.data},
                 },
                 { quoted: citel }
             );
