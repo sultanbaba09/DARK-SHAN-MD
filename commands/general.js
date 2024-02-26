@@ -76,12 +76,11 @@ cmd({
 🔰 *DARK SHAN MD REPO INFO* 🔰
   *❲❒❳ Stars:* ${data.stargazers_count} stars
   *❲❒❳ Forks:* ${data.forks_count} forks
-  *❲❒❳ Auther:* SuhailTechInfo
+  *❲❒❳ Auther:* kushansewmina
   *❲❒❳ Create:* ${data.created_at}
   *❲❒❳ Repo:* _${github}_
   *❲❒❳ Scan:* _${scan}_\n
-  *❲❒❳ Visit For Tutorial* _https://www.Youtube.com/c/darkshanyt1
-${Config.caption?'\n\n'+Config.caption : ''}`.trim();
+  *❲❒❳ Visit For Tutorial* _https://www.Youtube.com/c/darkshanyt1`.trim();
 	
         return await darkshan.bot.sendMessage(citel.chat,  {   image: { url: await botpic() },    caption: cap,  } , {   quoted: citel, });
       }catch(e){return await citel.error(e)}
@@ -109,8 +108,7 @@ cmd({
   *❲❒❳ Uptime:* ${runtime(process.uptime())}
   *❲❒❳ Version:* ${Config.VERSION}
   *❲❒❳ Owner:*  ${Config.ownername}\n
-  *❲❒❳ Support:* _https://www.Youtube.com/c/darkshanyt1
-${Config.caption?'\n\n'+Config.caption : ''}`.trim();
+  *❲❒❳ Support:* _https://www.Youtube.com/c/darkshanyt1`.trim();
         return await darkshan.bot.sendMessage(citel.chat, { image: { url: await botpic() },    caption:ter, },{ quoted: citel, });
 
     }
