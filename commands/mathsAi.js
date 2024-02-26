@@ -15,7 +15,7 @@ cmd({
  
             let textw = "";
   
-            textw += `*RESULT* ${mdata.data}`;
+            textw += `${mdata.data}`;
 
             Void.sendMessage(
                 citel.chat, {
