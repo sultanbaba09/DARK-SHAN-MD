@@ -55,3 +55,28 @@ cmd(
 
         }
     )
+
+//------------------------------------------
+
+cmd(
+    {
+        pattern: "ai3",
+        category:"dark",
+        react: "🛞",
+        filename: __filename
+    },
+        async(Void, citel, text) => {
+
+          citel.reply (`*_Please Wait, Getting Cricket Info_*`);
+const darkshan = await fetch(`https://vihangayt.me/tools/chatgpt?q=${text}`);
+  const gpt = await darkshan.json();
+console.log(gpt);
+
+let text = "";
+text +="\n*DARK SHAN MD:* " + gpt.data;
+
+}
+ return await citel.reply( text);
+
+
+})
