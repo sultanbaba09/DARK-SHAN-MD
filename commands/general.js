@@ -53,9 +53,9 @@ cmd({
   category: "misc",
   filename: __filename
 },
-async(Suhail, msg, text) => {
+async(darkshan, msg, text) => {
   const upt = runtime(process.uptime())
-  msg.reply(`*_Uptime of ${Config.botname}: ${upt}_*`)
+  msg.reply(`*_Uptime of dark shan md: ${upt}_*`)
 }
 )
 //---------------------------------------------------------------------------
@@ -68,22 +68,22 @@ cmd({
         category: "general",
         filename: __filename,
     },
-    async(Suhail, citel) => {
+    async(darkshan, citel) => {
       try{
-          let { data } = await axios.get('https://api.github.com/repos/SuhailTechInfo/Secktor-bot')
+          let { data } = await axios.get('https://api.github.com/repos/kushansewmina1234/DARK-SHAN-MD')
         let cap = `
         
-🔰 *Suhail-Md Repo Info* 🔰
+🔰 *DARK SHAN MD REPO INFO* 🔰
   *❲❒❳ Stars:* ${data.stargazers_count} stars
   *❲❒❳ Forks:* ${data.forks_count} forks
   *❲❒❳ Auther:* SuhailTechInfo
   *❲❒❳ Create:* ${data.created_at}
   *❲❒❳ Repo:* _${github}_
   *❲❒❳ Scan:* _${scan}_\n
-  *❲❒❳ Visit For Tutorial* _https://www.Youtube.com/c/SuhailTechInfo_
+  *❲❒❳ Visit For Tutorial* _https://www.Youtube.com/c/darkshanyt1
 ${Config.caption?'\n\n'+Config.caption : ''}`.trim();
 	
-        return await Suhail.bot.sendMessage(citel.chat,  {   image: { url: await botpic() },    caption: cap,  } , {   quoted: citel, });
+        return await darkshan.bot.sendMessage(citel.chat,  {   image: { url: await botpic() },    caption: cap,  } , {   quoted: citel, });
       }catch(e){return await citel.error(e)}
   });
 //---------------------------------------------------------------------------
@@ -96,7 +96,7 @@ cmd({
         category: "general",
         filename: __filename,
     },
-    async(Suhail, citel) => {
+    async(darkshan, citel) => {
 
         const uptime = process.uptime();
         timestampe = speed();
@@ -109,9 +109,9 @@ cmd({
   *❲❒❳ Uptime:* ${runtime(process.uptime())}
   *❲❒❳ Version:* ${Config.VERSION}
   *❲❒❳ Owner:*  ${Config.ownername}\n
-  *❲❒❳ Support:* _${gurl}_ 
+  *❲❒❳ Support:* _https://www.Youtube.com/c/darkshanyt1
 ${Config.caption?'\n\n'+Config.caption : ''}`.trim();
-        return await Suhail.bot.sendMessage(citel.chat, { image: { url: await botpic() },    caption:ter, },{ quoted: citel, });
+        return await darkshan.bot.sendMessage(citel.chat, { image: { url: await botpic() },    caption:ter, },{ quoted: citel, });
 
     }
 )
@@ -123,7 +123,7 @@ cmd({
   category: "general",
   filename: __filename,
 },
-async(Suhail, msg) => {
+async(darkshan, msg) => {
   try{
       const used = process.memoryUsage()
       const cpus = os.cpus().map(cpu => {
@@ -148,7 +148,7 @@ async(Suhail, msg) => {
     var neww = performance.now()
     var oldd = performance.now()
                   
-    respon = `*❲❒❳ ${Config.botname} Server Info ❲❒❳*
+    respon = `*❲❒❳ dark shan md Server Info ❲❒❳*
     
   *❲❒❳ Runtime:* ${runtime(process.uptime())}
   *❲❒❳ Speed:* ${latensie.toFixed(3)}/${(oldd - neww).toFixed(3)} ms
