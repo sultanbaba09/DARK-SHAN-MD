@@ -80,7 +80,7 @@ cmd({
   *❲❒❳ Create:* ${data.created_at}
   *❲❒❳ Repo:* _${github}_
   *❲❒❳ Scan:* _${scan}_\n
-  *❲❒❳ Visit For Tutorial* _https://www.Youtube.com/c/darkshanyt1`.trim();
+  *❲❒❳ Visit For Tutorial* _https://www.Youtube.com/c/darkshanyt1`;
 	
         return await darkshan.bot.sendMessage(citel.chat,  {   image: { url: await botpic() },    caption: cap,  } , {   quoted: citel, });
       }catch(e){return await citel.error(e)}
