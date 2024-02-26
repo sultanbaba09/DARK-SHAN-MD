@@ -1,5 +1,6 @@
 const {fetchJson,cmd, tlang } = require('../lib')
 const axios = require('axios')
+const fetch = require('node-fetch')
 
 cmd({
             pattern: "maths",
