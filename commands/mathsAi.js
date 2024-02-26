@@ -37,17 +37,13 @@ cmd(
         filename: __filename
     },
     async (Void, citel, text) => {
-        try {
-            if (!text) {
-                citel.reply("*Please give me text ✏️.");
-                return;
-            }
-
-            const kushan  = await fetchJson(`https://vihangayt.me/tools/chatgpt?q=${text}`);
-
-            let textw = "";
+                if (!text) return citel.reply("give me text");
+   
+            let gdata = await axios.get(`https://vihangayt.me/tools/chatgpt?q=${text}`);
+ 
+            let dark = "";
   
-            textw += `${kushan.data}`;
+            dark += `${gdata.data}`;
 
             Void.sendMessage(
                 citel.chat, {
