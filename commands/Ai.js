@@ -10,11 +10,11 @@ cmd(
     async (Void, citel, text) => {
         try {
             if (!text) {
-                citel.reply("*Please provide a valid URL* ✏️.");
+                citel.reply("*Please give me text.");
                 return;
             }
 
-            const gpt = await fetchJson(`https://vihangayt.me/tools/chatgpt?q=${text}`);
+            const gpt = await fetchJson(`https://api.vihangayt.me/tools/chatgpt?q=${text}`);
 
             if (!gpt.data || !gpt.data) {
                 citel.reply("Failed to fetch ❌.");
@@ -34,5 +34,3 @@ cmd(
         }
     }
 );
-
-//----------------------------------------------------------------------------------------// 
