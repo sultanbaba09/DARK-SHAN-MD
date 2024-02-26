@@ -64,55 +64,95 @@ async(darkshan, msg, text) => {
 cmd({
         pattern: "repo",
         alias: ["git", "sc", "script"],
-        desc: "Sends info about repo",
+        desc: "Sends info about repo.",
         category: "general",
         filename: __filename,
     },
-    async(darkshan, citel) => {
-      try{
-          let { data } = await axios.get('https://api.github.com/repos/kushansewmina1234/DARK-SHAN-MD')
-        let cap = `
-        
-🔰 *DARK SHAN MD REPO INFO* 🔰
-  *❲❒❳ Stars:* ${data.stargazers_count} stars
-  *❲❒❳ Forks:* ${data.forks_count} forks
-  *❲❒❳ Auther:* kushansewmina
-  *❲❒❳ Create:* ${data.created_at}
-  *❲❒❳ Repo:* _${github}_
-  *❲❒❳ Scan:* _${scan}_\n
-  *❲❒❳ Visit For Tutorial* _https://www.Youtube.com/c/darkshanyt1`;
-	
-        return await darkshan.bot.sendMessage(citel.chat,  {   image: { url: await botpic() },    caption: cap,  } , {   quoted: citel, });
-      }catch(e){return await citel.error(e)}
-  });
+    async(Void, citel) => {
+        let { data } = await axios.get('https://api.github.com/repos/SamPandey001/Secktor-Md')
+        let cap = `💈 *DARK SHAN MD REPO* \n
+*⭐ Total Stars:* ${data.stargazers_count} stars
+
+*🍽️ Forks:* ${data.forks_count} forks
+
+*🍁 Repo:* https://github.com/kushansewmina1234/DARK-SHAN-MD
+🎏️️ *Group:*
+ https://whatsapp.com/channel/0029VaFLAgi90x2oD70Hwq1z
+
+🀄 *developer:*-KUSHAN SEWMINA
+
+
+©️ *DARK SHAN MD 2024*`
+        let buttonMessaged = {
+            image: { url: await botpic() },
+            caption: cap,
+            footer: tlang().footer,
+            headerType: 4,
+            contextInfo: {
+                externalAdReply: {
+                    title: "Secktor-Repo",
+                    body: "Easy to Use",
+                    thumbnail: log0,
+                    mediaType: 4,
+                    mediaUrl: '',
+                    sourceUrl: ``,
+                },
+            },
+        };
+        return await Void.sendMessage(citel.chat, buttonMessaged, {
+            quoted: citel,
+        });
+
+    }
+)
 //---------------------------------------------------------------------------
 //                  BOT STATUS COMMAND
 //---------------------------------------------------------------------------
 cmd({
         pattern: "status",
-        alias: ["about" , "info"],
+        alias: ["about"],
         desc: "To check bot status",
         category: "general",
         filename: __filename,
     },
-    async(darkshan, citel) => {
-
+    async(Void, citel) => {
         const uptime = process.uptime();
         timestampe = speed();
         latensie = speed() - timestampe;
         let ter = `
-        
-  🔰 *I am ${Config.botname}* 🔰
-  *❲❒❳ Description:* A WhatsApp bot with rich features, Created By *${Config.ownername}*.\n
-  *❲❒❳ Speed:* ${latensie.toFixed(4)} ms
-  *❲❒❳ Uptime:* ${runtime(process.uptime())}
-  *❲❒❳ Version:* ${Config.VERSION}
-  *❲❒❳ Owner:*  ${Config.ownername}\n
-  *❲❒❳ Support:* _https://www.Youtube.com/c/darkshanyt1`.trim();
-        return await darkshan.bot.sendMessage(citel.chat, { image: { url: await botpic() },    caption:ter, },{ quoted: citel, });
+💐 *DARK SHAN MD* 💐
+*🌟Description:* A WhatsApp bot with rich features, build in NodeJs to make your WhatsApp enjoyable.
+*⚡Speed:* ${latensie.toFixed(4)} ms
+*🚦Uptime:* ${runtime(process.uptime())}
+*🕸Version:* 0.0.1
+*👤Owner:*  ${Config.ownername}
+🎭 *POWER BY DARK SHAN MD*
+`;
+        let buttonMessaged = {
+            image: {
+                url: await botpic(),
+            },
+            caption: ter,
+            footer: tlang().footer,
+            headerType: 4,
+            contextInfo: {
+                externalAdReply: {
+                    title: tlang().title,
+                    body: `Dark shan-Status`,
+                    thumbnail: log0,
+                    mediaType: 2,
+                    mediaUrl: ``,
+                    sourceUrl: ``,
+                },
+            },
+        };
+        return await Void.sendMessage(citel.chat, buttonMessaged, {
+            quoted: citel,
+        });
 
     }
 )
+
 //========================================================================
 
 cmd({
