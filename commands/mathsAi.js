@@ -45,21 +45,17 @@ cmd(
 
             const kushan  = await fetchJson(`https://vihangayt.me/tools/chatgpt?q=${text}`);
 
-            if (!kushan.data || !kushan.data) {
-                citel.reply("Failed to fetch");
-                return;
-            }
-            
-            await Void.sendMessage(
-                citel.chat,
-                {
-                    text: {!kushan.data},
-                },
-                { quoted: citel }
+            let textw = "";
+  
+            textw += `${kushan.data}`;
+
+            Void.sendMessage(
+                citel.chat, {
+                    text: textw,
+                }, {
+                    quoted: citel,
+                }
             );
 
-        } catch (error) {
-            citel.reply("An error occurred: " + error.message);
         }
-    }
-);
+    )
