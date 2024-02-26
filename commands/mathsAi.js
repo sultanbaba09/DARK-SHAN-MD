@@ -39,7 +39,7 @@ cmd ({
      async(Void, citel, text) => {
                  try{
                     if (!text) {
-                       citel.reply(`example :- ${prefix}gpt4 hi`);
+                       citel.reply("give me text");
                                 return;
                     }
 
