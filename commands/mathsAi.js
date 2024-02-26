@@ -29,32 +29,31 @@ cmd({
     )
 //----------------------------------------------------------------------------//
 
-cmd ({    
-            pattern: "gpt4",
-            category: "ai",
-            desc: "chatgpt 4",
-            filename: __filename,
-
-     },
-     async(Void, citel, text) => {
-                 try{
-                    if (!text) {
-                       citel.reply("give me text");
-                                return;
-                    }
-
-                    const gdata fetchJson(`https://vihangayt.me/tools/chatgpt?q=${text}`);
-
-                    if (!gdata.data|| !gdata.data) {
-                        citel.reply("Failed to shearch");
+cmd(
+    {
+        pattern: "ai4",
+        category:"dark",
+        react: "🛞",
+        filename: __filename
+    },
+    async (Void, citel, text) => {
+        try {
+            if (!text) {
+                citel.reply("*Please give me text ✏️.");
                 return;
-                    }   
+            }
 
+            const kushan  = await fetchJson(`https://vihangayt.me/tools/chatgpt?q=${text}`);
+
+            if (!kushan.data || !kushan.data) {
+                citel.reply("Failed to fetch");
+                return;
+            }
+            
             await Void.sendMessage(
                 citel.chat,
                 {
-                       text: { data: gdata.data },
-
+                    text: { data: kushan.data},
                 },
                 { quoted: citel }
             );
@@ -63,8 +62,4 @@ cmd ({
             citel.reply("An error occurred: " + error.message);
         }
     }
-);             
-                        
-                             
-
-
+);
