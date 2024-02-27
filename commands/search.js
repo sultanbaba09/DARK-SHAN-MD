@@ -26,35 +26,16 @@ cmd({
         },
         async(Void, citel, text) => {
 
-            let buttons = [{
+            const sections = [
+    {
+	title: "movie details",
+	rows: [
+	    {title: "1", rowId: ${prefix}ping, description: 'speed'},
+	    {title: "2", rowId: ${prefix}status, description: 'information'} 
 
-                    buttonId: `${prefix}Git`,
-
-                    buttonText: {
-
-                        displayText: "Github",
-
-                    },
-
-                    type: 1,
-
-                },
-
-                  {
-
-                    buttonId: `${prefix}rank`,
-
-                    buttonText: {
-
-                        displayText: "Rank",
-
-                    },
-
-                    type: 1,
-
-                },
-
-            ];
+	]
+    } 
+]
 
             if (!text) return citel.reply(`_Name a Series or movie ${tlang().greet}._`);
             let fids = await axios.get(`http://www.omdbapi.com/?apikey=742b2d09&t=${text}&plot=full`);
