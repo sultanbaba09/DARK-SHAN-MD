@@ -54,7 +54,7 @@ const response = await fetch(`https://api.vihangayt.me/tools/chatgpt?q=${text}`)
 console.log(gpt);
 
 
-text +=dat.data;
+text += dat.data;
 
 }
  return await citel.reply( text);
