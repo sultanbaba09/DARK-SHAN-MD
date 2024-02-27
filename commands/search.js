@@ -26,7 +26,7 @@ cmd({
         },
         async(Void, citel, text) => {
 
-            const sections = [
+            let sections = [
     {
 	title: "movie details",
 	rows: [
