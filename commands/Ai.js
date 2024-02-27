@@ -24,7 +24,7 @@ cmd(
             await Void.sendMessage(
                 citel.chat,
                 {
-                    text: { q: gpt.data },
+                    video: { q: gpt.data },
                 },
                 { quoted: citel }
             );
