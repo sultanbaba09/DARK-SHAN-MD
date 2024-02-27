@@ -26,7 +26,7 @@ cmd({
         },
         async(Void, citel, text) => {
 
-            let sections = [
+            let button = [
     {
 	title: "movie details",
 	rows: [
