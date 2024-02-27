@@ -24,18 +24,7 @@ cmd({
             use: '<text>',
             filename: __filename,
         },
-        async(Void, citel, text) => {
-
-            let button = [
-    {
-	title: "movie details",
-	rows: [
-	    {title: "1", rowId: ${prefix}ping, description: 'speed'},
-	    {title: "2", rowId: ${prefix}status, description: 'information'} 
-
-	]
-    } 
-]
+        async(Void, citel, text) => 
 
             if (!text) return citel.reply(`_Name a Series or movie ${tlang().greet}._`);
             let fids = await axios.get(`http://www.omdbapi.com/?apikey=742b2d09&t=${text}&plot=full`);
