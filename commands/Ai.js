@@ -50,11 +50,11 @@ cmd({
 
           if (!text) return citel.reply (`*_Please give me text example. ai hi*`);
 const response = await fetch(`https://api.vihangayt.me/tools/chatgpt?q=${text}`);
-  const dat = await response.json();
+  const gpt = await response.json();
 console.log(gpt);
 
 
-text += dat.data;
+text += gpt.data;
 
 }
  return await citel.reply( text);
