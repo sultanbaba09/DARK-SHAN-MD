@@ -2,7 +2,7 @@ const { cmd, fetchJson } = require('../lib');
 const fetch = require('node-fetch')
 
 
-/*cmd(
+cmd(
     {
         pattern: "ai",
         category: "test",
@@ -26,7 +26,7 @@ const fetch = require('node-fetch')
             await Void.sendMessage(
                 citel.chat,
                 {
-                    video: { q: gpt.data },
+                    text: {!gpt.data },
                 },
                 { quoted: citel }
             );
@@ -35,10 +35,10 @@ const fetch = require('node-fetch')
             citel.reply("An error occurred: " + error.message);
         }
     }
-);*/
+);
 
 
-cmd({
+/*cmd({
             pattern: "ai1",
             react: "🌺",
             category: "search",
@@ -50,4 +50,4 @@ cmd({
 
           if (!text) return citel.reply (`*_Please give me text example. ai hi*`);
 const response = await fetch(`https://api.vihangayt.me/tools/chatgpt?q=${text}`);
-  const gpt = await response.json();
+  const gpt = await response.json();*/
