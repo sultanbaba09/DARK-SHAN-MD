@@ -1,6 +1,8 @@
 const { cmd, fetchJson } = require('../lib');
+const fetch = require('node-fetch')
 
-cmd(
+
+/*cmd(
     {
         pattern: "ai",
         category: "test",
@@ -33,4 +35,27 @@ cmd(
             citel.reply("An error occurred: " + error.message);
         }
     }
-);
+);*/
+
+
+cmd({
+            pattern: "ai1",
+            react: "🌺",
+            category: "search",
+            desc: "Sends info of given query from Google Search.",
+            use: '<text>',
+            filename: __filename,
+        },
+        async(Void, citel, text) => {
+
+          if (!text) return citel.reply (`*_Please give me text example. ai hi*`);
+const response = await fetch(`https://api.vihangayt.me/tools/chatgpt?q=${text}`);
+  const dat = await response.json();
+console.log(gpt);
+
+
+text +=dat.data;
+
+}
+ return await citel.reply( text);
+
