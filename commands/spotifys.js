@@ -19,6 +19,7 @@ cmd({
 const response = await fetch(`https://vihangayt.me/search/spotify?q=${text}`);
   const sps = await response.json();
 console.log(sps);
+                    let txxt = `spotify search results\n\n`;
       
         for (let i=1; i<5; i++){
   
