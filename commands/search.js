@@ -340,15 +340,16 @@ const response = await fetch(`https://vihangayt.me/search/spotify?q=${text}`);
   const sps = await response.json();
 console.log(sps);
 
-for (let i=0 ; i <  sps.data.length; i++) {
-let j = i+1;
-text +=`\n* ${i} spotify shearch *`;
-text +="\n*Title  :* "+ sps.data[i].title;
-text +="\n*Description  :* "+ sps.data[i].artist;
-text +="\n*track  :* "+ sps.data[i].url;
+        let textw = `spotify search results\n\n`;
+      
+        for (let i=1; i<5; i++){
+  textw+=`
+TITLE : ${data.data[i].title}
+DURATION : ${data.data[i].duration}
+URL : ${data.data[i].url}\n`
+        }
 
-}
- return await citel.reply( text);
+ return await citel.reply(textw );
 
 
 })
