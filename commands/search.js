@@ -302,26 +302,26 @@ text +="\n*Match Ended:* " + dat.data[i].matchEnded;
 
 })
 //---------------------------------------------------------------------------
-// cmd({
-//            pattern: "wiki",
-//            category: "search",
-//            desc: "Gives horoscope info of user.",
-//            use: '<sign>\n:Example: horo libra',
-//            filename: __filename,
-//        },
-//        async(Void, citel, text) => { 
-//            if (!text) return citel.reply("Provide me a sign!")
-//            try {
-//            const URL = `https://erdwpe-api.herokuapp.com/api/search/wikimedia?text=${text}`;
-//            wikipedia({ 'query': text}).then(res => {
-//            let msg= `wiki Search From : ${text} \n\n`;
-//              for (let g of res) {
-//              msg+= `➣ Title : ${w.title}\n`;
-//              msg+= `➣ Description : ${w.source}\n\n────────────────────────\n\n`;
-//          }
-//        
-//            return citel.reply(msg);
-//        })
-//    }
-//)                
+ cmd({
+            pattern: "wiki",
+            category: "search",
+            desc: "Gives horoscope info of user.",
+            use: '<sign>\n:Example: horo libra',
+            filename: __filename,
+        },
+        async(Void, citel, text) => { 
+            if (!text) return citel.reply("Provide me a sign!")
+            try {
+            const URL = `https://erdwpe-api.herokuapp.com/api/search/wikimedia?text=${text}`;
+            wikipedia({ 'query': text}).then(res => {
+            let msg= `wiki Search From : ${text} \n\n`;
+              for (let g of res) {
+              msg+= `➣ Title : ${w.result.title}\n`;
+              msg+= `➣ Description : ${w.result.source}\n\n────────────────────────\n\n`;
+          }
+        
+            return citel.reply(msg);
+        })
+    }
+)                
 //---------------------------------------------------------------------------
