@@ -27,10 +27,9 @@ cmd({
         },
         async(Void, citel, text) => {
 
-          citel.reply (`*_Please Wait, Getting Cricket Info_*`);
+
 const response = await fetch(`https://vihangayt.me/search/spotify?q=${text}`);
   const sps = await response.json();
-console.log(sps);
       
         for (let i=1; i<5; i++){
   textw+=`
