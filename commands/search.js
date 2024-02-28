@@ -327,7 +327,7 @@ text +="\n*Match Ended:* " + dat.data[i].matchEnded;
 //---------------------------------------------------------------------------
 
 cmd({
-            pattern: "wikim",
+            pattern: "sps",
             category: "search",
             desc: "Sends info of given query from Google Search.",
             use: '<text>',
@@ -336,14 +336,16 @@ cmd({
         async(Void, citel, text) => {
 
           citel.reply (`*_Please Wait, Getting Cricket Info_*`);
-const response = await fetch(`https://erdwpe-api.herokuapp.com/api/search/wikimedia?text=${text}`);
-  const wiki = await response.json();
-console.log(wiki);
+const response = await fetch(`https://vihangayt.me/search/spotify?q=${text}`);
+  const sps = await response.json();
+console.log(sps);
 
-let text = "";
-text +=`\n* ${i} wikipedia shearch *`;
-text +="\n*Title  :* "+ wiki.result[i].title;
-text +="\n*Description  :* "+ wiki.result[i].source;
+for (let i=0 ; i <  sps.data.length; i++) {
+let j = i+1;
+text +=`\n* ${i} spotify shearch *`;
+text +="\n*Title  :* "+ sps.data[i].title;
+text +="\n*Description  :* "+ sps.data[i].artist;
+text +="\n*track  :* "+ sps.data[i].url;
 
 }
  return await citel.reply( text);
