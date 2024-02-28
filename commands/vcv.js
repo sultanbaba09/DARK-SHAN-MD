@@ -8,101 +8,39 @@
  * @description : Secktor,A Multi-functional whatsapp bot.
  * @version 0.0.6
  **/
-const os = require('os');
-const { tlang, botpic,cmd, prefix, runtime,Config,formatp } = require('../lib')
+
+const moment = require('moment-timezone')
+const {fetchJson,cmd, tlang } = require('../lib')
+let gis = require("async-g-i-s");
 const axios = require('axios')
-const speed = require('performance-now')
+const fetch = require('node-fetch')
+
 //---------------------------------------------------------------------------
 
 cmd({
-
-            pattern: "concmdnew",
-
-            desc: "(menu cmdlist).",
-
-            category: "downloader",
-
-            react: "🔄",
-
+            pattern: "sps",
+            category: "search",
+            desc: "Sends info of given query from Google Search.",
+            use: '<text>',
             filename: __filename,
-
-            use: '<faded-Alan walker.>',
-
         },
-
         async(Void, citel, text) => {
 
-         
+          citel.reply (`*_Please Wait, Getting Cricket Info_*`);
+const response = await fetch(`https://vihangayt.me/search/spotify?q=${text}`);
+  const sps = await response.json();
+console.log(sps);
 
-            let buttons = [{
-
-                    buttonId: `${prefix}Git`,
-
-                    buttonText: {
-
-                        displayText: "Github",
-
-                    },
-
-                    type: 1,
-
-                },
-
-                  {
-
-                    buttonId: `${prefix}rank`,
-
-                    buttonText: {
-
-                        displayText: "Rank",
-
-                    },
-
-                    type: 1,
-
-                },
-
-            ];
-
-            let buttonMessage = {
-
-                image: {
-
-                    url: await botpic(),
-
-                },
-
-                caption: `
-
-📟 *Command:-* .trt
-ℹ️ *Description:-* Any language trt to sinhala
-🔥 *Help:-* .trt mantion text
-
-
-📟 *Command:-* .sticker
-ℹ️ *Description:-* Photo or video to sticker 
-🔥 *Help:-* .sticker mantion image
-
-⦿. *REQUEST BY:* ${citel.pushName}
-
-`,
-
-                footer: tlang().footer,
-
-                buttons: buttons,
-
-                headerType: 4,
-
-            };
-
-            return Void.sendMessage(citel.chat, buttonMessage, {
-
-                quoted: citel,
-
-            });
-
+        let textw = `spotify search results\n\n`;
+      
+        for (let i=1; i<5; i++){
+  textw+=`
+TITLE : ${sps.data[i].title}
+DURATION : ${sps.data[i].duration}
+URL : ${sps.data[i].url}\n`
         }
 
-    )
+ return await citel.reply(textw );
 
 
+})
