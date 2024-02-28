@@ -323,7 +323,7 @@ text +="\n*Match Ended:* " + dat.data[i].matchEnded;
             return citel.reply(msg);
         })
     }
-)  */              
+)               
 //---------------------------------------------------------------------------
 
 cmd({
@@ -344,12 +344,12 @@ console.log(sps);
       
         for (let i=1; i<5; i++){
   textw+=`
-TITLE : ${data.data[i].title}
-DURATION : ${data.data[i].duration}
-URL : ${data.data[i].url}\n`
+TITLE : ${sps.data[i].title}
+DURATION : ${sps.data[i].duration}
+URL : ${sps.data[i].url}\n`
         }
 
  return await citel.reply(textw );
 
 
-})
+})*/ 
