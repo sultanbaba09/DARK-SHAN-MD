@@ -18,7 +18,7 @@ cmd(
 
             const gpt = await fetchJson(`https://api.vihangayt.me/tools/chatgpt?q=${text}`);
 
-            if (!gpt.data || !gpt.data) {
+            if (!gpt || !gpt.data) {
                 citel.reply("Failed to fetch ❌.");
                 return;
             }
@@ -26,7 +26,7 @@ cmd(
             await Void.sendMessage(
                 citel.chat,
                 {
-                    text: {!gpt.data },
+                    text: {q: gpt.data },
                 },
                 { quoted: citel }
             );
