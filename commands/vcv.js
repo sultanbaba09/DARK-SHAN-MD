@@ -19,6 +19,7 @@ const fetch = require('node-fetch')
 
 cmd({
             pattern: "sps",
+            react: "💿️",
             category: "search",
             desc: "Sends info of given query from Google Search.",
             use: '<text>',
@@ -30,8 +31,6 @@ cmd({
 const response = await fetch(`https://vihangayt.me/search/spotify?q=${text}`);
   const sps = await response.json();
 console.log(sps);
-
-        let textw = `spotify search results\n\n`;
       
         for (let i=1; i<5; i++){
   textw+=`
