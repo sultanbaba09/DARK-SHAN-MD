@@ -302,7 +302,7 @@ text +="\n*Match Ended:* " + dat.data[i].matchEnded;
 
 })
 //---------------------------------------------------------------------------
- cmd({
+/* cmd({
             pattern: "wiki",
             category: "search",
             desc: "Gives horoscope info of user.",
@@ -323,12 +323,11 @@ text +="\n*Match Ended:* " + dat.data[i].matchEnded;
             return citel.reply(msg);
         })
     }
-)                
+)  */              
 //---------------------------------------------------------------------------
 
 cmd({
-            pattern: "cricket",
-            alias :['cric','icc'],
+            pattern: "wikim",
             category: "search",
             desc: "Sends info of given query from Google Search.",
             use: '<text>',
