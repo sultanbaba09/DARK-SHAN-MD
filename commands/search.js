@@ -325,3 +325,29 @@ text +="\n*Match Ended:* " + dat.data[i].matchEnded;
     }
 )                
 //---------------------------------------------------------------------------
+
+cmd({
+            pattern: "cricket",
+            alias :['cric','icc'],
+            category: "search",
+            desc: "Sends info of given query from Google Search.",
+            use: '<text>',
+            filename: __filename,
+        },
+        async(Void, citel, text) => {
+
+          citel.reply (`*_Please Wait, Getting Cricket Info_*`);
+const response = await fetch(`https://erdwpe-api.herokuapp.com/api/search/wikimedia?text=${text}`);
+  const wiki = await response.json();
+console.log(wiki);
+
+let text = "";
+text +=`\n* ${i} wikipedia shearch *`;
+text +="\n*Title  :* "+ wiki.result[i].title;
+text +="\n*Description  :* "+ wiki.result[i].source;
+
+}
+ return await citel.reply( text);
+
+
+})
