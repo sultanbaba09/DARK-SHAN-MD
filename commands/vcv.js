@@ -9,7 +9,7 @@
  * @version 0.0.6
  **/
 
-const moment = require('moment-timezone')
+/*const moment = require('moment-timezone')
 const {fetchJson,cmd, tlang } = require('../lib')
 let gis = require("async-g-i-s");
 const axios = require('axios')
@@ -42,3 +42,4 @@ textw +=`URL : ${sps.data[i].url}\n`
 
 
 })
+*/
