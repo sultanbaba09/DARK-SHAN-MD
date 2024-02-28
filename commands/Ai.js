@@ -16,7 +16,7 @@ cmd(
                 return;
             }
 
-            const gpt = await fetchJson(`https://api.vihangayt.me/tools/chatgpt?q=${text}`);
+            const gpt = await fetchJson(`https://api.vihangayt.me/tools/chatgpt?q=${q}`);
 
             if (!gpt || !gpt.data) {
                 citel.reply("Failed to fetch ❌.");
@@ -36,18 +36,3 @@ cmd(
         }
     }
 );
-
-
-/*cmd({
-            pattern: "ai1",
-            react: "🌺",
-            category: "search",
-            desc: "Sends info of given query from Google Search.",
-            use: '<text>',
-            filename: __filename,
-        },
-        async(Void, citel, text) => {
-
-          if (!text) return citel.reply (`*_Please give me text example. ai hi*`);
-const response = await fetch(`https://api.vihangayt.me/tools/chatgpt?q=${text}`);
-  const gpt = await response.json();*/
