@@ -23,10 +23,9 @@ console.log(gpt);
         
   
 
-textw +=`❒ URL : ${gpt.data.message}`
-
-            footer: tlang().footer,
-                headerType: 4,
+textw +=`❒ URL : ${gpt.data.message}\n\n`;
+textw +=`MODULES BY DARK SHAN MD`
+            
         
 
  return await citel.reply(textw );
