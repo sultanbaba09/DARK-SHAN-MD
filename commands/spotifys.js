@@ -8,9 +8,10 @@ const fetch = require('node-fetch')
 
 
 cmd({
-            pattern: "spo",
+            pattern: "spotifys",
+            alias :['sts','spo','sps'],
             react: "💿️",
-            category: "check",
+            category: "shearch",
             desc: "Sends info of given query from Google Search.",
             use: '<text>',
             filename: __filename,
