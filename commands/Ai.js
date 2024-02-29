@@ -36,3 +36,31 @@ cmd(
         }
     }
 );
+
+//---------------------------------------------------------------------//
+
+cmd({
+            pattern: "ai",
+            category: "test",
+            react: "🌷",
+            desc: "Sends info of given query from Google Search.",
+            use: '<text>',
+            filename: __filename,
+        },
+        async(Void, citel, text) => {
+
+const response = await fetch(`https://api.neoxr.eu/api/gpt?q=${text}`);
+  const gpt = await response.json();
+console.log(gpt);
+                    let textw = ``;
+      
+        for (let i=1; i<2; i++){
+  
+
+textw +=`❒ URL : ${gpt.data[i].message}`
+        }
+
+ return await citel.reply(textw );
+
+
+})
