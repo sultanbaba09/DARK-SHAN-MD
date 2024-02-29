@@ -23,7 +23,7 @@ console.log(gpt);
         
   
 
-textw +=`❒ URL : ${gpt.data.message}\n\n`;
+textw +=`${gpt.data.message}\n\n`;
 textw +=`MODULES BY DARK SHAN MD`
             
         
