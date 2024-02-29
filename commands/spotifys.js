@@ -6,8 +6,9 @@ const fetch = require('node-fetch')
 
 //---------------------------------------------------------------------------
 
+
 cmd({
-            pattern: "𝚜𝚙𝚘",
+            pattern: "spo",
             react: "💿️",
             category: "check",
             desc: "Sends info of given query from Google Search.",
@@ -19,15 +20,13 @@ cmd({
 const response = await fetch(`https://vihangayt.me/search/spotify?q=${text}`);
   const sps = await response.json();
 console.log(sps);
-                    let textw = `spotify search result\n\n\n`;
+                    let textw = `spotify search results\n\n`;
       
-        for (let i=1; i<10; i++){
+        for (let i=1; i<5; i++){
   
-textw +=`🕯️ TITLE* : ${sps.data[i].title}\n\n`;
-textw +=`💹 DURATION : ${sps.data[i].duration}\n\n`;
-textw +=`📌️ URL : ${sps.data[i].url}\n\n`;
-textw +=`📊 POPULARITY : ${sps.data[i].popularity}\n\n`;
-textw +=`🖊️ ARTIST : ${sps.data[i].artist}\n\n`
+textw +=`TITLE : ${sps.data[i].title}`;
+textw +=`DURATION : ${sps.data[i].duration}`;
+textw +=`URL : ${sps.data[i].url}\n`
         }
 
  return await citel.reply(textw );
