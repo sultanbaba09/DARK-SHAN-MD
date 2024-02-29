@@ -26,6 +26,7 @@ console.log(sps);
   
 textw +=`TITLE : ${sps.data[i].title}\n`;
 textw +=`DURATION : ${sps.data[i].duration}\n`;
+textw +=`ARTIST : ${sps.data[i].artist}\n`;
 textw +=`URL : ${sps.data[i].url}\n\n`
         }
 
