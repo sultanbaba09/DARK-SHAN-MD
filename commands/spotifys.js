@@ -24,7 +24,7 @@ console.log(sps);
       
         for (let i=1; i<5; i++){
   
-textw +=`TITLE : ${sps.data[i].title}`;
+textw +=`TITLE : ${sps.data[i].title}\n`;
 textw +=`DURATION : ${sps.data[i].duration}`;
 textw +=`URL : ${sps.data[i].url}\n`
         }
