@@ -21,13 +21,13 @@ const response = await fetch(`https://vihangayt.me/search/spotify?q=${text}`);
 console.log(sps);
                     let textw = `◉┉❮❮ 𝙳𝙰𝚁𝙺 𝚂𝙷𝙰𝙽 𝙼𝙳 𝚂𝙿𝙾𝚃𝙸𝙵𝚈 𝚂𝙷𝙴𝙰𝚁𝙲𝙷 ❯❯┉◉\n\n\n`;
       
-        for (let i=1; i<5; i++){
+        for (let i=1; i<10; i++){
   
-textw +=`🕯️ _*TITLE*_ : ${sps.data[i].title}\n\n`;
-textw +=`💹 _*DURATION*_ : ${sps.data[i].duration}\n\n`;
-textw +=`📌️ _*URL*_ : ${sps.data[i].url}\n\n`
-textw +=`📊 _*POPULARITY*_ : ${sps.data[i].popularity}\n\n`;
-textw +=`🖊️ _*ARTIST*_ : ${sps.data[i].artist}\n\n`;
+textw +=`🕯️ TITLE* : ${sps.data[i].title}\n\n`;
+textw +=`💹 DURATION : ${sps.data[i].duration}\n\n`;
+textw +=`📌️ URL : ${sps.data[i].url}\n\n`
+textw +=`📊 POPULARITY : ${sps.data[i].popularity}\n\n`;
+textw +=`🖊️ ARTIST : ${sps.data[i].artist}\n\n`;
         }
 
  return await citel.reply(textw );
