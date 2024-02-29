@@ -54,11 +54,11 @@ const response = await fetch(`https://api.neoxr.eu/api/gpt?q=${text}`);
 console.log(gpt);
                     let textw = ``;
       
-        for (let i=1; i<2; i++){
+        
   
 
-textw +=`❒ URL : ${gpt.data[i].message}`
-        }
+textw +=`❒ URL : ${gpt.data.message}`
+        
 
  return await citel.reply(textw );
 
