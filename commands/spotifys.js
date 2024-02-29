@@ -22,7 +22,7 @@ const response = await fetch(`https://vihangayt.me/search/spotify?q=${text}`);
 console.log(sps);
                     let textw = `◉┉❮❮ 𝙳𝙰𝚁𝙺 𝚂𝙷𝙰𝙽 𝙼𝙳 𝚂𝙿𝙾𝚃𝙸𝙵𝚈 𝚂𝙷𝙴𝙰𝚁𝙲𝙷 ❯❯┉◉\n\n`;
       
-        for (let i=1; i<21; i++){
+        for (let i=1; i<16; i++){
   
 textw +=`❒ TITLE : ${sps.data[i].title}\n`;
 textw +=`❒ DURATION : ${sps.data[i].duration}\n`;
