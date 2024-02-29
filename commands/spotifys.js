@@ -23,10 +23,10 @@ console.log(sps);
       
         for (let i=1; i<10; i++){
   
-textw +=`🕯️ TITLE* : ${sps.data[i].title}\n\n`
-textw +=`💹 DURATION : ${sps.data[i].duration}\n\n`
-textw +=`📌️ URL : ${sps.data[i].url}\n\n`
-textw +=`📊 POPULARITY : ${sps.data[i].popularity}\n\n`
+textw +=`🕯️ TITLE* : ${sps.data[i].title}\n\n`;
+textw +=`💹 DURATION : ${sps.data[i].duration}\n\n`;
+textw +=`📌️ URL : ${sps.data[i].url}\n\n`;
+textw +=`📊 POPULARITY : ${sps.data[i].popularity}\n\n`;
 textw +=`🖊️ ARTIST : ${sps.data[i].artist}\n\n`
         }
 
