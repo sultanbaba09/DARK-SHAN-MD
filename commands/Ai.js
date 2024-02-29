@@ -40,7 +40,7 @@ cmd(
 //---------------------------------------------------------------------//
 
 cmd({
-            pattern: "ai",
+            pattern: "qw",
             category: "test",
             react: "🌷",
             desc: "Sends info of given query from Google Search.",
