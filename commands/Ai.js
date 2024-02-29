@@ -6,7 +6,7 @@ const fetch = require('node-fetch')
 //---------------------------------------------------------------------//
 
 cmd({
-            pattern: "qw",
+            pattern: "ai",
             category: "test",
             react: "🌷",
             desc: "Sends info of given query from Google Search.",
@@ -24,7 +24,7 @@ console.log(gpt);
   
 
 textw +=`${gpt.data.message}\n\n`;
-textw +=`MODULES BY DARK SHAN MD`
+textw +=`❒ 𝙳𝙰𝚁𝙺 𝚂𝙷𝙰𝙽 𝙼𝙳`
             
         
 
