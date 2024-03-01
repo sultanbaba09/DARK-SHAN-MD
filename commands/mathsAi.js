@@ -15,14 +15,14 @@ cmd({
             if (!text) return citel.reply("example:- 20×20");
  
            const response = await fetch(`https://vihangayt.me/tools/mathssolve?q=${text}`);
-  const mts = await response.json();
-console.log(mts);
+  const shan = await response.json();
+console.log(shan);
                     let textw = ``;
       
         
   
 
-textw +=`${mts.data}`
+textw +=`${shan.data}`
 
 return await citel.reply(textw );
 
