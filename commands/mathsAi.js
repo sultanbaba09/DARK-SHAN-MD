@@ -5,7 +5,8 @@ const fetch = require('node-fetch')
 
 cmd({
             pattern: "maths",
-            category: "maths AI",
+            category: "maths",
+            react: "💬",
             desc: "maths solver",
             use: '<location>',
             filename: __filename,
@@ -13,19 +14,17 @@ cmd({
        async(Void, citel, text) => {
             if (!text) return citel.reply("example:- 20×20");
  
-           let mdata = await axios.get(`https://vihangayt.me/tools/mathssolve?q=${text}`);
- 
-            let textw = "";
+           const response = await fetch(`https://vihangayt.me/tools/mathssolve?q=${text}`);
+  const mts = await response.json();
+console.log(mts);
+                    let textw = ``;
+      
+        
+  
 
-            textw += `${mdata.data}`;
+textw +=`${mts.data}`
 
-            Void.sendMessage(
-                citel.chat, {
-                   text: textw,
-                }, {
-                    quoted: citel,
-                }
-            );
+return await citel.reply(textw );
 
-        }
-    )
+
+})    
