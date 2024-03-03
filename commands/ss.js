@@ -1,39 +1,33 @@
 const { cmd, fetchJson } = require('../lib');
+const fetch = require('node-fetch')
 
-cmd(
-    {
-        pattern: "ssa",
-        alias: ['screen'],
-        category:"test",
-        react: "💃",
-        filename: __filename
-    },
-    async (Void, citel, text) => {
-        try {
-            if (!text) {
-                citel.reply("*Please provide a valid URL* ✏️.");
-                return;
-            }
 
-            const shan = await fetchJson(`https://vihangayt.me/tools/ssweb?url=${text}`);
+cmd({
+            pattern: "soundcloud",
+            alias :['sdc','scp','sd'],
+            react: "💿️",
+            category: "test",
+            desc: "Sends info of given query from Google Search.",
+            use: '<text>',
+            filename: __filename,
+        },
+        async(Void, citel, text) => {
 
-            if (!shan || !shan) {
-                citel.reply("Failed to fetch video URL ❌.");
-                return;
-            }
-            
-            await Void.sendMessage(
-                citel.chat,
-                {
-                    image: { url: shan },
-                    
-                },
-                { quoted: citel }
-            );
-
-        } catch (error) {
-            citel.reply("An error occurred: " + error.message);
+const response = await fetch(`https://vihangayt.me/search/soundcloud?q=${text}`);
+  const shan = await response.json();
+console.log(shan);
+                    let textw = `◉┉❮❮ 𝙳𝙰𝚁𝙺 𝚂𝙷𝙰𝙽 𝙼𝙳 𝚂𝙾𝚄𝙽𝙳𝙲𝙻𝙾𝚄𝙳 𝚂𝙷𝙴𝙰𝚁𝙲𝙷 ❯❯┉◉\n\n`;
+      
+        for (let i=1; i<9; i++){
+  
+textw +=`❒ TITLE : ${shan.result[i].title}\n`;
+textw +=`❒ DURATION : ${shan.result[i].timestamp}\n`;
+textw +=`❒ ARTIST : ${shan.result[i].artist}\n`;
+textw +=`❒ 𝚅𝙸𝙴𝚆𝚂 : ${shan.result[i].views}\n`;         
+textw +=`❒ URL : ${shan.result[i].url}\n\n`
         }
-    }
-);
 
+ return await citel.reply(textw );
+
+
+})
