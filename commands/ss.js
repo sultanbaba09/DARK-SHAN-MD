@@ -23,7 +23,7 @@ console.log(shan);
 textw +=`❒ TITLE : ${shan.result[i].title}\n`;
 textw +=`❒ DURATION : ${shan.result[i].timestamp}\n`;
 textw +=`❒ ARTIST : ${shan.result[i].artist}\n`;
-textw +=`❒ 𝚅𝙸𝙴𝚆𝚂 : ${shan.result[i].views}\n`;         
+textw +=`❒ VIEWS : ${shan.result[i].views}\n`;         
 textw +=`❒ URL : ${shan.result[i].url}\n\n`
         }
 
