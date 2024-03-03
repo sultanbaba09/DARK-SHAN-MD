@@ -18,7 +18,7 @@ const response = await fetch(`https://vihangayt.me/search/soundcloud?q=${text}`)
 console.log(shan);
                     let textw = `◉┉❮❮ 𝙳𝙰𝚁𝙺 𝚂𝙷𝙰𝙽 𝙼𝙳 𝚂𝙾𝚄𝙽𝙳𝙲𝙻𝙾𝚄𝙳 𝚂𝙷𝙴𝙰𝚁𝙲𝙷 ❯❯┉◉\n\n`;
       
-        for (let i=1; i<5; i++){
+        for (let i=1; i<9; i++){
   
 textw +=`❒ TITLE : ${shan.result[i].title}\n`;
 textw +=`❒ DURATION : ${shan.result[i].timestamp}\n`;
@@ -31,3 +31,14 @@ textw +=`❒ URL : ${shan.result[i].url}\n\n`
 
 
 })
+
+//---------------------------------------------------------------------------------------//
+
+/*cmd({   
+            pattern: "soundcloud",
+            alias :['sdc','scp','sd'],
+            react: "🪩",
+            category: "test",
+            desc: "Sends info of given query from Google Search.",
+            use: '<text>',
+            filename: __filename*/
