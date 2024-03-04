@@ -1,42 +1,163 @@
-const { cmd, fetchJson } = require('../lib');
-const fetch = require('node-fetch')
+const os = require('os');
 
+const { cmd,tlang,prefix,runtime,formatp} = require('../lib/');
 
 cmd({
-            pattern: "soundcloud",
-            alias :['sdc','scp','sd'],
-            react: "🪩",
-            category: "test",
-            desc: "Sends info of given query from Google Search.",
-            use: '<text>',
-            filename: __filename,
+
+            pattern: "groupsettings",
+
+            alias: ["gs"],
+
+            desc: "some group settings change.",
+
+            category: "extra",
+
+            filename: __filename
+
         },
+
         async(Void, citel, text) => {
 
-const response = await fetch(`https://vihangayt.me/search/soundcloud?q=${text}`);
-  const shan = await response.json();
-console.log(shan);
-                    let textw = `◉┉❮❮ 𝙳𝙰𝚁𝙺 𝚂𝙷𝙰𝙽 𝙼𝙳 𝚂𝙾𝚄𝙽𝙳𝙲𝙻𝙾𝚄𝙳 𝚂𝙷𝙴𝙰𝚁𝙲𝙷 ❯❯┉◉\n\n`;
-      
-        for (let i=1; i<6; i++){
-  
-textw +=`❒ TITLE : ${shan.result[i].title}\n`;
-textw +=`❒ ARTIST : ${shan.result[i].artist}\n`;         
-textw +=`❒ URL : ${shan.result[i].url}\n\n`
+           let list = [{
+
+title: 'MUTE GROUP 🔇',
+
+rowId: `${prefix}group close`,
+
+description: ' '
+
+},
+
+{
+
+title: 'UNMUTE GROUP 🔊',
+
+rowId: `${prefix}group open`,
+
+description: ' '
+
+},
+
+{
+
+title: 'ACTIVE ANTILINK ✅',
+
+rowId: `${prefix}act antilink`,
+
+description: ' '
+
+},
+
+{
+
+title: 'DEACTIVE ANTILINK ❌',
+
+rowId: `${prefix}deact antilink`,
+
+description: ' '
+
+},
+
+{
+
+title: 'ACTIVE BOT THIS GROUP ✅',
+
+rowId: `${prefix}bot on`,
+
+description: ''
+
+},
+
+{
+
+title: 'DEACTIVE BOT THIS GROUP ❌',
+
+rowId: `${prefix}bot off`,
+
+description: ''
+
+},
+
+{
+
+title: 'ACTIVE ADD MESSAGE AND LEFT MESSAGE ✅',
+
+rowId: `${prefix}act events`,
+
+description: ''
+
+},
+
+{
+
+title: 'DEACTIVE ADD MESSAGE AND LEFT MESSAGE ❌',
+
+rowId: `${prefix}deact events`,
+
+description: ''
+
+}
+
+            ]
+
+            ted = `┏━━━━━━━━━━━━━━━━━━━━━━━━━
+┃   *GROUP SETTINGS CHANGE*
+┗━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+*THINGS THAT CAN BE CHANGED FROM THIS,*
+
+● MUTE GROUP
+● UNMUTE GROUP
+
+● ACTIVE ANTILINK
+● DEACTIVE ANTILINK
+
+● ACTIVE BOT THIS GROUP
+● DEACTIVE BOT THIS GROUP
+
+● ACTIVE ADD MESSAGE AND LEFT MESSAGE
+● DEACTIVE ADD MESSAGE AND LEFT MESSAGE 
+
+
+⦿.  ©ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴍʀ ᴅᴜᴍɪᴅᴜ
+
+`
+
+            const sections = [
+
+                {
+
+                    title: "Change settings",
+
+                    rows: list
+
+                }
+
+            ]
+
+            const listMessage = {
+
+                text: ted,
+
+                footer: tlang().footer,
+
+                title: ``,
+
+                buttonText: "Change Settings ",
+
+                mentions: await Void.parseMention(ted),
+
+                sections
+
+            }
+
+            return Void.sendMessage(citel.chat, listMessage, {
+
+                quoted: citel
+
+            })
+
         }
 
- return await citel.reply(textw );
-
-
-})
-
-//---------------------------------------------------------------------------------------//
-
-/*cmd({   
-            pattern: "soundcloud",
-            alias :['sdc','scp','sd'],
-            react: "🪩",
-            category: "test",
-            desc: "Sends info of given query from Google Search.",
-            use: '<text>',
-            filename: __filename*/
+    )
