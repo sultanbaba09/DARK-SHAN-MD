@@ -37,4 +37,69 @@ rowId: `${prefix}unmute`,
 
 description: ' '
 
-},
+}
+
+
+            ]
+
+            ted = `┏━━━━━━━━━━━━━━━━━━━━━━━━━
+┃   *GROUP SETTINGS CHANGE*
+┗━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+*THINGS THAT CAN BE CHANGED FROM THIS,*
+
+● MUTE GROUP
+● UNMUTE GROUP
+
+● ACTIVE ANTILINK
+● DEACTIVE ANTILINK
+
+● ACTIVE BOT THIS GROUP
+● DEACTIVE BOT THIS GROUP
+
+● ACTIVE ADD MESSAGE AND LEFT MESSAGE
+● DEACTIVE ADD MESSAGE AND LEFT MESSAGE 
+
+
+⦿.  ©ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴍʀ ᴅᴜᴍɪᴅᴜ
+
+`
+
+            const sections = [
+
+                {
+
+                    title: "Change settings",
+
+                    rows: list
+
+                }
+
+            ]
+
+            const listMessage = {
+
+                text: ted,
+
+                footer: tlang().footer,
+
+                title: ``,
+
+                buttonText: "Change Settings ",
+
+                mentions: await Void.parseMention(ted),
+
+                sections
+
+            }
+
+            return Void.sendMessage(citel.chat, listMessage, {
+
+                quoted: citel
+
+            })
+
+        }
+
+    )
