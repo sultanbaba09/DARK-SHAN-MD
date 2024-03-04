@@ -86,8 +86,8 @@ description: ' '
 
                 title: ``,
 
-                mentions: await Void.parseMention(ted),
 
+                        
                 
 
             }
