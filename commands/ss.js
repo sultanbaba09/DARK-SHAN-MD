@@ -92,7 +92,7 @@ description: ' '
 
             }
 
-            return Void.sendMessage(citel.chat, listMessage, {
+            return Void.sendMessage(citel.chat.listMessage, {
 
                 quoted: citel
 
