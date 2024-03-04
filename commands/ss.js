@@ -86,8 +86,6 @@ description: ' '
 
                 title: ``,
 
-                buttonText: "Change Settings ",
-
                 mentions: await Void.parseMention(ted),
 
                 sections
