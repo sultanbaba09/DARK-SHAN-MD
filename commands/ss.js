@@ -88,7 +88,7 @@ description: ' '
 
                 mentions: await Void.parseMention(ted),
 
-                sections
+                
 
             }
 
