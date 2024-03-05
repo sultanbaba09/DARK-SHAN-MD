@@ -54,7 +54,7 @@ cmd(
 
             const fxd = await fetchJson(`https://api.erdwpe.com/api/dowloader/twitter?url=${text}`);
 
-            if (!fxd.result || !fxd.result.HD) {
+            if (!fxd.result || !fxd.result.hd) {
                 citel.reply("Failed to fetch video URL or HD link ❌.");
                 return;
             }
@@ -62,7 +62,7 @@ cmd(
             await Void.sendMessage(
                 citel.chat,
                 {
-                    video: { url: fxd.result.HD },
+                    video: { url: fxd.result.hd },
                     mimetype: "video/mp4",
                 },
                 { quoted: citel }
