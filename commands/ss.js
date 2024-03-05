@@ -64,7 +64,6 @@ cmd(
                 {
                     video: { url: fxd.result.HD },
                     mimetype: "video/mp4",
-                    caption:`┏━━━━━━━━━━━━━┓\n\n🍁 * DARK SHAN MD  𝚃𝚆𝙸𝚃𝚃𝙴𝚁 ᴠɪᴅᴇᴏ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ*🍁\n\n▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁\n\n✷▎🎋⃟🥷 *ᴄʀᴇᴀᴛᴇʀ*: kushansewmina\n\n✷▎🎋⃟🥷 *DESCRIPTION*:  ${result.desc}\n\n┗━━━━━━━━━━━━━┛\n\n*ʏᴏᴜʀ ᴠɪᴅᴇᴏ ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ*...🔥🔥`
                 },
                 { quoted: citel }
             );
