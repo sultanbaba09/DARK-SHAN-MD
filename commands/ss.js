@@ -4,7 +4,7 @@ let gis = require("async-g-i-s");
 const axios = require('axios')
 const fetch = require('node-fetch')
 
-//---------------------------------------------------------------------------
+//---------------------------------------------------------------------------//
 
 
 cmd({
@@ -34,3 +34,46 @@ textw +=`❒ SOURCE : ${wiki.result[i].source}\n\n`
 
 
 })
+
+//-----------------------------------------------------------------------------//
+
+cmd(
+    {
+        pattern: "twitter",
+        alias: ['tw'],
+        category:"downloader",
+        react: "🩵",
+        filename: __filename
+    },
+    async (Void, citel, text) => {
+        try {
+            if (!text) {
+                citel.reply("*Please provide a valid URL* ✏️.");
+                return;
+            }
+
+            const shan = await fetchJson(`https://api.erdwpe.com/api/dowloader/twitter?url=${text}`);
+
+            if (!shan.result || !shan.result.HD) {
+                citel.reply("Failed to fetch video URL or HD link ❌.");
+                return;
+            }
+            
+            await Void.sendMessage(
+                citel.chat,
+                {
+                    video: { url: shan.result.HD },
+                    mimetype: "video/mp4",
+                    caption:`┏━━━━━━━━━━━━━┓\n\n🍁 * DARK SHAN MD  𝚃𝚆𝙸𝚃𝚃𝙴𝚁 ᴠɪᴅᴇᴏ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ*🍁\n\n▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁\n\n✷▎🎋⃟🥷 *ᴄʀᴇᴀᴛᴇʀ*: kushansewmina\n\n✷▎🎋⃟🥷 *DESCRIPTION*:  ${result.desc}\n\n┗━━━━━━━━━━━━━┛\n\n*ʏᴏᴜʀ ᴠɪᴅᴇᴏ ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ*...🔥🔥`
+                },
+                { quoted: citel }
+            );
+
+        } catch (error) {
+            citel.reply("An error occurred: " + error.message);
+        }
+    }
+);
+
+
+
