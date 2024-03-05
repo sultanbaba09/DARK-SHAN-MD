@@ -52,9 +52,9 @@ cmd(
                 return;
             }
 
-            const shan = await fetchJson(`https://api.erdwpe.com/api/dowloader/twitter?url=${text}`);
+            const fxd = await fetchJson(`https://api.erdwpe.com/api/dowloader/twitter?url=${text}`);
 
-            if (!shan.result || !shan.result.HD) {
+            if (!fxd.result || !fxd.result.HD) {
                 citel.reply("Failed to fetch video URL or HD link ❌.");
                 return;
             }
@@ -62,7 +62,7 @@ cmd(
             await Void.sendMessage(
                 citel.chat,
                 {
-                    video: { url: shan.result.HD },
+                    video: { url: fxd.result.HD },
                     mimetype: "video/mp4",
                     caption:`┏━━━━━━━━━━━━━┓\n\n🍁 * DARK SHAN MD  𝚃𝚆𝙸𝚃𝚃𝙴𝚁 ᴠɪᴅᴇᴏ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ*🍁\n\n▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁\n\n✷▎🎋⃟🥷 *ᴄʀᴇᴀᴛᴇʀ*: kushansewmina\n\n✷▎🎋⃟🥷 *DESCRIPTION*:  ${result.desc}\n\n┗━━━━━━━━━━━━━┛\n\n*ʏᴏᴜʀ ᴠɪᴅᴇᴏ ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ*...🔥🔥`
                 },
