@@ -27,6 +27,22 @@ cmd(
                 {
                     video: { url: data.respon.download.wm},
                     mimetype: "video/mp4",
+                    captain: `┏━━━━━━━━━━━━━┓
+
+𝙳𝙰𝚁𝙺 𝚂𝙷𝙰𝙽 𝙼𝙳 𝚃𝙸𝙺𝚃𝙾𝙺 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁
+
+🖋️ *description*: ${description}
+
+🥷 *author*: ${author}
+
+ 🎲 *views*: ${playcount}
+
+▶ *url*: ${url}
+
+┗━━━━━━━━━━━━━┛
+${tlang().footer}`
+                    
+
                 },
                 { quoted: citel }
             );
