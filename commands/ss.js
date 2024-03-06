@@ -134,7 +134,6 @@ console.log(gps);
   
 textw +=`❒ TITLE : ${gps.hasil[i].title}\n`;
 textw +=`❒ DEVELOPER : ${gps.hasil[i].developer}\n`;
-textw +=`❒ APPINFO : ${gps.hasil[i].summary}\n`;
 textw +=`❒ APPID : ${gps.hasil[i].appId}\n\n`
 
         }
