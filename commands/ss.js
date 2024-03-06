@@ -10,7 +10,7 @@ const fetch = require('node-fetch')
 cmd({
             pattern: "wikipedia",
             alias :['wiki','wp'],
-            react: "🎐",
+            react: "content://com.android.chrome.FileProvider/images/screenshot/17097026271424137457864280051532.jpg",
             category: "shearch",
             desc: "Sends info of given query from Google Search.",
             use: '<text>',
