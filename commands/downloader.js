@@ -628,7 +628,7 @@ cmd(
         pattern: "tiktokaudio",
         alias: ['tta'],
         category:"downloader",
-        react: "🎲",
+        react: "🍄",
         filename: __filename
     },
     async (Void, citel, text) => {
