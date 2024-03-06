@@ -17,7 +17,7 @@ cmd(
 
             const data = await fetchJson(`https://rest-api.akuari.my.id/downloader/tiktok4?link=${text}`);
 
-            if (!data.respon || !data.respon.download.wm) {
+            if (!data.respon || !data.respon.download.nowm) {
                 citel.reply("Failed to fetch video URL or HD link ❌.");
                 return;
             }
@@ -29,7 +29,7 @@ cmd(
             await Void.sendMessage(
                 citel.chat,
                 {
-                    video: { url: data.respon.download.wm},
+                    video: { url: data.respon.download.nowm},
                     mimetype: "video/mp4",
                     caption: `┏━━━━━━━━━━━━━┓
 
@@ -43,9 +43,7 @@ cmd(
 
 ▶ *url*: ${data.respon.url}
 
-┗━━━━━━━━━━━━━┛
-
-${tlang().footer}`,
+┗━━━━━━━━━━━━━┛`,
                     
 
                 },
