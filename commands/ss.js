@@ -74,5 +74,41 @@ cmd(
     }
 );
 
+//---------------------------------------------------------------------------------------//
 
+cmd(
+    {
+        pattern: "insta",
+        alias: ['ig','instagram'],
+        category:"downloader",
+        react: "🎡",
+        filename: __filename
+    },
+    async (Void, citel, text) => {
+        try {
+            if (!text) {
+                citel.reply("*Please provide a valid URL* ✏️.");
+                return;
+            }
 
+            const ins = await fetchJson(`https://rest-api.akuari.my.id/downloader/igdl2?link=${text}`);
+
+            if (!ins || !ins.respon.data.url) {
+                citel.reply("Failed to fetch video URL or HD link ❌.");
+                return;
+            }
+            
+            await Void.sendMessage(
+                citel.chat,
+                {
+                    video: { url: ins.respon.data.url },
+                    mimetype: "video/mp4",
+                },
+                { quoted: citel }
+            );
+
+        } catch (error) {
+            citel.reply("An error occurred: " + error.message);
+        }
+    }
+);
