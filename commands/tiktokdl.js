@@ -31,13 +31,13 @@ cmd(
 
 𝙳𝙰𝚁𝙺 𝚂𝙷𝙰𝙽 𝙼𝙳 𝚃𝙸𝙺𝚃𝙾𝙺 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁
 
-🖋️ *description*: ${description}
+🖋️ *description*: ${data.description}
 
-🥷 *author*: ${author}
+🥷 *author*: ${data.author}
 
- 🎲 *views*: ${playcount}
+ 🎲 *views*: ${data.playcount}
 
-▶ *url*: ${url}
+▶ *url*: ${data.url}
 
 ┗━━━━━━━━━━━━━┛
 ${tlang().footer}`
