@@ -126,14 +126,16 @@ cmd({
         async(Void, citel, text) => {
 
 const response = await fetch(`https://rest-api.akuari.my.id/search/playstoresearch?query=${text}`);
-  const wiki = await response.json();
-console.log(wiki);
+  const gps = await response.json();
+console.log(gps);
                     let textw = `◉┉❮❮ 𝙳𝙰𝚁𝙺 𝚂𝙷𝙰𝙽 𝙼𝙳 𝙿𝙻𝙰𝚈𝚂𝚃𝙾𝚁𝙴 𝚂𝙷𝙴𝙰𝚁𝙲𝙷 ❯❯┉◉\n\n`;
       
-        for (let i=1; i<36; i++){
+        for (let i=1; i<16; i++){
   
-textw +=`❒ TITLE : ${wiki.hasil[i].title}\n`;
-textw +=`❒ SOURCE : ${wiki.hasil[i].source}\n\n`
+textw +=`❒ TITLE : ${gps.hasil[i].title}\n`;
+textw +=`❒ DEVELOPER : ${gps.hasil[i].developer}\n`;
+textw +=`❒ APPINFO : ${gps.hasil[i].summary}\n`;
+textw +=`❒ APPID : ${gps.hasil[i].appId}\n\n`
 
         }
 
