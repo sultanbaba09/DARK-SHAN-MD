@@ -21,10 +21,6 @@ cmd(
                 citel.reply("Failed to fetch video URL or HD link ❌.");
                 return;
             }
-
-            { footer: tlang().footer,
-                headerType: 4,
-                }
             
             await Void.sendMessage(
                 citel.chat,
