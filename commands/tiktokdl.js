@@ -15,9 +15,9 @@ cmd(
                 return;
             }
 
-            const data = await fetchJson(`https://rest-api.akuari.my.id/downloader/tiktok?link=${text}`);
+            const data = await fetchJson(`https://rest-api.akuari.my.id/downloader/tiktok4?link=${text}`);
 
-            if (!data.url || !data.url.audio) {
+            if (!data.respon || !data.respon.download.wm) {
                 citel.reply("Failed to fetch video URL or HD link ❌.");
                 return;
             }
@@ -25,7 +25,7 @@ cmd(
             await Void.sendMessage(
                 citel.chat,
                 {
-                    audio: { url: data.url.audio},
+                    audio: { url: data.respon.download.wm},
                     mimetype: "audio/mpeg",
                 },
                 { quoted: citel }
