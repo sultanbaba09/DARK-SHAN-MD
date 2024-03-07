@@ -10,7 +10,7 @@ const fetch = require('node-fetch')
 cmd({
             pattern: "wikipedia",
             alias :['wiki','wp'],
-            react: "content://com.android.chrome.FileProvider/images/screenshot/17097026271424137457864280051532.jpg",
+            react: "💃",
             category: "shearch",
             desc: "Sends info of given query from Google Search.",
             use: '<text>',
@@ -136,9 +136,9 @@ textw +=`❒ TITLE : ${gps.hasil[i].title}\n`;
 textw +=`❒ DEVELOPER : ${gps.hasil[i].developer}\n`;
 textw +=`❒ APPID : ${gps.hasil[i].appId}\n\n`;
         }
-                    let info = `how to download- ${prefix}playstore app id`
+                    let textw = `how to download- ${prefix}playstore app id`
 
- return await citel.reply(textw, info );
+ return await citel.reply(textw);
 
 
 })
