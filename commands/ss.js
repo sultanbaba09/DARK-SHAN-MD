@@ -141,4 +141,41 @@ textw +=`❒ APPID : ${gps.hasil[i].appId}\n\n`;
 
 
 })
+//------------------------------------------------------------------------------------------------//
 
+cmd(
+    {
+        pattern: "lexica",
+        alias: ['lx'],
+        category:"ai",
+        react: "🎡",
+        filename: __filename
+    },
+    async (Void, citel, text) => {
+        try {
+            if (!text) {
+                citel.reply("*Please provide a valid URL* ✏️.");
+                return;
+            }
+
+            const lx = await fetchJson(`https://rest-api.akuari.my.id/ai/lexica?prompt=${text}`);
+
+            if (!lx || !lx) {
+                citel.reply("Failed to fetch video URL or HD link ❌.");
+                return;
+            }
+            
+            await Void.sendMessage(
+                citel.chat,
+                {
+                    image: { url: lx },
+                    mimetype: "image/jpg",
+                },
+                { quoted: citel }
+            );
+
+        } catch (error) {
+            citel.reply("An error occurred: " + error.message);
+        }
+    }
+);
