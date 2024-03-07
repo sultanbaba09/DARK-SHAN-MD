@@ -53,12 +53,12 @@ Secktor.cmd({
 ┃❖┃ 𝘿𝙖𝙩𝙚: ${date}	
 ┃❖┃ 𝙈𝙤𝙙𝙚: ${Config.worktype}	
 ┃❖┃ 𝙋𝙡𝙖𝙩𝙚𝙛𝙤𝙧𝙢: shan•Linux	
-┃❖┃ 𝙑𝙚𝙧𝙨𝙞𝙤𝙣: 1.2.1	
+┃❖┃ 𝙑𝙚𝙧𝙨𝙞𝙤𝙣: 0.0.1	
 ┃❖┃ 	
 ┃❖┃ ✦ ▍▌▌▉▏▎▌▉▐▏▌✦	
 ┃❖┃ ✦ ▍▌▌▉▏▎▌▉▐▏▌✦	
 ┃❖┃ 	
-┃❖┃ © 𝘽𝙮: ${Config.ownername}	
+┃❖┃ © 𝘽𝙮: DARK SHAN MD	
 ┃❖╰━═━═━═━═━━━───◆	
 ╰━━━━═━═━═━═──⊷◆\n	
 ` + '```'	
@@ -95,31 +95,7 @@ Secktor.cmd({
             }	
         }	
     )	
-    //---------------------------------------------------------------------------	
-Secktor.cmd({	
-              pattern: "list",	
-              desc: "list menu",	
-              category: "core",	
-              react: "⚜️"	
-           },	
-          async(Void, msg , text ) => {	
-
-              const { commands } = require('../lib');	
-              text = `	
-  ╭━━〘 *${Config.botname}* 〙────⊷     	
-  ┃ ✭ Owner: ${Config.ownername}	
-  ┃ ✭ Uptime: ${runtime(process.uptime())}	
-  ╰━━━━━━━━━━━━━━⊷\n`	
-  text = '';	
-              for (let i = 0; i < commands.length; i++){if(commands[i].pattern==undefined){ continue; }else { text += `*${i+1} ${fancytext(commands[i].pattern,1)}*\n  ${fancytext(commands[i].desc,1)}\n`}}	
-
-
-
-   //str += `╰━━━━━━━━━━━───⊷\nNaveed-Dogar \n www.youtube.com/c/technicalnaveed`	
-             try{ return await Void.sendMessage(citel.chat, { image: { url: THUMB_IMAGE }, caption: text + Config.caption}); }catch{return await send(citel,str,{},"",citel);}	
-          }	
-      )	
-
+	
     //---------------------------------------------------------------------------	
 Secktor.cmd({	
         pattern: "owner",	
