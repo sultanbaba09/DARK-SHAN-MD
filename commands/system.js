@@ -286,9 +286,8 @@ ${alivemessage}
 ⏳ *Uptime:-* _${runtime(process.uptime())}_
 🧑‍⚖️ *Owner:-* _${Config.ownername}_
 🐈‍⬛ *Branch:-* _${Config.BRANCH}_
-🧑‍💻 *Devoloper*  : 𝙷𝙸𝙼𝙴𝚂𝙷
+🧑‍💻 *Devoloper*  : kushansewmina
 🐈‍⬛ *Github link* [COMING SOON]
-📢 *public group* https://chat.whatsapp.com/KVIVrBl84HsAO91wU896Q4
 _Type ${prefix}menu for my command list._
 
 _Powered by ${Config.ownername}_
