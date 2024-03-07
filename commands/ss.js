@@ -169,7 +169,7 @@ cmd(
                 citel.chat,
                 {
                     image: { url: lx },
-                    mimetype: "image/jpg",
+                    mimetype: "image/png",
                 },
                 { quoted: citel }
             );
