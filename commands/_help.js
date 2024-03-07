@@ -12,7 +12,7 @@ const readmore = long.repeat(4001)
 const Secktor = require('../lib/commands')
 
 
-Secktor.cmd({
+cmd({
             pattern: "menu",
             react: "🍁",
             desc: "list menu",
