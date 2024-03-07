@@ -136,8 +136,7 @@ textw +=`❒ TITLE : ${gps.hasil[i].title}\n`;
 textw +=`❒ DEVELOPER : ${gps.hasil[i].developer}\n`;
 textw +=`❒ APPID : ${gps.hasil[i].appId}\n\n`;
         }
-                    let textw = `how to download- ${prefix}playstore app id`
-
+                    
  return await citel.reply(textw);
 
 
