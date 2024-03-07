@@ -153,16 +153,28 @@ cmd(
     },
     async (Void, citel, text) => {
 
-  const response = await fetch(`https://rest-api.akuari.my.id/search/playstoresearch?query=${text}`);
-  const lx = await response.json();
-console.log(lx);
-                    let textw = ``;
-        
-  
-textw += `${lx}`
-        
+  if (!text) return
 
- return await citel.reply(textw );
+const webss = await fetchJson(`https://rest-api.akuari.my.id/ai/lexica?prompt=${text}`)
 
+            citel.reply (`*lexica is taking, please wait...*`)
 
-}) 
+       Void.sendMessage(citel.chat, {
+
+                image: {
+
+                    url: `https://rest-api.akuari.my.id/ai/lexica?prompt=${text}` ,
+
+                },
+
+                caption: tlang().footer,
+
+            }, {
+
+                quoted: citel,
+
+            });
+
+ }
+
+)
