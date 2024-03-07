@@ -152,31 +152,17 @@ cmd(
         filename: __filename
     },
     async (Void, citel, text) => {
-        try {
-            if (!text) {
-                citel.reply("*Please provide a valid URL* ✏️.");
-                return;
-            }
 
-            const lx = await fetchJson(`https://rest-api.akuari.my.id/ai/lexica?prompt=${text}`);
+  const response = await fetch(`https://rest-api.akuari.my.id/search/playstoresearch?query=${text}`);
+  const lx = await response.json();
+console.log(lx);
+                    let textw = ``;
+        
+  
+textw += `${lx}`
+        
 
-            if (!lx || !lx) {
-                citel.reply("Failed to fetch video URL or HD link ❌.");
-                return;
-            }
-            
-            await Void.sendMessage(
-                citel.chat,
-                {
-                    image: { url: lx },
-                    mimetype: "image/png",        
-         
-                },
-                { quoted: citel }
-            );
+ return await citel.reply(textw );
 
-        } catch (error) {
-            citel.reply("An error occurred: " + error.message);
-        }
-    }
-);
+
+}) 
