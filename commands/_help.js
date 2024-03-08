@@ -64,11 +64,11 @@ Secktor.cmd({
                    if(text.toLowerCase() == category.toLowerCase()){ str = `╭────❲ *${tiny(category)}* ❳────╮\n┃✺╭────────────···▸\n┻✺│\n` ;
     
                         for (const plugins of cmds[category]) { str += `│✺│⥃◈ ${fancytext(plugins,1)}\n` ; }
-                        str += `╰━━━━━━━━━━━━━──⦁┄⃟\n╰━═════════════━⦁┄⃟\n`  ;
+                        str += `┳✺│\n┃✺╰────────────···▸\n╰━═════════════━⦁┄⃟\n`  ;
                         break ;
                    }
                    else { for (const plugins of cmds[category]) { str += `│✺│⥃◈ ${fancytext(plugins,1)}\n` ; }
-                         str += `╰━━━━━━━━━━━━━──⦁┄⃟\n╰━═════════════━⦁┄⃟\n`  ; 
+                         str += `┳✺│\n┃✺╰────────────···▸\n╰━═════════════━⦁┄⃟\n`  ; 
                    }
   
                 }
