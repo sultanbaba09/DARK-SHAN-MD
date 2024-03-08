@@ -268,7 +268,7 @@ cmd({
     )
     //---------------------------------------------------------------------------
 cmd({
-            pattern: "alive",
+            pattern: "alive2",
             react: "💡",
             category: "general",
             filename: __filename,
