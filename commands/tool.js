@@ -95,7 +95,7 @@ cmd(
 
             const gdm = await fetchJson(`https://rest-api.akuari.my.id/downloader/gdrive2?link=${text}`);
 
-            if (!gdm || !gdm.download) {
+            if (!gdm.respon || !gdm.respon.download) {
                 citel.reply("Failed to fetch video URL or HD link ❌.");
                 return;
             }
@@ -103,8 +103,8 @@ cmd(
             await Void.sendMessage(
                 citel.chat,
                 {
-                    video: { url: gdm.download },
-                    mimetype: `${gdm.mimetype}`,
+                    video: { url: gdm.respon.download },
+                    mimetype: `${gdm.respon.mimetype}`,
                 },
                 { quoted: citel }
             );
