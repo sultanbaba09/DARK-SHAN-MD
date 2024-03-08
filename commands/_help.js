@@ -13,7 +13,7 @@ Secktor.cmd({
             alias: ["menu"],
             desc: "Help list",
             category: "general",
-            react: "✨",
+            react: "🍁",
             filename: __filename
         },
         async(Void, citel, text) => {
@@ -63,12 +63,12 @@ Secktor.cmd({
                    str += `╭────❲ *${tiny(category)}* ❳────╮\n┃✺╭────────────···▸\n┻✺│\n` ;
                    if(text.toLowerCase() == category.toLowerCase()){ str = `╭────❲ *${tiny(category)}* ❳────╮\n┃✺╭────────────···▸\n┻✺│\n` ;
     
-                        for (const plugins of cmds[category]) { str += `│ ${fancytext(plugins,1)}\n` ; }
-                        str += `╰━━━━━━━━━━━━━──◇◉\n`  ;
+                        for (const plugins of cmds[category]) { str += `│✺│⥃▹◈ ${fancytext(plugins,1)}\n` ; }
+                        str += `╰━━━━━━━━━━━━━──⦁┄⃟▫\n╰━═════════════━⦁┄⃟▫\n`  ;
                         break ;
                    }
                    else { for (const plugins of cmds[category]) { str += `│ ${fancytext(plugins,1)}\n` ; }
-                         str += `╰━━━━━━━━━━━━━──◇◉\n`  ; 
+                         str += `╰━━━━━━━━━━━━━──⦁┄⃟▫\n╰━═════════════━⦁┄⃟▫\n`  ; 
                    }
   
                 }
