@@ -13,7 +13,7 @@ Secktor.cmd({
             alias: ["menu"],
             desc: "Help list",
             category: "general",
-            react: "🎲",
+            react: "🍁",
             filename: __filename
         },
         async(Void, citel, text) => {
@@ -72,7 +72,7 @@ Secktor.cmd({
                    }
   
                 }
-                str+= `*⭐️Type:* _${prefix}help cmd_ name to know more about specific command.\n*Eg:* _${prefix}help attp_\n*Made with ❤️ in Nodejs* `
+                str+= `*⭐️Type:* _${prefix}help cmd_ name to know more about specific command.\n*Eg:* _${prefix}help attp_\n🃏 *𝔻𝔸ℝ𝕂 𝕊ℍ𝔸ℕ 𝕄𝔻* 🀄 `
                 let buttonMessaged = {
                     image: { url: await botpic() },
                     caption: str
