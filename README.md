@@ -24,7 +24,7 @@
 
 ### SCAN QR 
 
-<a href='COMING SOON' target="_blank"><img alt='Fork repo' src='https://img.shields.io/badge/SCAN QR CODE-brown?style=for-the-badge&logo=opencv&logoColor=white'/></a>
+<a href='https://dark-shan-md-web-5398288dc2ad.herokuapp.com/' target="_blank"><img alt='Fork repo' src='https://img.shields.io/badge/SCAN QR CODE-brown?style=for-the-badge&logo=opencv&logoColor=white'/></a>
 
 ### DEPLOY HEROKU
 
