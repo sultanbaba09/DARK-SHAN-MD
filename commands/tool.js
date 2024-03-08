@@ -11,7 +11,7 @@ cmd({
             pattern: "wikipedia",
             alias :['wiki','wp'],
             react: "💃",
-            category: "shearch",
+            category: "search",
             desc: "Sends info of given query from Google Search.",
             use: '<text>',
             filename: __filename,
@@ -78,9 +78,11 @@ cmd(
 
 cmd(
     {
-        pattern: "insta",
-        alias: ['ig','instagram'],
+        pattern: "gdrive",
+        alias: ['gd','googledrive'],
         category:"downloader",
+        desc: "google drive media download",
+
         react: "🎡",
         filename: __filename
     },
@@ -118,7 +120,7 @@ cmd({
             pattern: "playstore",
             alias :['gps','ps'],
             react: "🍄",
-            category: "shearch",
+            category: "search",
             desc: "Sends info of given query from Google Search.",
             use: '<text>',
             filename: __filename,
