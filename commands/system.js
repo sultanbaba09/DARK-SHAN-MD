@@ -267,7 +267,7 @@ cmd({
         }
     )
     //---------------------------------------------------------------------------
-cmd({
+/**cmd({
             pattern: "alive2",
             react: "💡",
             category: "general",
@@ -307,7 +307,7 @@ _Powered by ${Config.ownername}_
             await Void.sendMessage(citel.chat, { audio: {url: "https://raw.githubusercontent.com/kumarahimes/ANGEL-QUEEN-MD/main/AngelQueen/PTT-20230719-WA0068.m4a" }, mimetype: 'audio/mp4', ptt: true, }, { quoted: citel })
                 return await Void.sendMessage(citel.chat, buttonMessaged);
         }
-    )
+    )**/
     //---------------------------------------------------------------------------
 cmd({
         pattern: "allnotes",
