@@ -93,9 +93,9 @@ cmd(
                 return;
             }
 
-            const ins = await fetchJson(`https://rest-api.akuari.my.id/downloader/igdl2?link=${text}`);
+            const gdm = await fetchJson(`https://rest-api.akuari.my.id/downloader/gdrive2?link=${text}`);
 
-            if (!ins || !ins.respon.data.url) {
+            if (!gdm || !gdm.download) {
                 citel.reply("Failed to fetch video URL or HD link ❌.");
                 return;
             }
@@ -103,8 +103,8 @@ cmd(
             await Void.sendMessage(
                 citel.chat,
                 {
-                    video: { url: ins.respon.data.url },
-                    mimetype: "video/mp4",
+                    video: { url: gdm.download },
+                    mimetype: `${gdm.mimetype}`,
                 },
                 { quoted: citel }
             );
