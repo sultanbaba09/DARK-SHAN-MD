@@ -337,8 +337,7 @@ cmd({
         async(Void, citel, text) => {
             if (text) {
                 let h = await getBuffer(`https://api.qrserver.com/v1/create-qr-code/?size=500x500&data=${text}`)
-                await Void.sendMessage(citel.chat, { image: h })
-                return
+                
             }
             let buttonMessaged = {
                 image: { url: 'https://dark-shan-md-qr-code-4339e14f2aa8.herokuapp.com/' },
