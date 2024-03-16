@@ -31,6 +31,17 @@ cmd(
                     mimetype: "audio/mpeg",
                     waveform:  [100, 0, 100, 0, 100, 0, 100],
 
+
+                    contextInfo: {
+                            
+                                title: "↺ |◁   II   ▷|   ♡",
+                                body: `now playing ${text}`,
+                                thumbnail: pp,
+                                renderLargerThumbnail: false,
+                                mediaType: 1,
+                                sourceUrl: null
+                            }
+                        
                     
                 },
                 { quoted: citel }
