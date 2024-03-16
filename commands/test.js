@@ -27,6 +27,18 @@ cmd(
                 {
                     audio: { url: `https://guruapi.tech/api/spotifydl?url=${text}` },
                     mimetype: "audio/mpeg",
+                    waveform:  [100, 0, 100, 0, 100, 0, 100],
+
+                    contextInfo: {
+                            externalAdReply: {
+                                title: "↺ |◁   II   ▷|   ♡",
+                                body: `now playing ${text}`,
+                                thumbnail: await botpic(),
+                                renderLargerThumbnail: false,
+                                mediaType: 2,
+                                sourceUrl: null
+                            }
+                        }
                 },
                 { quoted: citel }
             );
