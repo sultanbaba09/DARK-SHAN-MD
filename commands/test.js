@@ -5,13 +5,13 @@ cmd(
         pattern: "spotify",
         alias: ['st'],
         category:"downloader",
-        react: "📽️",
+        react: "🎧",
         filename: __filename
     },
     async (Void, citel, text) => {
         try {
             if (!text) {
-                citel.reply("*Please provide a valid URL* ✏️.");
+                citel.reply("*Please provide a valid name* ✏️.");
                 return;
             }
             
@@ -28,7 +28,8 @@ cmd(
                 
                     audio: { url: `https://guruapi.tech/api/spotifydl?url=${text}` },
                     mimetype: "audio/mpeg",
-                    waveform:  [100, 0, 100, 0, 100, 0, 100],
+                    waveform: [100, 0, 100, 0, 100, 0, 100],
+                    fileName: "dark shan spotify"
 
 
                     contextInfo: {
