@@ -40,3 +40,14 @@
 
 
 <a href='temp/deploy-on-vps.md' target="_blank"><img alt='Fork repo' src='https://img.shields.io/badge/DEPLOY VPS/PC-silver?style=for-the-badge&logo=google&logoColor=white'/></a>
+
+
+<details close>
+<summary>new features</summary>
+
+<br>
+
+add `removebg2` cmd   time 11:43   :   date 13/03/2024
+fix `spotifydl`  time 16:07   :   date 16/03/2024
+
+  </details> 
