@@ -47,7 +47,10 @@
 
 <br>
 
-add `removebg2` cmd   time 11:43   :   date 13/03/2024\n
+add `removebg2` cmd   time 11:43   :   date 13/03/2024
+
+
+
 fix `spotifydl`  time 16:07   :   date 16/03/2024
 
   </details> 
