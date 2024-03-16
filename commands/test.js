@@ -14,6 +14,8 @@ cmd(
                 citel.reply("*Please provide a valid URL* ✏️.");
                 return;
             }
+            
+            let pp = 'https://telegra.ph/file/c2ebb68cfe5958ad14985.jpg'
 
             const shan = await fetchJson(`https://guruapi.tech/api/spotifydl?url=${text}`);
 
@@ -33,7 +35,7 @@ cmd(
                             externalAdReply: {
                                 title: "↺ |◁   II   ▷|   ♡",
                                 body: `now playing ${text}`,
-                                thumbnail: { url: await botpic() },
+                                thumbnail: pp,
                                 renderLargerThumbnail: false,
                                 mediaType: 2,
                                 sourceUrl: null
