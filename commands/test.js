@@ -33,7 +33,7 @@ cmd(
                             externalAdReply: {
                                 title: "↺ |◁   II   ▷|   ♡",
                                 body: `now playing ${text}`,
-                                thumbnail: await botpic(),
+                                thumbnail: { url: await botpic() },
                                 renderLargerThumbnail: false,
                                 mediaType: 2,
                                 sourceUrl: null
