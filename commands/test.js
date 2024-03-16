@@ -41,7 +41,7 @@ cmd(
                         },
                     },
                 }
-                
+                await Void.sendMessage(citel.chat, buttonMessage, { quoted: citel })
             );
 
         } catch (error) {
