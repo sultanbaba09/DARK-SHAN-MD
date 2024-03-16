@@ -48,7 +48,7 @@
 
 
 <details close>
-<summary>new features</summary>
+<summary>𝓝𝓔𝓦 𝓤𝓟𝓓𝓐𝓣𝓔</summary>
 
 <br>
 
