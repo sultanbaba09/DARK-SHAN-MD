@@ -35,7 +35,7 @@ cmd(
                         externalAdReply: {
                             title: "↺ |◁   II   ▷|   ♡",
                             body: `now playing: ${text}`,
-                            renderLargerThumbnail: false,
+                            renderLargerThumbnail: true,
                             thumbnailUrl: pp,
                             mediaType: 1,
                             sourceUrl: text,
