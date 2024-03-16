@@ -24,7 +24,8 @@ cmd(
                 return;
             }
             
-            let buttonMessage = {
+            Void.sendMessage(citel.chat, {
+                
                     audio: { url: `https://guruapi.tech/api/spotifydl?url=${text}` },
                     mimetype: "audio/mpeg",
                     waveform:  [100, 0, 100, 0, 100, 0, 100],
@@ -40,8 +41,9 @@ cmd(
                             sourceUrl: text,
                         },
                     },
-                }
-                await Void.sendMessage(citel.chat, buttonMessage, { quoted: citel })
+                },
+                
+                   { quoted: citel }
             );
 
         } catch (error) {
