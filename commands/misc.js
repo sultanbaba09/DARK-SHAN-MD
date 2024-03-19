@@ -42,6 +42,7 @@ const config = require('../config.js');
 const { Sticker, createSticker, StickerTypes } = require("wa-sticker-formatter");
  const fs = require('fs')
  const axios = require('axios')
+const fetch = require('node-fetch')
   //---------------------------------------------------------------------------
  cmd({
     pattern: "setwelcome",
@@ -519,7 +520,7 @@ let buttons = [{
 let limit = 5;
 try {
 if (!text) return citel.reply("```Uhh Please, Give me Url!```");
-let urll = `https://s.vercel.app/api?url=${text.match(/\bhttps?:\/\/\S+/gi)[0]}&width=1280&height=720`
+let urll = `https://image.thum.io/get/fullpage/=${text.match(/\bhttps?:\/\/\S+/gi)[0]}&width=1280&height=720`
 let media  = await getBuffer(urll)
 return await Void.sendMessage(citel.chat ,{image : media } , {quoted:citel} )
 }
