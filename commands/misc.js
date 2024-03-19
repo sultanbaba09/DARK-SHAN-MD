@@ -88,7 +88,7 @@ async(Void, citel, text,{ isCreator }) => {
          },
          async(Void, citel, text) => {
 let a = await getBuffer(`https://api.lolhuman.xyz/api/attp?apikey=GataDios&text=${text}`)
- return citel.reply(a,{packname:'King-Md',author:'Naveed'},"sticker") 
+ return citel.reply(a,{packname:'DARK SHAN MD',author:'kushan'},"sticker") 
          }
      )
  cmd({
@@ -99,7 +99,7 @@ let a = await getBuffer(`https://api.lolhuman.xyz/api/attp?apikey=GataDios&text=
          },
          async(Void, citel, text) => {
 let a = await getBuffer(`https://api.lolhuman.xyz/api/ttp?apikey=GataDios&text=${text}`)
- return citel.reply(a,{packname:'King-Md',author:'Naveed'},"sticker") 
+ return citel.reply(a,{packname:'DARK SHAN MD',author:'kushan'},"sticker") 
          }
      )
      //---------------------------------------------------------------------------//
@@ -367,7 +367,7 @@ const buffer = await sticker.toBuffer();
                              },
                          ];
                          let chatbott= await chatbot.findOne({ id: 'chatbot' })
-                         await Void.sendButtonText(citel.chat, buttons, `Chatbot Status: ${chatbott.worktype} `, 'King-Md', citel);
+                         await Void.sendButtonText(citel.chat, buttons, `Chatbot Status: ${chatbott.worktype} `, 'DARK SHAN MD', citel);
                         citel.reply(`Chatbot Status: ${chatbott.worktype} \n*Use:* ${prefix}chatbot on\n${prefix}chatbot off`)
                         }
              }
