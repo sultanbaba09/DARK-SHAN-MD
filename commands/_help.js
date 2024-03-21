@@ -82,6 +82,13 @@ Secktor.cmd({
                     image: { url: await botpic() },
                     caption: str,
                     contextInfo: {
+    mentionedJid: [ '' ],
+    groupMentions: [],
+    forwardingScore: 1,
+    isForwarded: true,
+    forwardedNewsletterMessageInfo: {
+      newsletterJid: '120363236768069973@newsletter',
+          serverMessageId: 127
                         externalAdReply: {
                             title: "DARK SHAN MD",
                             body: 'ᴍᴜʟᴛɪ ᴅᴇᴠɪᴄᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ',
