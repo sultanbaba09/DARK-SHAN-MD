@@ -83,13 +83,13 @@ Secktor.cmd({
                     caption: str,
                     contextInfo: {
                          externalAdReply: {
-                         title: "DARK SHAN MD-REPO",
-                         body: "Easy to Use",
+                         title: "ᴅᴀʀᴋ sʜᴀɴ ᴍᴅ",
+                         body: "𝑀𝑈𝐿𝑇𝐼 𝐷𝐸𝑉𝐼𝐶𝐸 𝑊𝐻𝐴𝑇𝑆𝐴𝑃𝑃 𝐵𝑂𝑇",
                          showAdAttribution: true,
                          thumbnailUrl: pp,
                          mediaType: 4,
                          mediaUrl: '',
-                         sourceUrl: ``,
+                         sourceUrl: `https://www.youtube.com/@darkshanyt1`,
                       },
                    },
                 };
