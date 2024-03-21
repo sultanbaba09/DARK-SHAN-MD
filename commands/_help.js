@@ -85,6 +85,7 @@ Secktor.cmd({
                          externalAdReply: {
                          title: "DARK SHAN MD-REPO",
                          body: "Easy to Use",
+                         showAdAttribution: true,
                          thumbnailUrl: pp,
                          mediaType: 4,
                          mediaUrl: '',
