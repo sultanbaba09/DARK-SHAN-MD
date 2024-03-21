@@ -82,22 +82,15 @@ Secktor.cmd({
                     image: { url: await botpic() },
                     caption: str,
                     contextInfo: {
-    mentionedJid: [ '' ],
-    groupMentions: [],
-    forwardingScore: 1,
-    isForwarded: true,
-    forwardedNewsletterMessageInfo: {
-      newsletterJid: '120363236768069973@newsletter',
-          serverMessageId: 127,
-                        externalAdReply: {
-                            title: "DARK SHAN MD",
-                            body: 'ᴍᴜʟᴛɪ ᴅᴇᴠɪᴄᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ',
-                            renderLargerThumbnail: false,
-                            thumbnailUrl: pp,
-                            mediaType: 1,
-                            sourceUrl: `https://whatsapp.com/channel/0029VaFLAgi90x2oD70Hwq1z`,
-                        },
-                    },
+                    externalAdReply: {
+                    title: "DARK SHAN MD-REPO",
+                    body: "Easy to Use",
+                    thumbnail: pp,
+                    mediaType: 4,
+                    mediaUrl: '',
+                    sourceUrl: ``,
+                },
+            },
                 };
                 return await Void.sendMessage(citel.chat, buttonMessaged);
             }
