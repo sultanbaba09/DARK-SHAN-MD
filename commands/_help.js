@@ -88,7 +88,7 @@ Secktor.cmd({
     isForwarded: true,
     forwardedNewsletterMessageInfo: {
       newsletterJid: '120363236768069973@newsletter',
-          serverMessageId: 127
+          serverMessageId: 127,
                         externalAdReply: {
                             title: "DARK SHAN MD",
                             body: 'ᴍᴜʟᴛɪ ᴅᴇᴠɪᴄᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ',
