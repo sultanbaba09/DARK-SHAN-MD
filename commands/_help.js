@@ -75,6 +75,9 @@ Secktor.cmd({
   
                 }
                 str+= `*⭐️Type:* _${prefix}help cmd_ name to know more about specific command.\n*Eg:* _${prefix}help attp_\n🃏 *𝔻𝔸ℝ𝕂 𝕊ℍ𝔸ℕ 𝕄𝔻* 🀄 `
+
+                            let pp = 'https://telegra.ph/file/1f80b5a628c33d3a00fcc.jpg'
+
                 let buttonMessaged = {
                     image: { url: await botpic() },
                     caption: str,
@@ -82,9 +85,10 @@ Secktor.cmd({
                         externalAdReply: {
                             title: "DARK SHAN MD",
                             body: 'ᴍᴜʟᴛɪ ᴅᴇᴠɪᴄᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ',
-                            renderLargerThumbnail: true,
+                            renderLargerThumbnail: false,
+                            thumbnailUrl: pp,
                             mediaType: 1,
-                            sourceUrl: text,
+                            sourceUrl: `https://whatsapp.com/channel/0029VaFLAgi90x2oD70Hwq1z`,
                         },
                     },
                 };
