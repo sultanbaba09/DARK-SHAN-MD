@@ -82,15 +82,15 @@ Secktor.cmd({
                     image: { url: await botpic() },
                     caption: str,
                     contextInfo: {
-                    externalAdReply: {
-                    title: "DARK SHAN MD-REPO",
-                    body: "Easy to Use",
-                    thumbnail: pp,
-                    mediaType: 4,
-                    mediaUrl: '',
-                    sourceUrl: ``,
-                },
-            },
+                         externalAdReply: {
+                         title: "DARK SHAN MD-REPO",
+                         body: "Easy to Use",
+                         thumbnailUrl: pp,
+                         mediaType: 4,
+                         mediaUrl: '',
+                         sourceUrl: ``,
+                      },
+                   },
                 };
                 return await Void.sendMessage(citel.chat, buttonMessaged);
             }
