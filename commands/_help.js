@@ -83,9 +83,8 @@ Secktor.cmd({
                             title: "DARK SHAN MD",
                             body: 'ᴍᴜʟᴛɪ ᴅᴇᴠɪᴄᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ',
                             renderLargerThumbnail: true,
-                            thumbnailUrl: pp,
                             mediaType: 1,
-                            sourceUrl: `https://whatsapp.com/channel/0029VaFLAgi90x2oD70Hwq1z`,
+                            sourceUrl: text,
                         },
                     },
                 };
