@@ -52,7 +52,11 @@
 
 <br>
 
-add `removebg2` cmd   time 11:43   :   date 13/03/2024
+fix `mathssolver` time 13:20   :   date 24/03/2024
+
+
+
+add `sirasa news information`  :  time 17:18  :   date 21/03/2024
 
 
 
@@ -60,6 +64,13 @@ fix `spotifydl`  time 16:07   :   date 16/03/2024
 
 
 
-add `sirasa news information`  :  time 17:18  :   date 21/03/2024
+add `removebg2` cmd   time 11:43   :   date 13/03/2024
+
+
+
+
+
+
+
 
   </details>  
