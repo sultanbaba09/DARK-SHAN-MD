@@ -18,4 +18,4 @@ cmd({
       🎗️ LINK ${data.ios.link}\n\n
 ©️ POWER BY DARK SHAN MD`
 
-    await Void.sendMessage(citel.chat, { image: { url: ios.images }, caption: kushan }, { quoted: citel })
+    await Void.sendMessage(citel.chat, { image: { url: data.ios.images }, caption: kushan }, { quoted: citel })
