@@ -9,8 +9,14 @@ cmd({
         filename: __filename
     },
     async(Void, citel,text) => {
-    try { const data = await IOSNEWS()
+    try  const data = await IOSNEWS()
       const ios = data.latest()
+         .then((result) => {
+    console.log(result);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
 
       const kushan = `🗞️ *DARK SHAN MD IOS NEWS*\n
       ⌨️ TITLE ${data.ios.title}\n\n
