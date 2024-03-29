@@ -1,5 +1,5 @@
 const { cmd } = require('../lib')
-const IOSNEWS = require('ios-news')
+const { IOSNEWS } = require('ios-news')
 
 cmd({
         pattern: "ios",
@@ -9,7 +9,7 @@ cmd({
         filename: __filename
     },
     async(Void, citel,text) => {
-      const data = await IOSNEWS(),
+    try { const data = await IOSNEWS()
       const ios = data.latest()
 
       const kushan = `🗞️ *DARK SHAN MD IOS NEWS*\n
