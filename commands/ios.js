@@ -20,3 +20,5 @@ cmd({
 ©️ POWER BY DARK SHAN MD`
 
     await Void.sendMessage(citel.chat, { image: { url: data.ios.images }, caption: kushan }, { quoted: citel })
+
+    })
