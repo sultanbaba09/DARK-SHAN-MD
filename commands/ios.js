@@ -9,7 +9,7 @@ cmd({
         filename: __filename
     },
     async(Void, citel,text) => {
-      const data = await IOSNEWS()
+      const data = await IOSNEWS(),
       const ios = data.latest()
 
       const kushan = `🗞️ *DARK SHAN MD IOS NEWS*\n
