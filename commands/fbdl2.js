@@ -18,9 +18,7 @@ cmd({
         async(Void, citel, text) => {
         
             let buttonMessage = {
-                image: {
-                    url: 'https://telegra.ph/file/b10172f9cfdbe5f43c43e.jpg',
-                },
+                
                         {
 
 const githubRepoUrl = 'https://api.github.com/repos/gssbotwa/Gssbotwa2';
