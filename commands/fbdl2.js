@@ -6,7 +6,7 @@ const { cmd, fetchJson } = require('../lib');
       
 cmd({
 
-            pattern: "menu",           
+            pattern: "polll",           
             desc: "(menu cmdlist).",
             category: "_help",
             react: "👨‍💻",
