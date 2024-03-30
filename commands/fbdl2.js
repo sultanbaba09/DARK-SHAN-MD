@@ -2,7 +2,7 @@ const { cmd, fetchJson } = require('../lib');
 const axios = require('axios')
 
 cmd({
-        pattern: "repo",
+        pattern: "shan",
         desc: "Sends info about repo.",
         category: "general",
         filename: __filename,
@@ -28,7 +28,7 @@ cmd({
         };
 
           Void.sendPoll(citel.chat, uy, ['.menu', '.ping'],
-        return await Void.sendMessage(citel.chat, buttonMessaged, {
+        return Void.sendMessage(citel.chat, buttonMessaged, {
             quoted: citel,
         });
     }
