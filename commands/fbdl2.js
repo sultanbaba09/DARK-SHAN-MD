@@ -1,4 +1,4 @@
-/*const { cmd, fetchJson } = require('../lib');
+const { cmd, fetchJson } = require('../lib');
 const axios = require('axios')
 
 cmd({
@@ -17,12 +17,12 @@ cmd({
         
       
 
-         await Void.sendPoll(citel.chat, 'please choice one' , ['.menu', '.ping'],
+            Void.sendPoll(citel.chat, 'please choice one' , ['.menu', '.ping'],
            {
             quoted: citel,
            });
     }
- )*/
+ )
     
       
       
