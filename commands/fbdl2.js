@@ -11,7 +11,7 @@ cmd({
     async(Void, citel, text) => {
            
             
-               await Void.sendpoll(citel.chat, "Please Choose, I Hope You're Happy!", ['.menu', '.ping'] )
+                Void.sendpoll(citel.chat, "Please Choose, I Hope You're Happy!", ['.menu', '.ping'] )
 
                                    },
                 
