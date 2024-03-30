@@ -43,7 +43,7 @@ const githubRepoUrl = 'https://api.github.com/repos/gssbotwa/Gssbotwa2';
             
            
 
-            Void.sendPoll(m.chat, uy, ['.menu', '.ping'], {
+            Void.sendPoll(citel.chat, uy, ['.menu', '.ping'], {
                 quoted: citel
             });
         })
