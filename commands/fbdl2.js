@@ -44,10 +44,7 @@ cmd(
     },
     async (Void, citel, text) => {
         try {
-            if (!text) {
-                citel.reply("*Please provide a valid URL* ✏️.");
-                return;
-            }
+            
 
             let { data } = await axios.get('https://api.github.com/repos/kushansewmina1234/DARK-SHAN-MD')
         let cap = `💈 *DARK SHAN MD REPO* \n
