@@ -28,7 +28,7 @@ cmd({
         };
 
           Void.sendPoll(citel.chat, uy, ['.menu', '.ping'],
-        return Void.sendMessage(citel.chat, buttonMessaged, {
+            Void.sendMessage(citel.chat, buttonMessaged, {
             quoted: citel,
         });
     }
