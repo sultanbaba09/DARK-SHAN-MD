@@ -22,13 +22,10 @@ cmd({
 
 
 ©️ *DARK SHAN MD 2024*`
-        let buttonMessaged = {
-            caption: cap,
-            
-        };
+      
 
-          Void.sendPoll(citel.chat, uy, ['.menu', '.ping'],
-            Void.sendMessage(citel.chat, buttonMessaged, {
+          Void.sendPoll(citel.chat, `${cap}`, ['.menu', '.ping']),
+           {
             quoted: citel,
         });
     }
