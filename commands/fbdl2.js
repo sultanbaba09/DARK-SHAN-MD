@@ -1,9 +1,8 @@
 const { cmd, fetchJson } = require('../lib');
-
+const axios = require('axios')
 
 cmd({
         pattern: "repo",
-        alias: ["git", "sc", "script"],
         desc: "Sends info about repo.",
         category: "general",
         filename: __filename,
@@ -32,8 +31,9 @@ cmd({
         return await Void.sendMessage(citel.chat, buttonMessaged, {
             quoted: citel,
         });
-
     }
+ )
+    
       
       
 
