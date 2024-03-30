@@ -23,7 +23,7 @@ cmd(
             }
             
             
-                Void.sendpoll(citel.chat, uy ['.menu', '.ping'],
+                Void.sendpoll(citel.chat, ['.menu', '.ping'],
                 
                 { quoted: citel }
             );
