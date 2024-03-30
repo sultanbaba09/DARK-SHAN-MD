@@ -7,9 +7,8 @@ cmd({
         category: "general",
         filename: __filename,
     },
-    async(Void, citel) => {
 
-            async (Void, citel, text) => {
+      async (Void, citel, text) => {
         try {
             if (!text) {
                 citel.reply("*Please provide a valid URL* ✏️.");
