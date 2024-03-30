@@ -20,18 +20,18 @@ let { data } = await axios.get('https://api.github.com/repos/kushansewmina1234/D
 
 *🍽️ Forks:* ${data.forks_count} forks
 
-*🍁 Repo:* https://github.com/kushansewmina1234/DARK-SHAN-MD
-🎏️️ *Group:*
- https://whatsapp.com/channel/0029VaFLAgi90x2oD70Hwq1z
-
-🀄 *developer:*-KUSHAN SEWMINA`
+*🍁 Repo:* https://github.com/kushansewmina1234/DARK-SHAN-MD`
 
             Void.sendPoll(citel.chat, cap , ['.menu', '.ping'],
-           {
-            quoted: citel,
-           });
-    }
- )
+           
+                   
+                      { quoted: citel }
+         );
+          } catch (error) {
+                  citel.reply("An error occurred: " + error.message);
+          }
+     }
+);
     
       
       
