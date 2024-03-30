@@ -1,4 +1,4 @@
-const { cmd, fetchJson } = require('../lib');
+/*const { cmd, fetchJson } = require('../lib');
 const axios = require('axios')
 
 cmd({
@@ -22,7 +22,7 @@ cmd({
             quoted: citel,
            });
     }
- )
+ )*/
     
       
       
