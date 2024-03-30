@@ -1,4 +1,4 @@
-const { cmd, fetchJson } = require('../lib');
+const { cmd } = require('../lib');
 const axios = require('axios')
 
 cmd({
@@ -22,16 +22,14 @@ let { data } = await axios.get('https://api.github.com/repos/kushansewmina1234/D
 
 *🍁 Repo:* https://github.com/kushansewmina1234/DARK-SHAN-MD`
 
-            Void.sendPoll(citel.chat, cap , ['.menu', '.ping'],
+            Void.sendPoll(citel.chat, cap, ['.menu', '.ping'],
            
                    
                       { quoted: citel }
          );
-          } catch (error) {
-                  citel.reply("An error occurred: " + error.message);
-          }
-     }
-);
+          } 
+      }
+ );
     
       
       
