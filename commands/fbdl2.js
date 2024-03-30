@@ -2,8 +2,8 @@ const { cmd, fetchJson } = require('../lib');
 
 cmd(
     {
-        pattern: "fb",
-        alias: ['facebook'],
+        pattern: "zxc",
+        alias: ['ptest'],
         category:"downloader",
         react: "📽️",
         filename: __filename
