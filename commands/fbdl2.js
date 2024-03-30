@@ -13,11 +13,11 @@ cmd({
             if (!text) {
                 citel.reply("*Please provide a valid URL* ✏️.");
                 return;
-            }
+            },
         
       
 
-          Void.sendPoll(citel.chat, 'please choice one' , ['.menu', '.ping'],
+         await Void.sendPoll(citel.chat, 'please choice one' , ['.menu', '.ping'],
            {
             quoted: citel,
            });
