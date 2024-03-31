@@ -33,7 +33,7 @@
  ========================================================
  **/
  
-/*const Secktor = require('../lib')
+const Secktor = require('../lib')
 Secktor.cmd({
         pattern: "ping",
         desc: "To check ping",
@@ -48,4 +48,4 @@ Secktor.cmd({
        return await Void.sendMessage(citel.chat, {text: '_𝐷𝐴𝑅𝐾 𝑆𝐻𝐴𝑁 𝑃𝑂𝑁𝐺_\n *' + (final - inital) + ' ms* ', edit: key});
     }
 );
-*/
+
