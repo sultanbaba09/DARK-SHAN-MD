@@ -1,4 +1,4 @@
-/*const Secktor = require('../lib')
+const Secktor = require('../lib')
 
 Secktor.cmd({
         pattern: "kushan",
@@ -24,7 +24,7 @@ Secktor.cmd({
    }) 
  } );
 
-const { cmd, fetchJson, prefix, Config } = require('../lib');
+/*const { cmd, fetchJson, prefix, Config } = require('../lib');
 const axios = require('axios');
 
 cmd(
@@ -57,7 +57,7 @@ cmd(
              
         } 
     }
-);*/
+);
 
 const Secktor = require('../lib')
 Secktor.cmd({
@@ -85,3 +85,4 @@ await Void.relayMessage(citel.chat, {
        } 
    )}  
  )
+*/
