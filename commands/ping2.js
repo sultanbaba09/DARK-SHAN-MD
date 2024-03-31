@@ -80,7 +80,7 @@ await Void.relayMessage(citel.chat, {
         key: pingMsg.key,
         type: 14,
         
-      }
-   } 
-},{});
-})
+        
+       } 
+   )}  
+ )
