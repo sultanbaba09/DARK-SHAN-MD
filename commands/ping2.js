@@ -55,8 +55,6 @@ cmd(
 
 
              
-        } catch (error) {
-            citel.reply("An error occurred: " + error.message);
-        }
+        } 
     }
 );
