@@ -54,8 +54,7 @@ cmd(
    }),
 
 
-             { quoted: citel }
-
+             
         } catch (error) {
             citel.reply("An error occurred: " + error.message);
         }
