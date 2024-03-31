@@ -1,7 +1,7 @@
 const { cmd } = require('../lib')
 
 cmd({
-        pattern: "kushan",
+        pattern: "ping",
         desc: "To check ping",
         category: "general",
         filename: __filename,
@@ -9,17 +9,26 @@ cmd({
     async(Void, citel) => {
         
         const speed = await Void.sendMessage(citel.chat, {text: '```ᴘɪɴɢ ᴅᴀʀᴋ sʜᴀɴ ᴍᴅ..```'});
-        
+        await Void.relayMessage(citel.chat,{
+                protocolMessage:{
+                        key: speed.key,
+                        type: 14,
+                        editedMessage:{
+                                conversation: 'KUSHAN SEWMINA'
+                        }
+                }
+        }
+                                )
+    }
+    );
+                                
+    
+                
 
        
 
 
- await Void.relayMessage(citel.chat, {
-      protocolMessage: {
-        key: speed.key,
-      }
-   }) 
- } );
+ 
 
 /*const { cmd, fetchJson, prefix, Config } = require('../lib');
 const axios = require('axios');
