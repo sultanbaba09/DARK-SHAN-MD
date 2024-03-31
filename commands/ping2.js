@@ -30,7 +30,7 @@ const axios = require('axios');
 cmd(
     {
         pattern: "kushan",
-        category:"general",
+        category:"downloader",
         filename: __filename
     },
     async (Void, citel, text) => {
