@@ -54,7 +54,7 @@ cmd(
 
 *🍁 Repo:* https://github.com/kushansewmina1234/DARK-SHAN-MD`
             
-            await Void.sendPoll(citel.chat, cap, ['.menu', '.ping'],
+            await Void.sendPoll(citel.chat, cap, [`${prefix}menu`, `${prefix}ping`],
                      
 
 
