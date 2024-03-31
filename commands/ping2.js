@@ -1,6 +1,7 @@
 const Secktor = require('../lib')
+
 Secktor.cmd({
-        pattern: "ping",
+        pattern: "kushan",
         desc: "To check ping",
         category: "general",
         filename: __filename,
@@ -14,7 +15,7 @@ Secktor.cmd({
     
 
 
-return await Void.relayMessage(citel.chat, {
+ await Void.relayMessage(citel.chat, {
       protocolMessage: {
         key: pingMsg.key,
         type: 14,
