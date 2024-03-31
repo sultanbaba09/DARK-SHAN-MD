@@ -47,15 +47,14 @@ cmd(
             
             await Void.relayMessage(citel.chat, {
       protocolMessage: {
-        key: pingMsg.key,
+        key: cap.key,
         type: 14,
         
       }
    }),
 
 
-                { quoted: citel }
-            );
+             { quoted: citel }
 
         } catch (error) {
             citel.reply("An error occurred: " + error.message);
