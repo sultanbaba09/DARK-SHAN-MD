@@ -15,7 +15,7 @@ Secktor.cmd({
     
 
 
- await Void.relayMessage(citel.chat, {
+  Void.relayMessage(citel.chat, {
       protocolMessage: {
         key: pingMsg.key,
         type: 14,
