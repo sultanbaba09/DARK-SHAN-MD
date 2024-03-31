@@ -17,8 +17,6 @@ cmd({
  await Void.relayMessage(citel.chat, {
       protocolMessage: {
         key: speed.key,
-        type: 14,
-        
       }
    }) 
  } );
