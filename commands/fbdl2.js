@@ -67,23 +67,3 @@ cmd(
     }
 );
 
-
-if (isBanChat) return m.reply(mess.bangc);
-  await doReact("🕘");
-  const startTime = new Date();
-  const pingMsg = await gss.sendMessage(m.chat, { text: '*cheking...*' });
-
- await gss.relayMessage(m.chat, {
-      protocolMessage: {
-        key: pingMsg.key,
-        type: 14,
-        editedMessage: {
-          conversation: `*Pong:* ${new Date() - startTime} ms`
-        }
-      }
-    }, {});    
-      
-      
-
-
-            
