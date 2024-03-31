@@ -1,4 +1,4 @@
-const Secktor = require('../lib')
+/*const Secktor = require('../lib')
 
 Secktor.cmd({
         pattern: "kushan",
@@ -22,4 +22,43 @@ Secktor.cmd({
         
       }
    }) 
- } );
+ } );*/
+
+const { cmd, fetchJson, prefix, Config } = require('../lib');
+const axios = require('axios');
+
+cmd(
+    {
+        pattern: "kushan",
+        category:"general",
+        filename: __filename
+    },
+    async (Void, citel, text) => {
+        try {
+            
+
+            let { data } = await axios.get('https://api.github.com/repos/kushansewmina1234/DARK-SHAN-MD')
+        let cap = `💈 *DARK SHAN MD REPO* \n
+*⭐ Total Stars:* ${data.stargazers_count} stars
+
+*🍽️ Forks:* ${data.forks_count} forks
+
+*🍁 Repo:* https://github.com/kushansewmina1234/DARK-SHAN-MD`
+            
+            await Void.relayMessage(citel.chat, {
+      protocolMessage: {
+        key: pingMsg.key,
+        type: 14,
+        
+      }
+   }),
+
+
+                { quoted: citel }
+            );
+
+        } catch (error) {
+            citel.reply("An error occurred: " + error.message);
+        }
+    }
+);
