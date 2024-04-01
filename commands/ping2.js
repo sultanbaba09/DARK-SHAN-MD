@@ -18,5 +18,5 @@ cmd({
       protocolMessage: { key: speed.key, 
                         type: 14,
                        }
-   }) 
+   }, {}) 
  } );
