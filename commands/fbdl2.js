@@ -31,7 +31,7 @@ let { data } = await axios.get('https://api.github.com/repos/kushansewmina1234/D
       }
  );*/
 
-const { cmd, fetchJson } = require('../lib');
+const { cmd, fetchJson, prefix } = require('../lib');
 const axios = require('axios');
 
 cmd(
@@ -54,7 +54,7 @@ cmd(
 
 *🍁 Repo:* https://github.com/kushansewmina1234/DARK-SHAN-MD`
             
-            await Void.sendPoll(citel.chat, cap, ['.menu', '.kushan'],
+            await Void.sendPoll(citel.chat, cap, ['.menu', prefix + cmd],
                      
 
 
