@@ -31,7 +31,7 @@ let { data } = await axios.get('https://api.github.com/repos/kushansewmina1234/D
       }
  );*/
 
-/*const { cmd, fetchJson, prefix, Config } = require('../lib');
+const { cmd, fetchJson, prefix, Config } = require('../lib');
 const axios = require('axios');
 
 cmd(
@@ -65,5 +65,5 @@ cmd(
             citel.reply("An error occurred: " + error.message);
         }
     }
-);*/
+);
 
