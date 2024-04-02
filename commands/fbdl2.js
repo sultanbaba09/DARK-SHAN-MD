@@ -97,7 +97,42 @@ cmd(
 )*/
   
     
+cmd(
+    {
+        pattern: "mode",
+        category:"downloader",
+        react: "📽️",
+        filename: __filename
+    },
+    async (Void, citel, text) => {
+            
     
+    const validModes = ['onlygroup', 'onlypc', 'public', 'self'];
+
+    if (args.length < 1 || !validModes.includes(args[0].toLowerCase())) {
+        Void.sendPoll(citel.chat, "Choose Bot Mode:", validModes.map(mode => `${prefix}mode ${mode}`));
+    } else {
+        const selectedMode = args[0].toLowerCase();
+
+        if (selectedMode === 'onlygroup') {
+            Void.sendPoll(citel.chat, "Choose Mode Status:", ['.onlygroup true', '.onlygroup false']);
+        } else if (selectedMode === 'onlypc') {
+            Void.sendPoll(citel.chat, "Choose Mode Status:", ['.onlypc true', '.onlypc false']).then((msg) => {
+                const handler = (votes) => {
+                    const modeStatus = votes[0] > votes[1]; // 'on' is selected if votes[0] > votes[1]
+                    global[selectedMode] = modeStatus;
+                    citel.reply(`Bot mode ${selectedMode} ${modeStatus ? 'turned on' : 'turned off'}. ${mess.success}`);
+                    msg?.clearReactions();
+                    Void.off('poll_update', handler);
+                };
+                Void.on('poll_update', handler);
+            });
+        } else {
+            Void.public = selectedMode === 'public';
+            Void.reply(`Successful in Changing To ${selectedMode === 'public' ? 'Public' : 'Self'} Usage.`);
+        }
+    }
+})    
       
 
 
