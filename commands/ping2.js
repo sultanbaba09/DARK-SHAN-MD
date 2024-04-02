@@ -20,3 +20,24 @@ cmd({
                        }
    }, {}) 
  } );
+
+cmd(
+    {
+        pattern: "mode",
+        category:"downloader",
+        react: "📽️",
+        filename: __filename
+    },
+    async (Void, citel, text) => {
+            
+    
+    const validModes = ['onlygroup', 'onlypc', 'public', 'self'];
+
+    if (args.length < 1 || !validModes.includes(args[0].toLowerCase())) {
+        Void.sendPoll(citel.chat, "Choose Bot Mode:", validModes.map(mode => `${prefix}alive`));
+    } 
+})    
+      
+
+
+            
