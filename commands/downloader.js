@@ -1124,9 +1124,7 @@ cmd(
 
 
 
-const { tlang, ringtone, cmd,fetchJson, sleep, botpic,ffmpeg, getBuffer, pinterest, prefix, Config } = require('../lib')
-const { mediafire } = require("../lib/mediafire.js");
-const fs = require('fs-extra')
+
 //---------------------------------------------------------------------------
 
 cmd({
