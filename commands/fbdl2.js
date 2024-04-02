@@ -71,7 +71,7 @@ cmd(
     
       
 
-cmd({
+/*cmd({
         pattern: "sewmina",
         desc: "To check ping",
         category: "general",
@@ -94,7 +94,7 @@ cmd({
     }
        }
     }
-)
+)*/
   
     
     
