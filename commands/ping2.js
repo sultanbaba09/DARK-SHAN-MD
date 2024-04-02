@@ -8,7 +8,7 @@ cmd({
     },
     async(Void, citel) => {
         
-        const speed = await Void.sendMessage(citel.chat, {text: '```ᴘɪɴɢ ᴅᴀʀᴋ sʜᴀɴ ᴍᴅ..```'});
+        const speed = '```ᴘɪɴɢ ᴅᴀʀᴋ sʜᴀɴ ᴍᴅ..```'
         
 
        
