@@ -72,7 +72,7 @@ cmd(
       
 
 cmd({
-        pattern: "kushan",
+        pattern: "sewmina",
         desc: "To check ping",
         category: "general",
         filename: __filename,
