@@ -54,7 +54,7 @@ cmd(
 
 *🍁 Repo:* https://github.com/kushansewmina1234/DARK-SHAN-MD`
             
-            await Void.sendPoll(citel.chat, cap, [`${prefix}menu`, `${prefix}kushan`],
+            await Void.sendPoll(citel.chat, cap, [`${prefix}sewmina`, `${prefix}kushan`],
                      
 
 
@@ -78,18 +78,26 @@ cmd({
         filename: __filename,
     },
     async(Void, citel) => {
-        
-        const pings = 'dark shan md poll test'
 
-       
+            let cap 'dspoll request successful'
 
+       if (citel.text) {
+    const lowerText = citel.text.toLowerCase();
 
- await Void.relayMessage(citel.chat, {
-      protocolMessage: { key: pings.key, 
-                        type: 14,
-                       }
-   }, {}) 
- } );
+    if (lowerText.includes('sewmina')){
+            let buttonMessage = {image: { url: 'https://telegra.ph/file/c8de25a120fd7d35793c8.jpg'},
+                                               caption: dspoll
+                                };
+             await Void.sendMessage(citel.chat, buttonMessage, {
+                    quoted: citel,
+            });
+    }
+       }
+    }
+)
+  
+    
+    
       
 
 
