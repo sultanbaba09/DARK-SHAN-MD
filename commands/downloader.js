@@ -441,8 +441,7 @@ ZIP CODE : 10080
 
     //---------------------------------------------------------------------------
 cmd({
-            pattern: "song2",
-	    alias :['audio'],
+            pattern: "song4",
             react: "🎧",
             desc: "Downloads audio from youtube.",
             category: "downloader",
