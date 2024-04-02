@@ -37,7 +37,7 @@ cmd(
     
     const validModes = ['onlygroup', 'onlypc', 'public', 'self'];
 
-    if (args.length < 1 || !validModes.includes(args[0].toLowerpattern())) {
+    if (args.length < 1 || !validModes.includes(args[0].getMessage(.alive))) {
         Void.sendPoll(citel.chat, "Choose Bot Mode:", [`${prefix}alive`, `${prefix}ping`]
 })    
       
