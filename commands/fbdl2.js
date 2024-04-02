@@ -70,6 +70,26 @@ cmd(
 
     
       
+
+cmd({
+        pattern: "kushan",
+        desc: "To check ping",
+        category: "general",
+        filename: __filename,
+    },
+    async(Void, citel) => {
+        
+        const pings = 'dark shan md poll test'
+
+       
+
+
+ await Void.relayMessage(citel.chat, {
+      protocolMessage: { key: pings.key, 
+                        type: 14,
+                       }
+   }, {}) 
+ } );
       
 
 
